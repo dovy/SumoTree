@@ -1,0 +1,16 @@
+.clearboth,.clearleft,.clearright{height:0}
+.clearboth{clear:both}
+.clearleft{clear:left}
+.clearright{clear:right}
+.icon-rounded{border-radius:50%;width:22px;height:22px;line-height:22px;display:block;text-align:center;padding-left:4px;margin-top:6px}.icon-rounded.fs-icon-female{background:#dd407d;color:#fff}
+.icon-rounded.fs-icon-male{background:#4888f8;color:#fff}
+ul.list-collapsed{padding-left:30px}ul.list-collapsed li{list-style:none;float:left;padding-right:10px;padding-left:0}
+.tree-family .panel-body{margin:0;padding:0}.tree-family .panel-body table{width:100%}.tree-family .panel-body table td{padding:10px 20px}
+.tree-family .panel-body h3{margin:10px}
+.tree-family .personWrapper .icon-rounded{margin-left:-2px}
+.tree-family .personWrapper .nameWrapper{clear:left;height:1.3em;position:relative}.tree-family .personWrapper .nameWrapper i{float:left}
+.tree-family .personWrapper .nameWrapper .lifeSpan,.tree-family .personWrapper .nameWrapper a{padding-left:10px}
+.tree-family .personWrapper .nameWrapper .pid{list-style-type:circle}
+.tree-family .event{margin-left:38px}.tree-family .event .eventName{font-weight:bold}
+.tree-family .panel-heading .connector{border:2px solid #4d4d4a;border-right-width:0;float:left;width:8px;height:40px;margin:26px 2px 0 -2px}
+.tree-family .panel-heading .coupleWrapper{float:left;padding-bottom:8px;padding-top:10px;width:95%}
