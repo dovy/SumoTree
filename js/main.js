@@ -1,8 +1,20 @@
 $(document).ready(function () {
+
+    $('a[rel="external"]').attr('target', '_blank');
+
+    
     $(document).tooltip({
         selector: "[data-toggle=tooltip]",
         container: "body"
     });
+
+    $('a.panel-collapse').click(function() {
+        $(this).children().toggleClass("fa-chevron-down fa-chevron-up");
+        $(this).closest(".panel-heading").next().slideToggle({duration: 200});
+        $(this).closest(".panel-heading").toggleClass('rounded-bottom');
+        return false;
+    });
+
 
     function toggleChevron(e) {
         $(e.target)
@@ -41,7 +53,7 @@ $(document).ready(function () {
 
             var theData = new Array();
             var holder = new Object();
-
+            console.log(data);
             $.each(data.spouses, function (k, spouse) {
                 spouse.husband.gender = spouse.husband.gender.toLowerCase();
                 if (!spouse.husband.name == "") {

@@ -1,16 +1,1 @@
-.clearboth,.clearleft,.clearright{height:0}
-.clearboth{clear:both}
-.clearleft{clear:left}
-.clearright{clear:right}
-.icon-rounded{border-radius:50%;width:22px;height:22px;line-height:22px;display:block;text-align:center;padding-left:4px;margin-top:6px}.icon-rounded.fs-icon-female{background:#dd407d;color:#fff}
-.icon-rounded.fs-icon-male{background:#4888f8;color:#fff}
-ul.list-collapsed{padding-left:30px}ul.list-collapsed li{list-style:none;float:left;padding-right:10px;padding-left:0}
-.tree-family .panel-body{margin:0;padding:0}.tree-family .panel-body table{width:100%}.tree-family .panel-body table td{padding:10px 20px}
-.tree-family .panel-body h3{margin:10px}
-.tree-family .personWrapper .icon-rounded{margin-left:-2px}
-.tree-family .personWrapper .nameWrapper{clear:left;height:1.3em;position:relative}.tree-family .personWrapper .nameWrapper i{float:left}
-.tree-family .personWrapper .nameWrapper .lifeSpan,.tree-family .personWrapper .nameWrapper a{padding-left:10px}
-.tree-family .personWrapper .nameWrapper .pid{list-style-type:circle}
-.tree-family .event{margin-left:38px}.tree-family .event .eventName{font-weight:bold}
-.tree-family .panel-heading .connector{border:2px solid #4d4d4a;border-right-width:0;float:left;width:8px;height:40px;margin:26px 2px 0 -2px}
-.tree-family .panel-heading .coupleWrapper{float:left;padding-bottom:8px;padding-top:10px;width:95%}
+.clearboth,.clearleft,.clearright{height:0}.clearboth{clear:both}.clearleft{clear:left}.clearright{clear:right}.icon-rounded{border-radius:50%;width:22px;height:22px;line-height:22px;display:block;text-align:center;padding-left:4px;margin-top:6px}.icon-rounded.fs-icon-female{background:#dd407d;color:#fff}.icon-rounded.fs-icon-male{background:#4888f8;color:#fff}ul.list-collapsed{padding-left:30px}ul.list-collapsed li{list-style:none;float:left;padding-right:10px;padding-left:0}.tree-family .panel-body{margin:0;padding:0}.tree-family .panel-body table{width:100%}.tree-family .panel-body table td{padding:10px 20px}.tree-family .panel-body h3{margin:10px}.tree-family .personWrapper .icon-rounded{margin-left:-2px}.tree-family .personWrapper .nameWrapper{clear:left;height:1.3em;position:relative}.tree-family .personWrapper .nameWrapper i{float:left}.tree-family .personWrapper .nameWrapper .lifeSpan,.tree-family .personWrapper .nameWrapper a{padding-left:10px}.tree-family .personWrapper .nameWrapper .pid{list-style-type:circle}.tree-family .event{margin-left:38px}.tree-family .event .eventName{font-weight:bold}.tree-family .panel-heading .connector{border:2px solid #4d4d4a;border-right-width:0;float:left;width:8px;height:40px;margin:26px 2px 0 -2px}.tree-family .panel-heading .coupleWrapper{float:left;padding-bottom:8px;padding-top:10px;width:95%}.panel .panel:last-child{margin-bottom:0}.family-panel .panel-body{padding:0;margin:0}.panel-heading .options{float:right !important;float:right}[class*=panel-].panel .panel-heading .options a{color:#fff}.panel-heading .options>a{opacity:.6;filter:alpha(opacity=60);float:right;padding-left:10px}.discussion-panel.panel-primary .badge{color:#428bca;background-color:#fff}.discussion-panel .panel-body .fa{font-size:24px;color:#999}.discussion-panel .discussion-updated{font-size:.7em;margin-left:5px}.source-title i{font-size:60px;float:left;margin-left:2px;color:#888}.source-title img{margin-right:15px;border:1px solid #ccc}.source-title{line-height:60px}.source-panel .row{margin:10px 0}.source-panel .row:last-child{margin-bottom:0}.source-panel .row:first-child{margin-top:0}

@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<title>Sumo Theme - A Bootstrap 3 Theme</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/style.css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
+<style>
+      body {
+        padding-bottom: 60px;
+      }
+      .fs-icons {
+        text-align: center;
+      }
+      .fs-icons .span3 {
+        font-size: 22px;
+        display: inline-block;
+        width: 15em;
+        padding: .25em .5em;
+        background: #eee;
+        margin: .5em 1em .5em 0;
+        text-align: left;
+      }
+</style>
+
+<a id="run" href="#">Run</a>
+<div id="output" />
+
+
+</head>
+<body>
+<a href="https://github.com/rootsdev/SumoTheme/"><img style="position: absolute; top: 53px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      Sumo Theme </a>
+    </div>
+    <div class="collapse navbar-collapse header-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#content-formatting">Content</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#fs-icons">FS Icons</a></li>
+          <li><a href="#images">Images</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#dropdowns">Dropdowns</a></li>
+          <li><a href="#input-groups">Input Groups</a></li>
+          <li><a href="#navs">Navs</a></li>
+          <li><a href="#navbar">Navbar</a></li>
+          <li><a href="#pagination">Pagination</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#labels">Labels</a></li>
+          <li><a href="#progress">Progress</a></li>
+          <li><a href="#media-object">Media Object</a></li>
+          <li><a href="#list-groups">List Groups</a></li>
+          <li><a href="#panels">Panels</a></li>
+          <li><a href="#wells">Wells</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">CSS Files</li>
+          <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
+          <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">LESS Files</li>
+          <li><a href="../less/variables.less">variables.less</a></li>
+          <li><a href="../less/theme.less">theme.less</a></li>
+        </ul>
+        </li>
+      </ul>
+      <p class="navbar-text navbar-right">
+        &nbsp;
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<h1>Select a Person ID</h1>
+<div id="personSelect" class="btn-group" style="margin: 0 auto; float: none;">
+  <a href="#KW7S-V7X" class="btn btn-default">KW7S-V7X</a>
+  <a href="#KW7S-VT9" class="btn btn-default">KW7S-VT9</a>
+  <a href="#KW7S-VWM" class="btn btn-default">KW7S-VWM</a>
+  <a href="#KW8X-J8G" class="btn btn-default">KW8X-J8G</a>
+  <a href="#KWQJ-9B8" class="btn btn-default">KWQJ-9B8</a>
+  <a href="#KWZH-X9C" class="btn btn-default">KWZH-X9C</a>
+</div>
+
+
+
+
+<div class="page-header">
+      <h2 id="grid">Sources</h2>
+</div>
+<div class='row'>
+  <div class="col-lg-12">
+    <div class="panel panel-primary source-panel">
+      <div class="panel-heading">
+        <div class="options">
+          <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <h4 class="panel-title">Sources</h4> 
+      </div>
+      <div class="panel-body">
+
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title source-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                <i class="fa fa-archive">&nbsp;</i>Collapsible Group Item #1<div class="pull-right"><span class="badge">Birth</span> <span class="badge">Baptism</span></div>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>URL</strong>:</div>
+                <div class="col-md-7"><a href="http://billiongraves.com/pages/record/AnaKarina/5983502" rel="external">http://billiongraves.com/pages/record/AnaKarina/5983502</a></div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Citation</strong>:</div>
+                <div class="col-md-7">"Billion Graves Record," BillionGraves (http://billiongraves.com/pages/record/AnaKarina/5983502 accessed 05 Dec. 2013),  Record #5983502. Citing BillionGraves, Headstones, BillionGraves.com.</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Notes</strong>:</div>
+                <div class="col-md-7">BillionGraves Headstone Record<br /><br />This source was added by the free service available at RecordSeek.com.</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Reason Source is Attached</strong>:</div>
+                <div class="col-md-7">Hello</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Last Modified</strong>:</div>
+                <div class="col-md-7">5 December 2013 by <a href="">Dovy</a></div>
+              </div>
+              <div class="row">                
+                <div class="col-md-3 col-md-offset-1 col-xs-3 col-xs-offset-1"><strong>Tags</strong>:</div>
+                <div class="col-md-7 col-xs-7"><span class="badge">Birth</span> <span class="badge">Baptism</span></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title source-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne2">
+                <img src="http://api.webthumbnail.org?width=64&height=64&url=http://billiongraves.com/pages/record/AnaKarina/5983502" width="64" height="64" alt="Google" class="img-circle" />Collapsible Group Item #1<div class="pull-right"><span class="badge">Burial</span></div>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne2" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>URL</strong>:</div>
+                <div class="col-md-7"><a href="http://billiongraves.com/pages/record/AnaKarina/5983502" rel="external">http://billiongraves.com/pages/record/AnaKarina/5983502</a></div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Citation</strong>:</div>
+                <div class="col-md-7">"Billion Graves Record," BillionGraves (http://billiongraves.com/pages/record/AnaKarina/5983502 accessed 05 Dec. 2013),  Record #5983502. Citing BillionGraves, Headstones, BillionGraves.com.</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Notes</strong>:</div>
+                <div class="col-md-7">BillionGraves Headstone Record<br /><br />This source was added by the free service available at RecordSeek.com.</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Reason Source is Attached</strong>:</div>
+                <div class="col-md-7">Hello</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1"><strong>Last Modified</strong>:</div>
+                <div class="col-md-3">5 December 2013 by <a href="">Dovy</a></div>
+                <div class="col-md-1 col-md-offset-1"><strong>Tags</strong>:</div>
+                <div class="col-md-2"><span class="badge">Birth</span> <span class="badge">Baptism</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+    </div>  
+  </div>
+</div>
+
+    
+
+
+
+
+</div>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<title>Sumo Theme - A Bootstrap 3 Theme</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/style.css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
+<style>
+      body {
+        padding-bottom: 60px;
+      }
+      .fs-icons {
+        text-align: center;
+      }
+      .fs-icons .span3 {
+        font-size: 22px;
+        display: inline-block;
+        width: 15em;
+        padding: .25em .5em;
+        background: #eee;
+        margin: .5em 1em .5em 0;
+        text-align: left;
+      }
+</style>
+
+<a id="run" href="#">Run</a>
+<div id="output" />
+
+
+</head>
+<body>
+<a href="https://github.com/rootsdev/SumoTheme/"><img style="position: absolute; top: 53px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      Sumo Theme </a>
+    </div>
+    <div class="collapse navbar-collapse header-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#content-formatting">Content</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#fs-icons">FS Icons</a></li>
+          <li><a href="#images">Images</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#dropdowns">Dropdowns</a></li>
+          <li><a href="#input-groups">Input Groups</a></li>
+          <li><a href="#navs">Navs</a></li>
+          <li><a href="#navbar">Navbar</a></li>
+          <li><a href="#pagination">Pagination</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#labels">Labels</a></li>
+          <li><a href="#progress">Progress</a></li>
+          <li><a href="#media-object">Media Object</a></li>
+          <li><a href="#list-groups">List Groups</a></li>
+          <li><a href="#panels">Panels</a></li>
+          <li><a href="#wells">Wells</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">CSS Files</li>
+          <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
+          <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">LESS Files</li>
+          <li><a href="../less/variables.less">variables.less</a></li>
+          <li><a href="../less/theme.less">theme.less</a></li>
+        </ul>
+        </li>
+      </ul>
+      <p class="navbar-text navbar-right">
+        &nbsp;
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<h1>Select a Person ID</h1>
+<div id="personSelect" class="btn-group" style="margin: 0 auto; float: none;">
+  <a href="#KW7S-V7X" class="btn btn-default">KW7S-V7X</a>
+  <a href="#KW7S-VT9" class="btn btn-default">KW7S-VT9</a>
+  <a href="#KW7S-VWM" class="btn btn-default">KW7S-VWM</a>
+  <a href="#KW8X-J8G" class="btn btn-default">KW8X-J8G</a>
+  <a href="#KWQJ-9B8" class="btn btn-default">KWQJ-9B8</a>
+  <a href="#KWZH-X9C" class="btn btn-default">KWZH-X9C</a>
+</div>
+<div class="page-header">
+      <h2 id="grid">Discussions</h2>
+</div>
+<div class='row'>
+  <div class="col-lg-12">
+    <div class="panel panel-primary discussion-panel">
+      <div class="panel-heading">
+        <div class="options">
+          <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <h4 class="panel-title">Discussions</h4> 
+      </div>
+      <div class="panel-body">
+
+
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+                Discussion #1</a>
+              <small class="discussion-updated"> updated <time datetime="2001-05-15 19:00">14 mins ago</time>
+              </small> <span class="badge pull-right">5</span>                
+              
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+            <div class="panel-body">
+
+
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <i class="fa fa-comments-o">&nbsp;</i>
+                  </a>
+                  <div class="media-body">
+                    <div class="discussion">
+                      <h4 class="media-heading">This is a test </h4>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>
+                      <div class="media">
+                        <a class="pull-left" href="#">
+                          <i class="fa fa-comments-o">&nbsp;</i>
+                        </a>
+                        <div class="media-body">
+                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                          <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>
+                          <div class="media">
+                            <a class="pull-left" href="#">
+                              <i class="fa fa-comments-o">&nbsp;</i>
+                            </a>
+                            <div class="media-body">
+                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                              <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>                    
+                            </div>
+                          </div>                
+                        </div>
+                      </div>
+                      <div class="media">
+                        <a class="pull-left" href="#">
+                          <i class="fa fa-comments-o">&nbsp;</i>
+                        </a>
+                        <div class="media-body">
+                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>
+                        </div>
+                      </div>            
+                    </div>
+                  </div>
+                </div>  
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                Discussion #2
+              </a>
+              <small class="discussion-updated"> updated <time datetime="2001-05-15 19:00">14 mins ago</time>
+              </small> <span class="badge pull-right">5</span>
+              
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+            <div class="panel-body">
+
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <i class="fa fa-comments-o">&nbsp;</i>
+                  </a>
+                  <div class="media-body">
+                    <div class="discussion">
+                      <h4 class="media-heading">This is a test </h4>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>
+                      <div class="media">
+                        <a class="pull-left" href="#">
+                          <i class="fa fa-comments-o">&nbsp;</i>
+                        </a>
+                        <div class="media-body">
+                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                          <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>              
+                        </div>
+                      </div>
+                      <div class="media">
+                        <a class="pull-left" href="#">
+                          <i class="fa fa-comments-o">&nbsp;</i>
+                        </a>
+                        <div class="media-body">
+                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <h6>by <a href="#dovy" class="fs-contributor">Dovy Paukstys</a>, <small><time datetime="2001-05-15 19:00">14 mins ago</time></small></h6>
+                        </div>
+                      </div>            
+                    </div>
+                  </div>
+                </div>  
+
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      </div>
+    </div>  
+  </div>
+
+</div>
+
+    
+</div>
+  
+</div>
+</body>
+</html>

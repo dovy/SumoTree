@@ -8,7 +8,6 @@
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
 <style>
       body {
@@ -28,9 +27,12 @@
       }
 </style>
 
-<a id="run" href="#">Run</a>
-<div id="output" />
-
+<script id="user" type="text/html">
+  <li>
+    <p class="name">Hello Im {{ name }}</p>
+    <p><a href="http://twitter.com/{{ twitter }}">@{{ twitter }}</a></p>
+  </li>
+</script>
 
 </head>
 <body>
@@ -107,35 +109,41 @@
   <a href="#KWQJ-9B8" class="btn btn-default">KWQJ-9B8</a>
   <a href="#KWZH-X9C" class="btn btn-default">KWZH-X9C</a>
 </div>
-<div class="page-header">
-      <h2 id="grid">Family Members</h2>
-</div>
-<div class='row'>
-  <div class="col-lg-6">
-    <div class="panel panel-primary family-panel">
-      <div class="panel-heading">
-        <div class="options">
-          <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-up"></i></a>
-        </div>
-        <h4 class="panel-title">Spouses and Children</h4>
-      </div>
-      <div class="panel-body spouses-children"></div>
-    </div>  
+  <!---  Begin Row  -->
+  <div id="familyView" class="row">
+    <div class="col-lg-6 spouses-children">
+      <h2>Spouses and Children</h2>
+    </div>
+    <div class="col-lg-6 parents-children">
+      <h2>Parents and Siblings</h2>
+    </div>    
   </div>
-  <div class=" col-lg-6">
-    <div class="panel panel-primary family-panel">
-      <div class="panel-heading">
-        <div class="options">
-          <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-up"></i></a>
-        </div>
-        <h4 class="panel-title">Parents and Children</h4>
-      </div>
-      <div class="panel-body parents-children"></div>
-    </div>  
-  </div>
-</div>
 
-    
+  <div class="row">
+    <div class="col-lg-3 spouses-children">
+      <h2>Spouses and Children</h2>
+    </div>
+    <div class="col-lg-3 parents-children">
+      <h2>Parents and Siblings</h2>
+    </div>    
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-4 spouses-children">
+      <h2>Spouses and Children</h2>
+    </div>
+    <div class="col-lg-4 parents-children">
+      <h2>Parents and Siblings</h2>
+    </div>    
+  </div>   
+  <div class="row col-md-offset-2">
+    <div class="col-lg-5 spouses-children">
+      <h2>Spouses and Children</h2>
+    </div>
+    <div class="col-lg-5 push2 parents-children">
+      <h2>Parents and Siblings</h2>
+    </div>    
+  </div>     
 </div>
   
 </div>
