@@ -1,10 +1,10 @@
 <div class="personWrapper">
   <div class="nameWrapper">
     <i class="fs-icon-{{gender}} icon-rounded">&nbsp;</i>
-    <a href="#" class="male" data-pid="{{id}}">{{name}}</a>
+    <a href="#" class="male personcard name" data-pid="{{id}}">{{name}}</a>
   </div>
   <ul class="list-collapsed">
-	{{#lifespan}}<li class="lifeSpan" data-toggle="tooltip" title="{{#birthdate}}{{birthdate}}{{/birthdate}}-{{#deathdate}}{{deathdate}}{{/deathdate}}" data-placement="bottom">{{lifespan}}</li>{{/lifespan}}
+	{{#lifespan}}<li class="lifeSpan" data-toggle="tooltip" title="{{#birthDate}}{{birthDate}}{{/birthDate}} - {{#deathDate}}{{deathDate}}{{/deathDate}}" data-placement="bottom">{{lifespan}}</li>{{/lifespan}}
     {{#id}}<li class="separator">-</li>
     <li class="pid">{{id}}</li>{{/id}}
   </ul>

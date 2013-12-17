@@ -6,19 +6,10 @@
 <link rel="stylesheet" href="./css/bootstrap.css">
 <link rel="stylesheet" href="./css/style.css">
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://rootsdev.org/familysearch-javascript-sdk/familysearch-javascript-sdk.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
-<script type="text/javascript" src="js/sumowidgets.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/sdk.js"></script>
-
-
-
-
-
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
 <style>
       body {
         padding-bottom: 60px;
@@ -36,6 +27,10 @@
         text-align: left;
       }
 </style>
+
+<a id="run" href="#">Run</a>
+<div id="output" />
+
 
 </head>
 <body>
@@ -104,14 +99,13 @@
 
 <div class="container">
 <h1>Select a Person ID</h1>
-<div id="output"></div>
-
 <div id="personSelect" class="btn-group" style="margin: 0 auto; float: none;">
-  <a href="#" class="btn btn-default widgetAction" data-pid="KW7S-VQJ" data-type="person">KW7S-VQJ</a>
-  <a href="#" class="btn btn-default widgetAction" data-pid="KW7S-V7X" data-type="person">KW7S-V7X</a>
-  <a href="#" class="btn btn-default widgetAction" data-pid="KW7S-VT9" data-type="person">KW7S-VT9</a>
-  <a href="#" class="btn btn-default widgetAction" data-pid="KW7S-VWM" data-type="person">KW7S-VWM</a>
-  <a href="#" class="btn btn-default widgetAction" data-pid="KWQJ-9B8" data-type="person">KWQJ-9B8</a>
+  <a href="#KW7S-V7X" class="btn btn-default">KW7S-V7X</a>
+  <a href="#KW7S-VT9" class="btn btn-default">KW7S-VT9</a>
+  <a href="#KW7S-VWM" class="btn btn-default">KW7S-VWM</a>
+  <a href="#KW8X-J8G" class="btn btn-default">KW8X-J8G</a>
+  <a href="#KWQJ-9B8" class="btn btn-default">KWQJ-9B8</a>
+  <a href="#KWZH-X9C" class="btn btn-default">KWZH-X9C</a>
 </div>
 <div class="page-header">
       <h2 id="grid">Family Members</h2>
@@ -122,7 +116,7 @@
   <div class="col-lg-9">
 
     <div class='row'>
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="panel panel-primary family-panel">
           <div class="panel-heading">
             <div class="options">
@@ -133,7 +127,7 @@
           <div class="panel-body spouses-children"></div>
         </div>  
       </div>
-      <div class=" col-md-6">
+      <div class=" col-lg-6">
         <div class="panel panel-primary family-panel">
           <div class="panel-heading">
             <div class="options">

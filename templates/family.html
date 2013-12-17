@@ -1,72 +1,58 @@
-<div class="panel panel-default tree-family">
-  <div class="panel-heading">
-    <div class="connector">
-      &nbsp;
-    </div>
-    <div class="coupleWrapper{{#current}} current{{/current}}"{{#relationshipId}} data-relationshipId="{{relationshipId}}"{{/relationshipId}}{{#coupleId}} data-coupleId="{{coupleId}}"{{/coupleId}}>
-      {{#husband}}
-        <div class="personWrapper">
-          <div class="nameWrapper">
-            <i class="fs-icon-{{gender}} icon-rounded">&nbsp;</i>
-            <a href="#" class="male" data-pid="{{id}}">{{name}}</a>
-          </div>
-          <ul class="list-collapsed">
-          {{#lifeSpan}}<li class="lifeSpan" data-toggle="tooltip" title="{{lifeSpan}}" data-placement="bottom">{{lifeSpan}}</li>{{/lifeSpan}}
-            {{#id}}<li class="separator">-</li>
-            <li class="pid">{{id}}</li>{{/id}}
-          </ul>
-        </div>
-      {{/husband}}
-      {{#wife}}
-        <div class="personWrapper">
-          <div class="nameWrapper">
-            <i class="fs-icon-{{gender}} icon-rounded">&nbsp;</i>
-            <a href="#" class="male" data-pid="{{id}}">{{name}}</a>
-          </div>
-          <ul class="list-collapsed">
-          {{#lifeSpan}}<li class="lifeSpan" data-toggle="tooltip" title="{{lifeSpan}}" data-placement="bottom">{{lifeSpan}}</li>{{/lifeSpan}}
-            {{#id}}<li class="separator">-</li>
-            <li class="pid">{{id}}</li>{{/id}}
-          </ul>
-        </div>      
-      {{/wife}}
-    </div>
-    
-    {{#event}}
-      <div class="event">
-        <span class="eventName">{{type}}</span><br/>
-        {{#originalDate}}<span class="eventDate" title="{{standardDate}}">{{originalDate}}</span><br/>{{/originalDate}}
-        {{#originalPlace}}<span class="eventPlace" data-toggle="tooltip" data-placement="bottom" title="{{standardPlace}}">{{originalPlace}}</span>{{/originalPlace}}
+{{#families}}
+  <div class="panel panel-default tree-family">
+    <div class="panel-heading">
+      <div class="connector">
+        &nbsp;
       </div>
-    {{/event}}
-    <div class="clearboth">
-      &nbsp;
-    </div>
-  </div>
-  <div class="panel-body">
-    <table class="table-hover">
-    {{#children}}
-      <tr>
-        <td>
+      <div class="coupleWrapper{{#current}} current{{/current}}"{{#relationshipId}} data-relationshipId="{{relationshipId}}"{{/relationshipId}}{{#coupleId}} data-coupleId="{{coupleId}}"{{/coupleId}}>
+        {{#husband}}
+          {{> person}}
+        {{/husband}} 
+        {{^husband}} 
           <div class="personWrapper">
             <div class="nameWrapper">
-              <i class="fs-icon-{{gender}} icon-rounded">&nbsp;</i>
-              <a href="#" class="male" data-pid="{{id}}">{{name}}</a>
+              <i class="fs-icon-male icon-rounded">&nbsp;</i>
             </div>
             <ul class="list-collapsed">
-            {{#lifeSpan}}<li class="lifeSpan" data-toggle="tooltip" title="{{lifeSpan}}" data-placement="bottom">{{lifeSpan}}</li>{{/lifeSpan}}
-              {{#id}}<li class="separator">-</li>
-              <li class="pid">{{id}}</li>{{/id}}
-            </ul>
-          </div>
-        </td>
-      </tr>    
-    {{/children}}
-    {{^children}}
-      <tr><td><h3>No children</h3></td></tr>
-    {{/children}}
-    </table>
-    
+              <li>&nbsp;</li>
+            </ul>            
+          </div>             
+        {{/husband}}
+        {{#wife}}
+          {{> person}}    
+        {{/wife}} 
+        {{^wife}} 
+          <div class="personWrapper">
+            <div class="nameWrapper">
+              <i class="fs-icon-female icon-rounded">&nbsp;</i>
+            </div>
+            <ul class="list-collapsed">
+              <li>&nbsp;</li>
+            </ul>                        
+          </div>        
+        {{/wife}}
+      </div>
+      {{#event}}
+        {{> event}}
+      {{/event}}
+      <div class="clearboth">
+        &nbsp;
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table-hover">
+      {{#children}}
+        <tr>
+          <td>
+            {{> person}}
+          </td>
+        </tr>    
+      {{/children}}
+      {{^children}}
+        <tr><td><h3>No children</h3></td></tr>
+      {{/children}}
+      </table>
+    </div>
   </div>
-</div>
-</div>
+  </div>
+{{/families}}

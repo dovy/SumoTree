@@ -1,0 +1,151 @@
+
+<div class="cardFrame">
+  <div class="content">
+    <div class="profile-image"></div>
+
+    <div class="person clearfix">
+
+		  <div class="nameWrapper">
+		    <i class="fs-icon-{{gender}} icon-rounded">&nbsp;</i>
+		    <a href="#" class="male personcard name widgetAction" data-pid="{{id}}" data-type="person">{{name}}</a><br />
+		    <span class="pid">
+        	{{id}}
+      	</span>
+		  </div>
+
+      
+		  <div class="clearfix">&nbsp;</div>
+      <div class="engageWatch gadget watchGadget">
+        <a class="watch notwatching" href="" title=
+        "Be notified of updates to this person and add to my watch list."><span class="watchLabel fs-icon-watch-off"
+        title=
+        "Be notified of updates to this person and add to my watch list.">Watch</span>
+        <span class="unwatchLabel fs-icon-watch-on" title=
+        "Stop being notified of updates to this person and remove from my watch list.">
+        Unwatch</span> <span class="unavailableLabel fs-icon-watch-disabled"
+        title="Service is temporarily unavailable.">Watch</span></a>
+      </div>
+    </div>
+
+    <table class="eventTable">
+      <tbody>
+        <tr class="event birth">
+          <th>Birth</th>
+
+          <td>
+            <div class="date ellipses-text" title=
+            "Standard: {{birthDate}}">
+              {{birthDate}}
+            </div>
+
+            <div class="ellipses-text">
+              <div class="place" title=
+              "Standard: {{birthPlace}}s">
+                {{birthPlace}}
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="event death">
+          <th>Death</th>
+          <td>
+            <div class="date ellipses-text" title="Standard: {{deathDate}}">
+              {{deathDate}}
+            </div>
+
+            <div class="ellipses-text">
+              <div class="place" title="{{deathPlace}}">
+                {{deathPlace}}
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody class="engageStatus hide">
+        <tr>
+          <th></th>
+
+          <td class="sections" colspan="2">
+            <ul class="clearfix">
+              <li class="sources-label"><a href=
+              "https://sandbox.familysearch.org/tree/#view=ancestor&amp;person=KW7S-V72&amp;section=sources"
+              onclick=
+              "FS.trackLink(true, FS.LINK_TYPES.PERSON_CARD_SOURCES_CLICK);"><span>
+              0</span>Sources</a></li>
+
+              <li class="discussions-label"><a href=
+              "https://sandbox.familysearch.org/tree/#view=ancestor&amp;person=KW7S-V72&amp;section=discussions"
+              onclick=
+              "FS.trackLink(true, FS.LINK_TYPES.PERSON_CARD_DISCUSSIONS_CLICK);">
+              <span>0</span>Discussions</a></li>
+
+              <li class="memories-label"><a href=
+              "https://sandbox.familysearch.org/tree/#view=ancestor&amp;person=KW7S-V72&amp;section=memories"
+              onclick=
+              "FS.trackLink(true, FS.LINK_TYPES.PERSON_CARD_MEMORIES_CLICK);">
+              <span>0</span>Memories</a></li>
+
+              <li class="photos-label"><a href=
+              "https://sandbox.familysearch.org/tree/#view=ancestor&amp;person=KW7S-V72&amp;section=photos"
+              onclick=
+              "FS.trackLink(true, FS.LINK_TYPES.PERSON_CARD_PHOTOS_CLICK);"><span>
+              0</span>Photos</a></li>
+
+              <li class="stories-label"><a href=
+              "https://sandbox.familysearch.org/tree/#view=ancestor&amp;person=KW7S-V72&amp;section=stories"
+              onclick=
+              "FS.trackLink(true, FS.LINK_TYPES.PERSON_CARD_STORIES_CLICK);"><span>
+              0</span>Stories</a></li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr class="ordRow" style="display: table-row; display: none;">
+          <th>Temple</th>
+
+          <td class="engageOrds" style="display: none;">
+          <!--spans below are put on a single line to avoid extra white in some browers-->
+          <span class="ordIcons"><span class="ordIcon Invalid" title="">B</span><span class="ordIcon Invalid"
+          title="">C</span><span class="ordIcon Invalid"
+          title="">I</span><span class="ordIcon Invalid"
+          title="">E</span><span class="ordIcon Invalid"
+          title="">SP</span><span class=
+          "ordIcon Invalid" title=
+          "">SS</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="statusTable" style="display:none">
+      <tbody>
+        <tr class="status ordRow" style=
+        "display: table-row;">
+          <th><span>Ordinances</span></th>
+
+          <td><span class="age"></span> 
+          <!--spans below are put on a single line to avoid extra white in some browers-->
+           <span class="ordIcons"><span class=
+          "ordIcon Invalid" title=
+          "">B</span><span class="ordIcon Invalid"
+          title="">C</span><span class="ordIcon Invalid"
+          title="">I</span><span class="ordIcon Invalid"
+          title="">E</span><span class="ordIcon Invalid" title="">SP</span><span class="ordIcon Invalid"
+          title="">SS</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="deleted-baner hide">
+      PERSON DELETED
+    </div>
+  </div>
+
+  <div class="buttonBarBG"></div>
+
+  <div class="actionBar">
+    <a class="fs-icon-pedigree tree hide widgetAction" href="#" data-pid="{{id}}" data-type="pedigree">Tree</a>
+    <a class="details widgetAction" href="#" data-pid="{{id}}" data-type="person"><i class="fs-icon-{{gender}}">&nbsp;</i>Person</a>
+  </div>
+</div>
