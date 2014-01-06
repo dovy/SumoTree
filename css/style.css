@@ -64,7 +64,8 @@ ul.list-collapsed li {
   float: left;
 }
 .tree-family .personWrapper .nameWrapper .lifeSpan,
-.tree-family .personWrapper .nameWrapper a {
+.tree-family .personWrapper .nameWrapper a,
+.tree-family .personWrapper .nameWrapper span {
   padding-left: 10px;
 }
 .tree-family .personWrapper .nameWrapper .pid {
@@ -451,5 +452,5 @@ ul.list-collapsed li {
 }
 
 .tree-family thead > tr > td, .tree-family tbody > tr > td, .tree-family tfoot > tr > td {
-  
+  padding: ; 
 }
