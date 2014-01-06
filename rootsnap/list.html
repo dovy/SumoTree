@@ -1,0 +1,699 @@
+<!doctype html>
+
+<html>
+  
+  <head>
+    <title>RootSnap - Web</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        padding-bottom: 60px;
+      }
+      .fs-icons {
+        text-align: center;
+      }
+      .fs-icons .span3 {
+        font-size: 22px;
+        display: inline-block;
+        width: 15em;
+        padding: .25em .5em;
+        background: #eee;
+        margin: .5em 1em .5em 0;
+        text-align: left;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <a href="https://github.com/rootsdev/SumoTheme/"><img style="position: absolute; top: 53px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+             RootSnap
+        </a>
+        </div>
+        
+        <div class="collapse navbar-collapse header-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#content-formatting">Content</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#fs-icons">FS Icons</a></li>
+                <li><a href="#images">Images</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#dropdowns">Dropdowns</a></li>
+                <li><a href="#input-groups">Input Groups</a></li>
+                <li><a href="#navs">Navs</a></li>
+                <li><a href="#navbar">Navbar</a></li>
+                <li><a href="#pagination">Pagination</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#labels">Labels</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#media-object">Media Object</a></li>
+                <li><a href="#list-groups">List Groups</a></li>
+                <li><a href="#panels">Panels</a></li>
+                <li><a href="#wells">Wells</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">CSS Files</li>
+                <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
+                <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">LESS Files</li>
+                <li><a href="../less/variables.less">variables.less</a></li>
+                <li><a href="../less/theme.less">theme.less</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="navbar-text navbar-right">&nbsp;</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="searchResultsTable grid table table-striped table-hover tree-family" id="">
+            <colgroup>
+              <col style="width:24%">
+              <col style="width:38%">
+              <col style="width:19%">
+              <col style="width:19%">
+            </colgroup>
+
+            <thead class="hiddenHeader" style="">
+              <tr>
+                <th class="personHeader">Person</th>
+                <th class="eventsHeader">Events</th>
+                <th>Parents</th>
+                <th>Spouse</th>
+              </tr>
+            </thead>
+
+            <tbody class="resultsRecords">
+              <tr class="person">
+                <td>
+                  <div class="personWrapper">
+                    <div class="nameWrapper">
+                      <i class="fs-icon-male icon-rounded">&nbsp;</i> <a href="#" class="male personcard name" data-pid="277H-SWR" data-original-title="" title="">Pranas Paukstys</a>
+                    </div>
+                    <ul class="list-collapsed">
+                      <li class="pid">277H-SWR</li>
+                    </ul>
+                  </div>
+                </td>
+                <td class="primaryEvents">
+                  <div class="event birthEvent">
+                    <span class="eventName hidden-xs hidden-sm">birth</span><span class="eventName visible-xs visible-sm">b.</span> 
+                    <span class="eventDate" title="{{standardDate}}">16 August 1919</span>
+                    , <span class="eventPlace" data-toggle="tooltip" data-placement="bottom" title="{{standardPlace}}">Lithuania</span>
+                  </div>
+                  <div class="event death deathEvent">
+                    <span class="eventName hidden-xs hidden-sm">death</span><span class="eventName visible-xs visible-sm">d.</span> 
+                    <span class="eventDate" title="{{standardDate}}">17 March 1971</span>
+                    , <span class="eventPlace" data-toggle="tooltip" data-placement="bottom" title="{{standardPlace}}">Chicago, Cook, Illinois, United States</span>
+                  </div>
+                </td>
+                
+
+                <td class="parents micro">
+                  <div class="connector visible-lg visible-md">
+                    &nbsp;
+                  </div>
+                  <div class="coupleWrapper">
+                    <div class="personWrapper">
+                      <div class="nameWrapper">
+                        <i class="fs-icon-male icon-rounded">&nbsp;</i>
+                        <a href="#" class="male personcard name" data-pid="L851-NPH" data-original-title="" title="">Bronius Paukstys</a>
+                      </div>
+                    </div>         
+                    <div class="personWrapper">
+                      <div class="nameWrapper">
+                        <i class="fs-icon-female icon-rounded">&nbsp;</i>
+                        <a href="#" class="male personcard name" data-pid="LDJS-T6K" data-original-title="" title="">Mrs Paukstys</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearboth">
+                    &nbsp;
+                  </div>
+                
+
+                </td>
+                      
+                <td class="spouse micro">
+                  <div class="personWrapper">
+                    <div class="nameWrapper">
+                      <i class="fs-icon-female icon-rounded">&nbsp;</i> <a href="#" class="female personcard name" data-pid="277H-SWR" data-original-title="" title="">Mute Paukstys</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+
+              <tr class="record" id="searchPage_record2">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record2Name" name="searchPage_record2Name">Antanas
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9XB9-1JX</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">1912, Vistakio
+                    Ruda, Marijampole, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">19 October 1955,
+                    Bogota, Cundinamarca, Colombia</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record3">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record3Name" name="searchPage_record3Name">Bronius
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9NW4-DXJ</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">30 January 1900,
+                    Kaunas, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">21 March 1938,
+                    Samara, Russia</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record4">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record4Name" name="searchPage_record4Name">Bronius
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">L851-NPH</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events"></ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">
+                  <ul class="spouse">
+                    <li>
+                      <div class="name female fs-icon-before-female-micro">
+                        Mrs Paukstys
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="record" id="searchPage_record5">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record5Name" name="searchPage_record5Name">Jonas
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">L4S8-7C4</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">20 March 1899,
+                    Šakiai, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">15 May 1965,
+                    Ratnyčia, Lithuania</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record6">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record6Name" name="searchPage_record6Name">Tomas
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9XB9-1VJ</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">17 March 1863, of
+                    Pajavonis, Vilkaviskis, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">31 July 1928,
+                    Pittston, Luzerne, Pennsylvania, United States</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">
+                  <ul class="parentsInfo">
+                    <li class="husband">
+                      <div class="name male fs-icon-before-male-micro">
+                        Paukstys
+                      </div>
+                    </li>
+
+                    <li class="wife">
+                      <div class="name female fs-icon-before-female-micro">
+                        [Unknown Name]
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record7">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-female">
+                        <a class="name female" href="javascript:void(0);" id=
+                        "searchPage_record7Name" name="searchPage_record7Name">Mrs
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">LDJS-T6K</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">19 July
+                    2012</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">
+                  <ul class="spouse">
+                    <li>
+                      <div class="name male fs-icon-before-male-micro">
+                        Bronius Paukstys
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="record" id="searchPage_record8">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record8Name" name="searchPage_record8Name">Juozas
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9XB9-1VN</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">17 March 1861, of
+                    Pajavonis, Vilkaviskis, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">18 January 1906,
+                    Edwardsville, Luzerne, Pennsylvania, United States</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">
+                  <ul class="parentsInfo">
+                    <li class="husband">
+                      <div class="name male fs-icon-before-male-micro">
+                        Paukstys
+                      </div>
+                    </li>
+
+                    <li class="wife">
+                      <div class="name female fs-icon-before-female-micro">
+                        [Unknown Name]
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record9">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record9Name" name="searchPage_record9Name">Juozas
+                        Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9XB9-1JF</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">1871, of
+                    Pajavonis, Vilkaviskis, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">4 June 1914,
+                    Brooklyn, Kings, New York, USA</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record10">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record10Name" name=
+                        "searchPage_record10Name">Silvestras Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9XB9-1VF</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">17 September
+                    1858, of Pajavonis, Vilkaviskis, Lithuania</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">18 March 1916,
+                    Edwardsville, Luzerne, Pennsylvania, United States</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">
+                  <ul class="parentsInfo">
+                    <li class="husband">
+                      <div class="name male fs-icon-before-male-micro">
+                        Paukstys
+                      </div>
+                    </li>
+
+                    <li class="wife">
+                      <div class="name female fs-icon-before-female-micro">
+                        [Unknown Name]
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record11">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record11Name" name=
+                        "searchPage_record11Name">Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9XB9-1VK</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events"></ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">
+                  <ul class="spouse">
+                    <li>
+                      <div class="name female fs-icon-before-female-micro">
+                        [Unknown Name]
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="record" id="searchPage_record12">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-unknown">
+                        <a class="name unknown" href="javascript:void(0);" id=
+                        "searchPage_record12Name" name=
+                        "searchPage_record12Name">Pranas</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">MR5T-NX8</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">6 April
+                    1879</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">8 June
+                    1938</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">
+                  <ul class="parentsInfo">
+                    <li class="husband">
+                      <div class="name male fs-icon-before-male-micro">
+                        Juozas Sutkaitis
+                      </div>
+                    </li>
+
+                    <li class="wife">
+                      <div class="name female fs-icon-before-female-micro">
+                        Marcele Uzuptye
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record13">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record13Name" name=
+                        "searchPage_record13Name">Pranas</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">9DM4-DFR</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events"></ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">
+                  <ul class="spouse">
+                    <li>
+                      <div class="name female fs-icon-before-female-micro">
+                        [Unknown Name]
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr class="record" id="searchPage_record14">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-female">
+                        <a class="name female" href="javascript:void(0);" id=
+                        "searchPage_record14Name" name="searchPage_record14Name">Birute
+                        Marija Paukstys</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">277H-R63</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">19 December 1946,
+                    Germany</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">26 June 2007,
+                    Wakefield, Middlesex, Massachusetts, United States</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">&nbsp;</td>
+              </tr>
+
+              <tr class="record" id="searchPage_record15">
+                <td class="individualColumn">
+                  <ul class="nameInfo">
+                    <li>
+                      <div class="includePersonCard fs-icon-before-male">
+                        <a class="name male" href="javascript:void(0);" id=
+                        "searchPage_record15Name" name="searchPage_record15Name">Pranas
+                        Girnius</a>
+                      </div>
+                    </li>
+
+                    <li><span class="id">LHWG-6HH</span></li>
+                  </ul>
+                </td>
+
+                <td class="eventsColumn">
+                  <ul class="events">
+                    <li class="event birth"><label class=
+                    "eventLabel">birth</label><span class="eventData">5 August 1904,
+                    Germany</span></li>
+
+                    <li class="event death"><label class=
+                    "eventLabel">death</label><span class="eventData">30 December 1973,
+                    Rio de Janeiro, Brazil</span></li>
+                  </ul>
+                </td>
+
+                <td class="parentsColumn">&nbsp;</td>
+
+                <td class="spouseColumn">
+                  <ul class="spouse">
+                    <li>
+                      <div class="name female fs-icon-before-female-micro">
+                        Konstancija Girnius
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

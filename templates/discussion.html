@@ -1,0 +1,34 @@
+{{#discussions}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" href="#discussion-{{id}}">{{title}}</a> 
+        <small class="discussion-updated">updated 
+          <abbr class="timeago" title="{{modified}}">{{modified}}</abbr>
+        </small> 
+        <span class="badge pull-right">{{commentNumber}}</span>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" id="discussion-{{id}}" style=
+    "height: 0px;">
+      <div class="panel-body">
+        <div class="media">
+          <a class="pull-left fa fa-comments-o" href="#" style=
+          "font-style: italic">&nbsp;</a>
+          <div class="media-body">
+            <div class="discussion">
+              <h4 class="media-heading">{{description}}
+              <h6>by <a class="fs-contributor" href="#{{contributor}}">{{contributor}}</a>, <small><abbr class="timeago" title="{{created}}">{{created}}</abbr></small></h6>
+                {{#comments}}
+                  {{> comment}}
+                {{/comments}} 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/discussions}}
+{{^discussions}}
+  <center>None</center>
+{{/discussions}}

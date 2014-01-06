@@ -76,7 +76,7 @@ ul.list-collapsed li {
 .tree-family .event .eventName {
   font-weight: bold;
 }
-.tree-family .panel-heading .connector {
+.tree-family .connector {
   border: 2px solid #4d4d4a;
   border-right-width: 0;
   float: left;
@@ -84,11 +84,33 @@ ul.list-collapsed li {
   height: 40px;
   margin: 26px 2px 0 -2px;
 }
-.tree-family .panel-heading .coupleWrapper {
+.tree-family .micro .connector {
+  margin-top: 10px;
+  height: 20px;
+}
+.tree-family .micro i {
+  font-size: 10px;
+  width: 10px;
+  overflow: hidden;
+  text-indent: -99px;
+  height: 10px;
+}
+.parents, .personWrapper {
+  white-space: nowrap;
+}
+.tree-family .micro i.fs-icon-male {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.tree-family .coupleWrapper {
   float: left;
   padding-bottom: 8px;
   padding-top: 10px;
   width: 95%;
+}
+.tree-family .micro .coupleWrapper {
+  padding-top: 0;
 }
 .panel .panel:last-child {
   margin-bottom: 0;
@@ -379,20 +401,19 @@ ul.list-collapsed li {
 }
 .popover {
   max-width: auto;
+  min-width: 400px;
 }
 .cardFrame .name {
   color: #0051C4;
   font-size: 22px;
-  width: 88%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 88%;
   display: inline-block;
 }
 .cardFrame .nameWrapper a,
 .cardFrame .nameWrapper span {
-  padding-left: 14px !important;
+  padding-left: 54px !important;
 }
 .cardFrame .nameWrapper i {
   width: 44px;
@@ -402,10 +423,33 @@ ul.list-collapsed li {
   display: block;
   padding-left: 7px;
   margin-top: 0;
+  position: absolute;
 }
 .watchGadget {
   display: none;
 }
 .clearfix {
   clear: both;
+}
+
+
+.tree-family .primaryEvents .event {
+  margin-left: 0;
+}
+.tree-family .primaryEvents .eventName {
+  font-weight: normal;
+  width: 50px;
+  color: #888;
+}
+.tree-family .primaryEvents .eventName.visible-xs, .tree-family .primaryEvents .eventName.visible-sm {
+  clear: left;
+  width: 18px;
+}
+
+.tree-family .primaryEvents .event span {
+  float: left;
+}
+
+.tree-family thead > tr > td, .tree-family tbody > tr > td, .tree-family tfoot > tr > td {
+  
 }
