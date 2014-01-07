@@ -52,24 +52,27 @@ ul.list-collapsed li {
 .tree-family .panel-body h3 {
   margin: 10px;
 }
-.tree-family .personWrapper .icon-rounded {
+.personWrapper .icon-rounded {
   margin-left: -2px;
 }
-.tree-family .personWrapper .nameWrapper {
+.personWrapper .nameWrapper {
   clear: left;
   height: 1.3em;
   position: relative;
 }
-.tree-family .personWrapper .nameWrapper i {
+.personWrapper .nameWrapper i {
   float: left;
 }
-.tree-family .personWrapper .nameWrapper .lifeSpan,
-.tree-family .personWrapper .nameWrapper a,
-.tree-family .personWrapper .nameWrapper span {
+.personWrapper .nameWrapper .lifeSpan,
+.personWrapper .nameWrapper a,
+.personWrapper .nameWrapper span {
   padding-left: 10px;
 }
-.tree-family .personWrapper .nameWrapper .pid {
+.personWrapper .nameWrapper .pid {
   list-style-type: circle;
+}
+.jumbotron .personWrapper .name {
+  color: #fff;
 }
 .tree-family .event {
   margin-left: 38px;
@@ -304,7 +307,7 @@ ul.list-collapsed li {
   text-shadow: 0px 1px 1px #000;
 }
 .cardFrame .actionBar i,
-.tree-family .personWrapper .cardFrame .actionBar i {
+.personWrapper .cardFrame .actionBar i {
   color: #fff;
   line-height: 35px;
   float: none;
