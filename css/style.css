@@ -511,9 +511,13 @@ ul.list-collapsed li {
 }
 
 
-
+#container {
+	margin: 0 auto;
+	text-align:center;
+}
 .photo { 
-	width: 25%;
+	max-width: 30%;
+	min-width: 200px;
 	margin: 10px 1%;
 	float: left;
 	border-radius: 8px;
