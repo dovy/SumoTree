@@ -1,0 +1,3 @@
+[submodule "familysearch-javascript-sdk"]
+	path = familysearch-javascript-sdk
+	url = https://github.com/rootsdev/familysearch-javascript-sdk.git
