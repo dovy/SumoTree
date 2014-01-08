@@ -510,3 +510,11 @@ ul.list-collapsed li {
 	min-width: 350px;
 }
 
+
+
+.photo { 
+	width: 25%;
+	margin: 10px 1%;
+	float: left;
+	border-radius: 8px;
+}
