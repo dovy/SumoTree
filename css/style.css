@@ -30,6 +30,14 @@
   background: #4888f8;
   color: #fff;
 }
+.jumbotron .icon-rounded.fs-icon-male {
+  background: #f4f4f4;
+  color: #4888f8;
+  -webkit-box-shadow: 0px 0px 0px 10px rgba(255,255,255,.25);
+  -moz-box-shadow: 0px 0px 0px 10px rgba(255,255,255,.25);
+  box-shadow: 0px 0px 0px 10px rgba(255,255,255,.25);
+}
+
 ul.list-collapsed {
   padding-left: 30px;
 }
@@ -99,7 +107,7 @@ ul.list-collapsed li {
   text-indent: -99px;
   height: 10px;
 }
-.parents, .personWrapper {
+.parents, .personWrapper,  {
   white-space: nowrap;
 }
 .tree-family .micro i.fs-icon-male {
@@ -457,3 +465,48 @@ ul.list-collapsed li {
 .tree-family thead > tr > td, .tree-family tbody > tr > td, .tree-family tfoot > tr > td {
   padding: ; 
 }
+
+.tree-family.jumbotron {
+	padding: 30px;
+}
+.jumbotron .personWrapper .nameWrapper .lifeSpan, .jumbotron .personWrapper .nameWrapper a, .jumbotron .personWrapper .nameWrapper span {
+	padding-left:0;
+}
+.personWrapper span.pid {
+	float: right;
+	line-height: 1.428571429;
+}
+
+.jumbotron .personWrapper span.pid {
+	opacity: .8;
+}
+
+
+.nameWrapper i.hasImage {
+	overflow: hidden;
+	text-indent:-999px;
+}
+.jumbotron .nameWrapper .icon-rounded {
+	width: 124px;
+	height: 124px;
+	font-size: 70px;
+	line-height: 124px;
+	margin: 0 auto;
+	text-align: center;
+	margin-right: 30px;
+	
+}
+.jumbotron ul.list-collapsed li {
+	float: none;
+}
+.jumbotron .personWrapper .nameWrapper {
+	height: auto;
+}
+.jumbotron .personWrapper .nameWrapper h1 {
+	margin: 0;
+	padding-top: 10px;
+}
+.jumbotron .nameWrapper {
+	min-width: 350px;
+}
+
