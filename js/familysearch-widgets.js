@@ -31,9 +31,6 @@ var fsWidgets = new function() {
                 $( container ).html( fsWidgetTemplates['profileHeader.html'].render( person ) ).fadeIn();
             });            
         }
-
-        
-
     }
 
 
@@ -534,87 +531,3 @@ var fsWidgets = new function() {
 
 
 }
-
-FamilySearch.init({
-    //app_key: 'WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK', // Sandbox
-    app_key: 'KB2L-BVD1-3Q6S-J7X4-GKFZ-4168-QPZ6-NJRK', // Production
-    //app_key: 'KB2L-BVD1-3Q6S-J7X4-GKFZ-4168-QPZ6-NJRK', // Staging
-    //environment: 'sandbox',
-    environment: 'production',
-    //environment: 'staging',
-    autoSignin: true,
-    saveAccessToken: true,
-    //access_token: 'USYSE66BE2591EF6EADF59548EA24A3CA710_idses-prod03.a.fsglobal.net',
-    auth_callback: document.location.protocol + '//' + document.location.hostname + '/',
-    http_function: $.ajax,
-    deferred_function: $.Deferred
-}); 
-// APP PORTION, DIFF FILE
-$(document).ready(function () {
-   
-    // Construct the url params from data values
-    $(document.body).on('click', '.widgetAction', function () {
-        var str = "";
-        var obj = $(this)
-            .data();
-        for (var key in obj) {
-            if (key == "bs.popover") {
-                continue;
-            }
-            if (str != "") {
-                str += "&";
-            }
-            str += key + "=" + obj[key];
-        }
-        window.location.hash = str;
-        loadContent();
-        return false;
-    });
-    // No updating of that hash when it's just for a popover
-    $(document.body).on('click', '.nameWrapper a, .personcard', function (e) {
-            e.preventDefault();
-            return false;
-    });
-    // Only one popover open at time
-    $(':not(#anything)').on('click', function (e) {
-        $('.personcard').each(function () {
-            //the 'is' for buttons that trigger popups
-            //the 'has' for icons and other elements within a button that triggers a popup
-            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                $(this).popover('hide');
-                return;
-            }
-        });
-    });    
-
-    function loadContent() {
-        fsWidgets.getPID();
-            
-        fsWidgets.profileHeader( '.profileHeaderContainer', fsWidgets.pID );
-        fsWidgets.familyMembers( '.familyWidgetContainer', fsWidgets.pID );
-        fsWidgets.pedigree( '.pedigreeWidgetContainer', fsWidgets.pID );
-        if ( fsWidgets.currentUser != fsWidgets.pID ) {
-            fsWidgets.sources( '.sourcesWidgetContainer', fsWidgets.pID );
-            fsWidgets.changes( '.changesWidgetContainer', fsWidgets.pID );
-            fsWidgets.discussions( '.discussionsWidgetContainer', fsWidgets.pID );
-            fsWidgets.notes( '.notesWidgetContainer', fsWidgets.pID );    
-        }
-        
-        // Blank open links
-        $('a[rel="external"]').attr('target', '_blank');
-    
-    }
-
-    FamilySearch.getAccessToken().then(function () {
-        if (!fsWidgets.currentUser) {
-            FamilySearch.getCurrentUserPersonId().then(function (response) {
-                FamilySearch.getPerson( response ).then(function (response) {
-                    fsWidgets.currentUser = fsWidgets.getPersonDetails( response.getPerson() );
-                    loadContent();
-                });
-            });  
-        } else {
-            loadContent();    
-        }
-    });
-});

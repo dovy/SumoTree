@@ -13,3 +13,5 @@ To get started, provide your authorized key on your website.
 
 ### Grunt
 Use `grunt watch` to update LESS and hogan design templates
+
+# Getting Started
