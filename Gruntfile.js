@@ -109,13 +109,13 @@ module.exports = function(grunt) {
       publish: {
         options: {
           prettify: true,
-          namespace: 'SumoWidgets',
+          namespace: 'fsWidgetTemplates',
           defaultName: function(file) {
             return file.split('/').pop();
           }
         },
         files:{
-          "js/sumowidgets.js": ["templates/**/*.html"]
+          "js/fs-widget-templates.js": ["templates/**/*.html"]
         }
       }
     }

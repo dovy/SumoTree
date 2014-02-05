@@ -2,66 +2,74 @@
   <div class="panel-group" id="source-{{id}}">
     <div class="panel panel-default source-objects">
       <div class="panel-heading">
-        <table style="width: 100%;">
-          <tr>
-            <td>
-              <h4 class="panel-title source-title">
-                  {{#url}}
-                    <a data-parent="#source-{{id}}" data-toggle="collapse" href="#{{id}}"><img src="http://api.webthumbnail.org?width=64&height=64&url={{url}}" width="64" height="64" alt="Google" class="img-circle" />{{title}}</a>
-                  {{/url}}
-                  {{^url}}
-                    <a data-parent="#source-{{id}}" data-toggle="collapse" href="#{{id}}"><i class="fa fa-archive">&nbsp;</i>{{title}}</a>
-                  {{/url}}
-              </h4>            
-            </td>
-              <td style="width: 35%;">
-                <h4 class="panel-title source-title">
-                  {{#tags}}<a data-parent="#source-{{id}}" data-toggle="collapse" href="#{{id}}"><span class="badge">{{tag}}</span></a> {{/tags}}
-                </h4>
-              </td>
-          </tr>
-        </table>
+        <h4 class="panel-title source-title">
+            {{#url}}
+              <a data-parent="#source-{{id}}" data-toggle="collapse" href="#{{id}}">
+                <div class="row">
+                  <div class="col-md-2 hidden-sm hidden-xs" style="padding-left: 0;">
+                    <img src="http://api.webthumbnail.org?width=64&height=64&url={{url}}" width="64" height="64" alt="Google" class="img-circle" />
+                  </div>
+                  <div class="col-md-10 col-sm-12">{{title}}</div>
+              </a>
+            {{/url}}
+            {{^url}}
+              <a data-parent="#source-{{id}}" data-toggle="collapse" href="#{{id}}">
+                <div class="row">
+                  <div class="col-md-2 hidden-sm hidden-xs" style="padding-left: 0;">
+                    <i class="fa fa-archive">&nbsp;</i>
+                  </div>
+                  <div class="col-md-10 col-sm-12">{{title}}</div>
+              </a>            
+            {{/url}}
+            {{#tags}}<br /><a data-parent="#source-{{id}}" data-toggle="collapse" href="#{{id}}"><span class="badge">{{tag}}</span></a> {{/tags}}
+        </h4>
       </div>
       <div class="panel-collapse collapse" id="{{id}}">
         <div class="panel-body">
-          <div class="row">
-            <div class="col-md-3 col-md-offset-1">
+          {{#url}}<div class="row">
+            <div class="col-md-3">
               <strong>URL</strong>:
             </div>
-            <div class="col-md-7">
-              <a href="{{url}}" rel="external">{{url}}</a>
+            <div class="col-md-9">
+              <a href="{{url}}" rel="external" class="sourceUrl">{{url}}</a>
             </div>
-          </div>
+          </div>{{/url}}
+          {{#citation}}
           <div class="row">
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-3">
               <strong>Citation</strong>:
             </div>
-            <div class="col-md-7">
+            <div class="col-md-9">
               {{citation}}
             </div>
           </div>
+          {{/citation}}
+          {{#note}}
           <div class="row">
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-3">
               <strong>Notes</strong>:
             </div>
-            <div class="col-md-7">
+            <div class="col-md-9">
               {{note}}
             </div>
           </div>
+          {{/note}}
+          {{#justification}}
           <div class="row">
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-3">
               <strong>Reason Source is Attached</strong>:
             </div>
-            <div class="col-md-7">
+            <div class="col-md-9">
               {{justification}}
             </div>
           </div>
+          {{/justification}}
           <div class="row">
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-3">
               <strong>Last Modified</strong>:
             </div>
-            <div class="col-md-7">
-              <abbr class="timeago" title="{{modified}}">{{modified}}</abbr> by <a href="#{{contributor}}&type=contributor">{{contributor}}</a>
+            <div class="col-md-9">
+              <abbr class="timeago" title="{{modified}}">{{modified}}</abbr> by <a class="contributorCard" href="#" data-pid="{{contributor}}">{{contributor}}</a>
             </div>
           </div>
         </div>

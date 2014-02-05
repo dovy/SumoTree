@@ -1,0 +1,15 @@
+<div class="tree-family jumbotron ng-scope jumbo-{{gender}}">
+  <div class="personWrapper">
+    <span class="pid hidden-xs hidden-sm">{{id}}</span>
+    <div class="nameWrapper">
+      <i class="icon-rounded {{#image}}hasImage portraitStyle{{/image}}{{^image}}fs-icon-{{gender}}{{/image}}"{{#image}} style="background: url({{image}}) center center no-repeat; background-size:cover"{{/image}}>
+        &nbsp;</i> <h1>{{name}}</h1>
+      
+      <ul class="list-collapsed" style="display: block;">
+        {{#lifespan}}<li class="lifeSpan">{{lifespan}}</li>{{/lifespan}}
+      </ul>
+      
+    </div>
+  </div>
+  <div class="clearboth"></div> 
+</div>

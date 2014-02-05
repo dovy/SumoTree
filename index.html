@@ -1,155 +1,123 @@
 <!doctype html>
-
 <html>
-  
-  <head>
-    <title>Sumo Theme - A Bootstrap 3 Theme</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <style>
+<head>
+<title>FamilySearch Widgets</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/style.css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/familysearch-javascript-sdk.js"></script>
+<script src="js/hogan-2.0.0.js"></script>
+<script type="text/javascript" src="js/fs-widget-templates.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript" src="js/familysearch-widgets.js"></script>
+<script type="text/javascript" src="js/jquery.timeago.js"></script>
+
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<style>
       body {
         padding-bottom: 60px;
       }
-      .fs-icons {
-        text-align: center;
-      }
-      .fs-icons .span3 {
-        font-size: 22px;
-        display: inline-block;
-        width: 15em;
-        padding: .25em .5em;
-        background: #eee;
-        margin: .5em 1em .5em 0;
-        text-align: left;
-      }
-    </style>
-  </head>
-  
-  <body>
-    <a href="https://github.com/rootsdev/SumoTheme/"><img style="position: absolute; top: 53px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-             Sumo Theme
-        </a>
-        </div>
-        
-        <div class="collapse navbar-collapse header-collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#headings">Headings</a></li>
-                <li><a href="#content-formatting">Content</a></li>
-                <li><a href="#tables">Tables</a></li>
-                <li><a href="#forms">Forms</a></li>
-                <li><a href="#fs-icons">FS Icons</a></li>
-                <li><a href="#images">Images</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#dropdowns">Dropdowns</a></li>
-                <li><a href="#input-groups">Input Groups</a></li>
-                <li><a href="#navs">Navs</a></li>
-                <li><a href="#navbar">Navbar</a></li>
-                <li><a href="#pagination">Pagination</a></li>
-                <li><a href="#alerts">Alerts</a></li>
-                <li><a href="#labels">Labels</a></li>
-                <li><a href="#progress">Progress</a></li>
-                <li><a href="#media-object">Media Object</a></li>
-                <li><a href="#list-groups">List Groups</a></li>
-                <li><a href="#panels">Panels</a></li>
-                <li><a href="#wells">Wells</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-header">CSS Files</li>
-                <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
-                <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">LESS Files</li>
-                <li><a href="../less/variables.less">variables.less</a></li>
-                <li><a href="../less/theme.less">theme.less</a></li>
-              </ul>
-            </li>
+      
+</style>
+
+</head>
+<body>
+<a href="https://github.com/rootsdev/SumoTheme/"><img style="position: absolute; top: 53px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      Sumo Theme </a>
+    </div>
+    <div class="collapse navbar-collapse header-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#content-formatting">Content</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#fs-icons">FS Icons</a></li>
+          <li><a href="#images">Images</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#dropdowns">Dropdowns</a></li>
+          <li><a href="#input-groups">Input Groups</a></li>
+          <li><a href="#navs">Navs</a></li>
+          <li><a href="#navbar">Navbar</a></li>
+          <li><a href="#pagination">Pagination</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#labels">Labels</a></li>
+          <li><a href="#progress">Progress</a></li>
+          <li><a href="#media-object">Media Object</a></li>
+          <li><a href="#list-groups">List Groups</a></li>
+          <li><a href="#panels">Panels</a></li>
+          <li><a href="#wells">Wells</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">CSS Files</li>
+            <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
+            <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">LESS Files</li>
+            <li><a href="../less/variables.less">variables.less</a></li>
+            <li><a href="../less/theme.less">theme.less</a></li>
           </ul>
-          <p class="navbar-text navbar-right">&nbsp;</p>
-          
-        </div>
-      </div>
+        </li>
+      </ul>
+      <p class="navbar-text navbar-right">&nbsp;</p>
     </div>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>
-           FamilySearch Widgets
-         </h1>
-        <p>Widets based off the FamilySearch SDK and utilizing Hogan.js for templating.</p>
-      </div>
+  </div>
+</div>
 
-      <div class="page-header">
-            <h2 id="grid">Full Profile</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">Profile View<small class="pull-right">Under Construction, Currently Static</small></div>
-            <div class="panel-body">
-              <h4>Utilizes all profile widget pieces as outlined below.</h4>
-              <center><a href="profile.html" class="btn btn-primary">See the Full Profile View</a></center>
-            </div>
-          </div>
-        </div>
-      <div class="page-header">
-            <h2 id="grid">Profile Pieces</h2>
-      </div>      
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">Family View</div>
-            <div class="panel-body">
-              <h4>This is the family view that denotes the base makup of a person's unit. All HTML is rendered at runtime. When widgets are completed, a precompiled javascript file will be compiled and the hogan.js library can be dropped. The widgets will function as standalone javascript code.</h4>
-              <center><a href="family.html" class="btn btn-primary">See the Family Widget</a></center>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">Sources<small class="pull-right">Under Construction, Currently Static</small></div>
-            <div class="panel-body">
-              <h4>Sources with URL preview thumbnail.</h4>
-              <center><a href="sources.html" class="btn btn-primary">See the Sources Widget</a></center>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">Discussions<small class="pull-right">Under Construction, Currently Static</small></div>
-              <div class="panel-body">
-                <h4>Discussion widget with full nesting.</h4>
-                <center><a href="discussions.html" class="btn btn-primary">See the Discussions Widget</a></center>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container">
+
+  <div class="profileHeaderContainer"></div>
+
+  <div class='row'>
+    <div class="col-lg-9">
+      <div class="familyWidgetContainer"></div>
     </div>
-  </body>
-
+    <div class="col-lg-3">
+      <div class="changesWidgetContainer"></div>
+    </div>  
+  </div>
+  <div class='row'>
+    <div class="col-lg-6">
+      <div class="sourcesWidgetContainer"></div>
+    </div>
+    <div class="col-lg-6">
+      <div class="discussionsWidgetContainer"></div>
+    </div>
+    <div class="col-lg-6">
+      <div class="notesWidgetContainer"></div>
+    </div>
+    <div class="col-lg-6">
+      <div class="memoriesWidgetContainer"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="pedigreeWidgetContainer"></div>
+    </div>    
+  </div>
+</div>
+</body>
 </html>

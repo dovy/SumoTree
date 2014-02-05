@@ -1,3 +1,6 @@
 [submodule "familysearch-javascript-sdk"]
 	path = familysearch-javascript-sdk
 	url = https://github.com/rootsdev/familysearch-javascript-sdk.git
+[submodule "familysearch-icons"]
+	path = familysearch-icons
+	url = https://github.com/rootsdev/FamilySearch-Icons.git

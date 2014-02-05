@@ -125,7 +125,7 @@ ul.list-collapsed {
 	float: right!important;
 	float: right;
 }
-[class*=panel-].panel .panel-heading .options a {
+[class*=panel-].panel-primary .options a {
 	color: #fff;
 }
 .panel-heading .options>a {
@@ -140,11 +140,11 @@ ul.list-collapsed {
 	background-color: #fff;
 }
 
-.discussion-panel .panel-body .fa {
+.discussion-panel .panel-body .fa, .note-panel .panel-body .fa {
 	font-size: 24px;
 	color: #999;
 }
-.discussion-panel .discussion-updated {
+.discussion-panel .discussion-updated, .note-panel .note-updated {
 	font-size: .7em;
 	margin-left: 5px;
 }
@@ -160,14 +160,28 @@ ul.list-collapsed {
 	border: 1px solid #ccc;
 }
 .source-title {
-	line-height: 60px;
+	line-height: 1.3em;
+}
+.sourceUrl {
+	word-break: break-all;
 }
 .source-panel .row {
-	margin: 10px 0;
+	margin: 0;
 }
 .source-panel .row:last-child {
 	margin-bottom: 0;
 }
 .source-panel .row:first-child {
 	margin-top: 0;
+}
+.change-objects {
+	h6 {
+		margin-bottom: 15px;
+	}
+	h5:first-child {
+		margin-top: 0px;
+	}	
+	h6:last-child {
+		margin-bottom: 0px;
+	}
 }

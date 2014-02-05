@@ -1,0 +1,12 @@
+{{#id}}
+    <a class="node node--pedigree{{#focus}} node--focus{{/focus}} personcard" href="#"  data-pid="{{id}}">
+        <i class="node__image fs-icon-{{gender}} icon-rounded">&nbsp;</i>
+        <div class="node__body">
+            <h2 class="node__name">{{name}}</h2>
+            <small class="node__dates">{{lifespan}}</small>
+        </div>
+    </a>
+{{/id}}
+{{^id}}
+    <div class="node node--pedigree node--empty"></div>
+{{/id}}

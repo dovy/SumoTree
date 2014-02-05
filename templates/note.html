@@ -1,0 +1,30 @@
+{{#notes}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" href="#note-{{htmlId}}">{{subject}}</a> 
+        <small class="note-updated">updated 
+          <abbr class="timeago" title="{{modified}}">{{modified}}</abbr>
+        </small> 
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" id="note-{{htmlId}}" style=
+    "height: 0px;">
+      <div class="panel-body">
+        <div class="media">
+          <a class="pull-left fa fa-pencil" href="#" style=
+          "font-style: italic">&nbsp;</a>
+          <div class="media-body">
+            <div class="note">
+              <h4 class="media-heading">{{text}}
+              <h6>by <a class="contributorCard" href="#" data-pid="{{contributor}}">{{contributor}}</a>, <small><abbr class="timeago" title="{{modified}}">{{modified}}</abbr></small></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/notes}}
+{{^notes}}
+  <center>None</center>
+{{/notes}}

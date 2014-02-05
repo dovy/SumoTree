@@ -1,0 +1,56 @@
+<div class='row'>
+  <div class="col-md-12">
+    <div class="panel panel-primary family-panel">
+      <div class="panel-heading">
+        <div class="options">
+          <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <h4 class="panel-title">Ancestors List</h4>
+      </div>
+      <div class="panel-body ancestor-list">
+        <table class="searchResultsTable grid table table-striped table-hover tree-family" id="">
+          <colgroup>
+            <col class="hidden-xs">
+            <col>
+            <col>
+          </colgroup>
+          <thead class="hiddenHeader" style="">
+          <tr>
+            <th class="hidden-xs"></th>
+            <th class="personHeader ng-binding">Person</th>
+            <th class="eventsHeader">Events</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr class="person">
+              <td class="hidden-xs ng-binding" ng-bind-html="getAncestryHtml(person)"><div class="dots"><span class="male"></span><span class="male"></span><span class="male"></span></div></td>
+              <td>
+                <div class="personWrapper">
+                  <div class="nameWrapper">
+                    <i class="icon-rounded fs-icon-male" ng-class="{'fs-icon-male': person.isMale(), 'fs-icon-female': !person.isMale()}">&nbsp;</i>
+                    <a href="" class="personcard name ng-binding" ng-click="select(person)">Bronius Paukstys</a>
+                  </div>
+                  <ul class="list-collapsed">
+                    <li class="pid ng-binding">L851-NPH</li>
+                  </ul>
+                </div>
+              </td>
+              <td class="primaryEvents">
+                <div class="event clearfix">
+                  <span class="eventName hidden-xs hidden-sm">birth</span><span class="eventName visible-xs visible-sm">b.</span>
+                  <span class="eventDate ng-binding"></span>
+                  <span class="eventPlace ng-binding"><span ng-show="person.display.birthPlace">,&nbsp;</span></span>
+                </div>
+                <div class="event clearfix">
+                  <span class="eventName hidden-xs hidden-sm">death</span><span class="eventName visible-xs visible-sm">d.</span>
+                  <span class="eventDate ng-binding"></span>
+                  <span class="eventPlace ng-binding"><span class="ng-hide">,&nbsp;</span></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>        
+      </div>
+    </div>  
+  </div>
+</div>  
