@@ -6,9 +6,10 @@ FamilySearch.init({
     //environment: 'sandbox',
     environment: 'production',
     //environment: 'staging',
-    autoSignin: true,
-    saveAccessToken: true,
-    auth_callback: 'http://sumoapp.dev/',
+    auto_expire: true,
+    auto_signin: true,
+    save_access_token: true,
+    auth_callback: document.location.protocol + '//' + document.location.hostname + '/',
     http_function: $.ajax,
     deferred_function: $.Deferred
 }); 
@@ -66,14 +67,14 @@ $(document).ready(function () {
     function loadContent() {
         fsWidgets.getPID();
         fsWidgets.profileHeader( '.profileHeaderContainer', fsWidgets.pID );
-        fsWidgets.familyMembers( '.familyWidgetContainer', fsWidgets.pID );
+        //fsWidgets.familyMembers( '.familyWidgetContainer', fsWidgets.pID );
         if ( fsWidgets.currentUser.id != fsWidgets.pID ) {
-            fsWidgets.sources( '.sourcesWidgetContainer', fsWidgets.pID );
-            fsWidgets.changes( '.changesWidgetContainer', fsWidgets.pID );
-            fsWidgets.discussions( '.discussionsWidgetContainer', fsWidgets.pID );
-            fsWidgets.notes( '.notesWidgetContainer', fsWidgets.pID );    
+            //fsWidgets.sources( '.sourcesWidgetContainer', fsWidgets.pID );
+            //fsWidgets.changes( '.changesWidgetContainer', fsWidgets.pID );
+            //fsWidgets.discussions( '.discussionsWidgetContainer', fsWidgets.pID );
+            //fsWidgets.notes( '.notesWidgetContainer', fsWidgets.pID );    
         }
-        fsWidgets.pedigree( '.pedigreeWidgetContainer', fsWidgets.pID );
+        //fsWidgets.pedigree( '.pedigreeWidgetContainer', fsWidgets.pID );
         // Blank open links
         $('a[rel="external"]').attr('target', '_blank');
     }
