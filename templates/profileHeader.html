@@ -6,7 +6,8 @@
         &nbsp;</i> <h1>{{name}}</h1>
       
       <ul class="list-collapsed" style="display: block;">
-        {{#lifespan}}<li class="lifeSpan">{{lifespan}}</li>{{/lifespan}}
+        {{#lifespan}}<li class="lifeSpan">{{birthDate}} - {{#isLiving}}Living{{/isLiving}}{{^isLiving}}{{deathDate}}{{/isLiving}}</li>{{/lifespan}}
+        <li class="personActions"><small><a href="">View Tree</a> <a href="">Unwatch</a></small></li>
       </ul>
       
     </div>

@@ -50,10 +50,9 @@
         <tr class="event death">
           <th>Death</th>
           <td>
-            <div class="date ellipses-text" title="Standard: {{deathDate}}">
-              {{deathDate}}
+            <div class="date ellipses-text" title="{{#deathDate}}Standard: {{deathDate}}{{/deathDate}}{{#isLiving}}Living{{/isLiving}}">
+              {{#deathDate}}{{deathDate}}{{/deathDate}}{{#isLiving}}Living{{/isLiving}}
             </div>
-
             <div class="ellipses-text">
               <div class="place" title="{{deathPlace}}">
                 {{deathPlace}}

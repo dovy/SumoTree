@@ -1,14 +1,14 @@
 // UPDATE YOUR app_key AND auth_callback to get started
 FamilySearch.init({
-    //app_key: 'WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK', // Sandbox
-    app_key: 'KB2L-BVD1-3Q6S-J7X4-GKFZ-4168-QPZ6-NJRK', // Production
-    //app_key: 'KB2L-BVD1-3Q6S-J7X4-GKFZ-4168-QPZ6-NJRK', // Staging
+    app_key: 'WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK', // Sandbox
+
     //environment: 'sandbox',
     environment: 'production',
     //environment: 'staging',
     auto_expire: true,
     auto_signin: true,
     save_access_token: true,
+    //access_token: 'USYSAB64A532864219B838B24990D3F6EF17_idses-prod02.a.fsglobal.net',
     auth_callback: document.location.protocol + '//' + document.location.hostname + '/',
     http_function: $.ajax,
     deferred_function: $.Deferred
@@ -44,17 +44,19 @@ $(document).ready(function () {
             str += key + "=" + obj[key];
         }
         window.location.hash = str;
+        $( document ).find('.popover').hide();
         loadContent();
         return false;
     });
     // No updating of that hash when it's just for a popover
-    $(document.body).on('click', '.nameWrapper a, .personcard', function (e) {
-            e.preventDefault();
-            return false;
+    $(document.body).on('click', '.nameWrapper a, .personCard, .contributorCard', function (e) {
+        e.preventDefault();
+        return false;
     });
     // Only one popover open at time
     $(':not(#anything)').on('click', function (e) {
-        $('.personcard').each(function () {
+
+        $('.contributorCard').each(function () {
             //the 'is' for buttons that trigger popups
             //the 'has' for icons and other elements within a button that triggers a popup
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
@@ -62,19 +64,22 @@ $(document).ready(function () {
                 return;
             }
         });
-    });    
+        
+    });  
+
+
 
     function loadContent() {
         fsWidgets.getPID();
         fsWidgets.profileHeader( '.profileHeaderContainer', fsWidgets.pID );
-        //fsWidgets.familyMembers( '.familyWidgetContainer', fsWidgets.pID );
+        fsWidgets.familyMembers( '.familyWidgetContainer', fsWidgets.pID );
         if ( fsWidgets.currentUser.id != fsWidgets.pID ) {
-            //fsWidgets.sources( '.sourcesWidgetContainer', fsWidgets.pID );
-            //fsWidgets.changes( '.changesWidgetContainer', fsWidgets.pID );
-            //fsWidgets.discussions( '.discussionsWidgetContainer', fsWidgets.pID );
-            //fsWidgets.notes( '.notesWidgetContainer', fsWidgets.pID );    
+            fsWidgets.sources( '.sourcesWidgetContainer', fsWidgets.pID );
+            fsWidgets.changes( '.changesWidgetContainer', fsWidgets.pID );
+            fsWidgets.discussions( '.discussionsWidgetContainer', fsWidgets.pID );
+            fsWidgets.notes( '.notesWidgetContainer', fsWidgets.pID );    
         }
-        //fsWidgets.pedigree( '.pedigreeWidgetContainer', fsWidgets.pID );
+        fsWidgets.pedigree( '.pedigreeWidgetContainer', fsWidgets.pID );
         // Blank open links
         $('a[rel="external"]').attr('target', '_blank');
     }

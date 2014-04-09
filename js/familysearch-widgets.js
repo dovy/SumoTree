@@ -1,6 +1,8 @@
+
 var fsWidgets = new function() {  
 
     this.people = new Array();
+    this.contributors = new Array();
     this.pID = "";
     this.currentUser = "";
     
@@ -29,6 +31,7 @@ var fsWidgets = new function() {
                     return;
                 }
                 $( container ).html( fsWidgetTemplates['profileHeader.html'].render( person ) ).fadeIn();
+                fsWidgets.doPopovers( container );
             });            
         }
     }
@@ -47,8 +50,6 @@ var fsWidgets = new function() {
         if (fsWidgets.people[data.id]) {
             //return fsWidgets.people[data.id];
         }
-        // Grab the LifeSpan
-        data.lifespan = response.$getLifeSpan();
         data.isLiving = response.living;
         // Cache that person - remove when in SDK
         fsWidgets.people[data.id] = data;
@@ -209,7 +210,7 @@ var fsWidgets = new function() {
                 }
                 var immediate = fsWidgetTemplates['family.html'].render(render, {
                     person: fsWidgetTemplates['person.html'],
-                    popover: fsWidgetTemplates['popover.html'],
+                    popover: fsWidgetTemplates['personCard.html'],
                     event: fsWidgetTemplates['event.html']
                 });
 
@@ -219,18 +220,13 @@ var fsWidgets = new function() {
                 parentFamilies.families = data.parents;
                 var parental = fsWidgetTemplates['family.html'].render(parentFamilies, {
                     person: fsWidgetTemplates['person.html'],
-                    popover: fsWidgetTemplates['popover.html'],
+                    popover: fsWidgetTemplates['personCard.html'],
                     event: fsWidgetTemplates['event.html']
                 });
                 $('.parents-children').html(parental);
                 // Must reload the popover for the new content
-                $('.personcard').popover({
-                    html: true,
-                    content: function () {
-                        return fsWidgetTemplates['popover.html'].render( fsWidgets.people[$(this).data('pid')] );
-                    }
-                });  
                 $( container ).fadeIn();
+                fsWidgets.doPopovers( container );
             });     
         });
     };
@@ -291,6 +287,8 @@ var fsWidgets = new function() {
                 jQuery("abbr.timeago").timeago();
                 $( container ).fadeIn();
 
+                fsWidgets.doPopovers( container );
+
             });
         });
     }
@@ -314,7 +312,7 @@ var fsWidgets = new function() {
 
         function discussionWidgetDetails(discussion) {
 
-            return FamilySearch.getComments( discussion.id ).then(function (response) {
+            return FamilySearch.getDiscussionComments( discussion.id ).then(function (response) {
                 var data = {
                     id: discussion.id,
                     htmlId: discussion.id.replace('ds.disc.', ''),
@@ -369,6 +367,7 @@ var fsWidgets = new function() {
                     jQuery("abbr.timeago").timeago();               
 
                     $( container ).fadeIn();
+                    fsWidgets.doPopovers( container );
 
                 });
             });
@@ -429,6 +428,7 @@ var fsWidgets = new function() {
                 $( '.note-objects' ).html( fsWidgetTemplates['note.html'].render( theData ) );
                 jQuery("abbr.timeago").timeago();
                 $( container ).fadeIn();
+                fsWidgets.doPopovers( container );
 
             });
         });
@@ -444,7 +444,7 @@ var fsWidgets = new function() {
                 ancestors['node'+i] = {};
             };
             for (var i = 0, len = response.length; i < len; i++) {
-                ancestors['node'+response[i].getAscendancyNumber()] = fsWidgets.getPersonDetails( response[i] );
+                ancestors['node'+response[i].$getAscendancyNumber()] = fsWidgets.getPersonDetails( response[i] );
             }
             ancestors['node1'].focus = true;
             
@@ -455,22 +455,94 @@ var fsWidgets = new function() {
 
             $( container ).html( fsWidgetTemplates['pedigreeContainer.html'].render( ancestors, {
                 node: fsWidgetTemplates['pedigreeNode.html'],
-                popover: fsWidgetTemplates['popover.html']
+                popover: fsWidgetTemplates['personCard.html']
             } ) ).fadeIn();
-
-            // Must reload the popover for the new content
-            $('.personcard').popover({
-                html: true,
-                content: function () {
-                    return fsWidgetTemplates['popover.html'].render( fsWidgets.people[$(this).data('pid')] );
-                }
-            });
-
+            fsWidgets.doPopovers( container );
           
         });
 
 
     }
+
+    this.doPopovers = function(container) {
+
+        // Must reload the popover for the new content
+        $( container ).find('.personCard').popover({
+            html: true,
+            container: 'body',
+            content: function () {
+                return fsWidgetTemplates['personCard.html'].render( fsWidgets.people[$(this).data('pid')] );
+            }
+        });
+
+        // Hide all but this
+        $( container ).find('.personCard').click(function(e){
+            e.preventDefault();
+            $( container ).find('.personCard').not(this).popover('hide');
+            return false;
+        });
+
+        // hide all popovers if any non-popover part of the body is clicked
+        $( "body" ).on('click', function (e) {
+            if (!$(e.target).parents('.popover-content').length) {
+                $('.personCard').popover('hide');
+            }
+        });
+
+
+
+        var popover = $( container ).find('.contributorCard').popover({
+            html: true,
+            container: 'body',
+            content: function () {
+                var item = $(this);
+                if ( fsWidgets.contributors[$(this).data('cid')].length !== 0 ) {
+                    return fsWidgetTemplates['contributorCard.html'].render( fsWidgets.contributors[$(this).data('cid')] );
+                } else {
+                    return FamilySearch.getAgent( $(this).data('cid') ).then(function (response) {
+                        var agent = response.getAgent();
+                        var cid = agent.id.split('.');
+                        cid = cid[cid.length-1];
+                        var data = {
+                            cid: cid,
+                            completeId: agent.id,
+                            name: agent.$getName(),
+                            alias: agent.$getAccountName(),
+                            email: agent.$getEmail(),
+                        };
+                        item.data("bs.popover").options.content=fsWidgetTemplates['contributorCard.html'].render( data );
+                        item.popover("show");
+                    });
+                }
+            }
+        }).on('show.bs.modal', function() {
+            FamilySearch.getAgent( $(this).data('cid') ).then(function (response) {
+                var agent = response.getAgent();
+                var cid = agent.id.split('.');
+                cid = cid[cid.length-1];
+                var data = {
+                    cid: cid,
+                    completeId: agent.id,
+                    name: agent.$getName(),
+                    alias: agent.$getAccountName(),
+                    email: agent.$getEmail(),
+                };
+                popover.attr('data-content', fsWidgetTemplates['contributorCard.html'].render( data ) );
+            });
+
+        });
+
+        // Hide all but this
+        $( container ).find('.contributorCard').click(function(){
+            $( container ).find('.contributorCard').not(this).popover('toggle');
+        });
+        /*
+        // Delete the cards if they've been used. They can still be clickable!
+        container.find('.contributorCard').on('hidden.bs.popover', function () {
+            $(this).next().remove();
+        });
+        */
+    };
 
 
     //--> CHANGES WIDGET
@@ -487,6 +559,7 @@ var fsWidgets = new function() {
                 title: change.title,
                 modified: new Date( change.updated ).toISOString(),
                 contributor: change.contributors[0].name,
+                contributorID: change.links.agent.href.replace('?', '.json?')
             }
             
             return data;

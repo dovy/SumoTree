@@ -94,6 +94,7 @@ module.exports = function(grunt) {
     watch: {
       files: [
         '<%= src %>',
+        '!js/familysearch-javascript-sdk.js',
         'js/*.js',
         'less/*.less',
         'templates/**/*.html',

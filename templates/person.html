@@ -1,7 +1,7 @@
 <div class="personWrapper">
   <div class="nameWrapper">
     <i class="fs-icon-{{gender}} icon-rounded">&nbsp;</i>
-    <a href="#" class="{{gender}} personcard name" data-pid="{{id}}">{{name}}</a>
+    <a href="#" class="{{gender}} personCard name" data-pid="{{id}}">{{name}}</a>
   </div>
   <ul class="list-collapsed">
 	{{#lifespan}}<li class="lifeSpan" data-toggle="tooltip" title="{{#birthDate}}{{^deathDate}}b. {{/deathDate}}{{birthDate}}{{/birthDate}}{{#deathDate}}{{#birthDate}} - {{/birthDate}}{{^birthDate}}d. {{/birthDate}}{{deathDate}}{{/deathDate}}" data-placement="bottom">{{lifespan}}</li>{{/lifespan}}
