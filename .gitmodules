@@ -3,7 +3,7 @@
 	url = https://github.com/rootsdev/familysearch-javascript-sdk.git
 [submodule "familysearch-icons"]
 	path = familysearch-icons
-	url = https://github.com/rootsdev/FamilySearch-Icons.git
+	url = https://github.com/rootsdev/familysearch-icons.git
 [submodule "css/vendor/boostrap"]
 	path = css/vendor/boostrap
 	url = https://github.com/twbs/bootstrap.git
