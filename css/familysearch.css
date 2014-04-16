@@ -1,0 +1,35 @@
+.profileHeaderContainer .jumbotron {
+  border-bottom: 1px solid #B7B7B7;
+  background: #cdcdcd no-repeat;
+  position: relative;
+  color: #333331;
+}
+.profileHeaderContainer .jumbotron .personWrapper .nameWrapper h1 {
+  font-size: 28px;
+  line-height: 32px;
+  color: #333331;
+  font-weight: bold;
+}
+.profileHeaderContainer .jumbotron .icon-rounded {
+  box-shadow: 0px 0px 0px 6px #ffffff;
+  width: 100px;
+  height: 100px;
+  font-size: 56px;
+  line-height: 100px;
+  padding-left: 0;
+}
+.profileHeaderContainer .jumbotron .icon-rounded.fs-icon-male {
+  color: #4888f8;
+  background: #F4F4F4;
+}
+.profileHeaderContainer .jumbotron .list-collapsed {
+  line-height: 1em;
+  font-size: 16px;
+  line-height: 20px;
+}
+.profileHeaderContainer .jumbotron .personActions {
+  margin-top: 10px;
+}
+.profileHeaderContainer .jumbotron .personActions a {
+  color: #333331;
+}

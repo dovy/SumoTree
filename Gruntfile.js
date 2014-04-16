@@ -10,7 +10,8 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "css/style.css": "less/style.less"
+          "css/style.css": "less/style.less",
+          "css/familysearch.css": "less/familysearch.less"
         }
       },
       production: {
@@ -18,7 +19,8 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          "css/style.css": "less/style.less"
+          "css/style.css": "less/style.less",
+          "css/familysearch.css": "less/familysearch.less"
         }
       }
     },

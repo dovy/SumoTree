@@ -54,10 +54,12 @@ $(document).ready(function () {
         $(this).closest(".panel-heading").toggleClass('rounded-bottom');
         if ($(this).attr('data-original-title') == "Close") {
             $(this).attr('data-original-title', $(this).attr('data-original-title').replace('Close', 'Open'));
+            $(this).parent().find('.toggleDetails').hide();
         } else {
             if ($(this).attr('data-original-title')) {
                 $(this).attr('data-original-title', $(this).attr('data-original-title').replace('Open', 'Close'));
             }
+            $(this).parent().find('.toggleDetails').show();
         }
         return false;
     });
