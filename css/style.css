@@ -256,6 +256,9 @@ ul.list-collapsed li {
 .family-panel .well:last-child {
   margin-bottom: 0px;
 }
+.detailActions i {
+  margin-right: 5px;
+}
 .clearfix {
   *zoom: 1;
 }

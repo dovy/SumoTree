@@ -137,8 +137,20 @@ label {
 .family-panel .well:last-child {
   margin-bottom: 20px;
 }
+.detailActions.pull-right {
+  float: none !important;
+}
+.detailActions.pull-right i {
+  display: none;
+}
+.detailActions .btn {
+  padding-left: 0;
+  padding-right: 10px;
+  font-size: 14px;
+}
 .family-panel .detailsWell,
 .family-panel .well {
+  margin-top: 0;
   padding: 0;
   border-radius: 4px 4px 4px 4px;
   min-height: 38px;
