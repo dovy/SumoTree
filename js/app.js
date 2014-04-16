@@ -1,7 +1,8 @@
 // UPDATE YOUR app_key AND auth_callback to get started
 FamilySearch.init({
-    app_key: 'WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK', // Sandbox
-
+    //app_key: 'WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK', // Sandbox
+    app_key: 'KB2L-BVD1-3Q6S-J7X4-GKFZ-4168-QPZ6-NJRK', // Production
+    //app_key: 'KB2L-BVD1-3Q6S-J7X4-GKFZ-4168-QPZ6-NJRK', // Staging
     //environment: 'sandbox',
     environment: 'production',
     //environment: 'staging',

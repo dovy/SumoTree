@@ -4,3 +4,6 @@
 [submodule "familysearch-icons"]
 	path = familysearch-icons
 	url = https://github.com/rootsdev/FamilySearch-Icons.git
+[submodule "css/vendor/boostrap"]
+	path = css/vendor/boostrap
+	url = https://github.com/twbs/bootstrap.git

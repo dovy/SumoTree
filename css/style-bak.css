@@ -158,104 +158,6 @@ ul.list-collapsed li {
 .change-objects h6:last-child {
   margin-bottom: 0px;
 }
-.family-panel .detailsWell,
-.family-panel .well {
-  padding: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.family-panel .detailsWell .itemBody p:last-child,
-.family-panel .well .itemBody p:last-child {
-  margin: 0;
-}
-.family-panel .detailsWell h3,
-.family-panel .well h3 {
-  margin-top: 0;
-}
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
-  margin-bottom: 0px;
-}
-.family-panel .detailsWell .form-group,
-.family-panel .well .form-group,
-.family-panel .detailsWell .actionRow,
-.family-panel .well .actionRow,
-.family-panel .detailsWell .editingItem,
-.family-panel .well .editingItem,
-.family-panel .detailsWell .detailsItem,
-.family-panel .well .detailsItem {
-  display: none;
-}
-.family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails {
-  background: #eee;
-  color: #555;
-  border-color: #ddd;
-}
-.family-panel .detailsWell.openDetails .itemBody p:last-child,
-.family-panel .well.openDetails .itemBody p:last-child {
-  margin: 0 0 10px;
-}
-.family-panel .detailsWell.openDetails .detailsItem,
-.family-panel .well.openDetails .detailsItem {
-  display: inline-block;
-}
-.family-panel .detailsWell.openDetails .non-form,
-.family-panel .well.openDetails .non-form {
-  display: inline-block;
-}
-.family-panel .detailsWell.editing .itemBody p:last-child,
-.family-panel .well.editing .itemBody p:last-child {
-  margin: 0 0 10px;
-}
-.family-panel .detailsWell.editing a,
-.family-panel .well.editing a,
-.family-panel .detailsWell.editing .btn-link,
-.family-panel .well.editing .btn-link {
-  color: #fff;
-  opacity: .6;
-}
-.family-panel .detailsWell.editing a:hover,
-.family-panel .well.editing a:hover,
-.family-panel .detailsWell.editing .btn-link:hover,
-.family-panel .well.editing .btn-link:hover {
-  opacity: 1;
-}
-.family-panel .detailsWell.editing .form-group,
-.family-panel .well.editing .form-group,
-.family-panel .detailsWell.editing .actionRow,
-.family-panel .well.editing .actionRow,
-.family-panel .detailsWell.editing .editingItem,
-.family-panel .well.editing .editingItem {
-  display: block;
-}
-.family-panel .detailsWell.editing .non-form,
-.family-panel .well.editing .non-form,
-.family-panel .detailsWell.editing .detailActions,
-.family-panel .well.editing .detailActions {
-  display: none;
-}
-.family-panel .detailsWell.editing,
-.family-panel .well.editing,
-.family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails {
-  border-top: 0;
-  padding: 19px 18px 18px 18px;
-}
-.family-panel .detailsWell.editing .itemBody p:last-child,
-.family-panel .well.editing .itemBody p:last-child,
-.family-panel .detailsWell.openDetails .itemBody p:last-child,
-.family-panel .well.openDetails .itemBody p:last-child {
-  margin: 0 0 10px;
-}
-.family-panel .detailsWell h3,
-.family-panel .well h3 {
-  margin-top: 0;
-}
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
-  margin-bottom: 0px;
-}
 .clearfix {
   *zoom: 1;
 }
@@ -974,10 +876,10 @@ a.node--focus:active .node__name {
   -moz-transition: none;
   -o-transition: none;
   transition: none;
-  -webkit-transition: all 83.33333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -moz-transition: all 83.33333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 83.33333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 83.33333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 83.33333333333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 83.33333333333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 83.33333333333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 83.33333333333333ms cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 1;
   margin-top: 6.5px;
   padding: 5px 0 0;
@@ -1389,9 +1291,6 @@ a.node--focus:active .node__name {
 .watchGadget {
   display: none;
 }
-.actionRow {
-  margin-top: 15px;
-}
 .tree-family .primaryEvents .event {
   margin-left: 0;
 }
@@ -1415,9 +1314,6 @@ a.node--focus:active .node__name {
 }
 .tree-family.jumbotron {
   padding: 30px;
-}
-.jumbotron .icon-rounded:before {
-  margin-left: 23px;
 }
 .jumbotron .personWrapper .nameWrapper .lifeSpan,
 .jumbotron .personWrapper .nameWrapper a,

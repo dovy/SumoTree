@@ -485,7 +485,7 @@ var fsWidgets = new function() {
         // hide all popovers if any non-popover part of the body is clicked
         $( "body" ).on('click', function (e) {
             if (!$(e.target).parents('.popover-content').length) {
-                $('.personCard').popover('hide');
+                $('.personCard').popover('hide  ');
             }
         });
 

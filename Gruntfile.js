@@ -7,41 +7,6 @@ module.exports = function(grunt) {
     clean: {
       dist: ['dist']
     },
-
-    jshint: {
-      src: {
-        options: {
-          jshintrc: '.jshintrc'
-        },
-        src: ['<%= src %>']
-      },
-      test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
-        src: ['test/unit/*.js']
-      }
-    },
-
-    karma: {
-      options: {
-        configFile: 'karma.conf.js'
-      },
-      dev: {
-        background: true,
-        browsers: ['PhantomJS']
-      },
-      travis: {
-        singleRun: true,
-        browsers: ['PhantomJS']
-      }
-    },
-    less: {
-      files: {
-        "css/style.css": "less/style.less"
-      }
-    }, 
-
     less: {
       development: {
         files: {
@@ -133,37 +98,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks('grunt-contrib-hogan');
   grunt.loadNpmTasks('grunt-contrib-less');
-
-  grunt.registerTask('server', [
-    'connect',
-    'karma:dev:start',
-    'watch'
-  ]);
-
-  grunt.registerTask('test', [
-    'karma:travis'
-  ]);
-
-  grunt.registerTask('build', [
-    'clean:dist',
-    'jshint',
-    'test',
-    'ngdocs',
-    'requirejs'
-  ]);
-
-  grunt.registerTask('publish', [
-    'build',
-    'gh-pages:dev'
-  ]);
-
-  grunt.registerTask('travis', [
-    'jshint',
-    'karma:travis',
-    'ngdocs',
-    'requirejs',
-    'gh-pages:travis'
-  ]);
 
   // Default task(s)
   grunt.registerTask('default', ['build']);

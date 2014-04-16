@@ -185,3 +185,86 @@ ul.list-collapsed {
 		margin-bottom: 0px;
 	}
 }
+
+
+.family-panel {
+  .detailsWell, .well {
+    .itemBody p:last-child {
+      margin: 0;
+    }
+    //margin: 10px;
+    padding: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    h3 {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .form-group, .actionRow, .editingItem, .detailsItem {
+      display: none;
+    }
+    &.openDetails {
+      background: #eee;
+      color: #555;
+      border-color: #ddd;
+      .itemBody p:last-child {
+        margin: 0 0 10px;
+      }
+
+      .detailsItem {
+        display: inline-block;
+      }
+      .non-form {
+        display: inline-block;
+      }
+    }
+    &.editing {
+      .itemBody p:last-child {
+        margin: 0 0 10px;
+      }
+      a, .btn-link {
+        color: #fff;
+        opacity: .6;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .form-group, .actionRow, .editingItem {
+        display: block;
+      }
+      .non-form, .detailActions {
+        display: none;
+      }
+    }
+    &.editing, &.openDetails {
+      .itemBody p:last-child {
+        margin: 0 0 10px;
+      }
+      border-top: 0;
+      padding: 19px 18px 18px 18px;
+    }
+
+    h3 {
+      margin-top: 0;
+
+    }
+    .openDetails {
+
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+
+
+.family-panel {
+  .well.editing {
+    //margin: 15px;
+
+
+  }
+}
