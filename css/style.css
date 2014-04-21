@@ -272,6 +272,10 @@ ul.list-collapsed li {
   background-color: #f8f8f8;
   box-shadow: 0px 1px 0px #cccccc, 0px -1px 0px #cccccc;
 }
+.detailsWell:hover.editing,
+.detailsWell:hover.openDetails {
+  box-shadow: none;
+}
 .detailsWell:hover.editing {
   background-color: #3071a9;
 }
@@ -337,6 +341,9 @@ ul.list-collapsed li {
 }
 .tree-family .panel-heading {
   padding-bottom: 0;
+}
+.panel-heading .options {
+  margin-top: -3px;
 }
 .clearfix {
   *zoom: 1;
@@ -1215,6 +1222,9 @@ a.node--focus:active .node__name {
 .tree-family .panel-body .cardFrame table td {
   padding-top: 0;
 }
+.popover {
+  max-width: 100% !important;
+}
 .personWrapper .popover {
   max-width: 100%;
   padding: 0;
@@ -1222,9 +1232,9 @@ a.node--focus:active .node__name {
 .popover,
 .popover .content,
 .cardFrame {
-  border-radius: 9px 9px 9px 9px;
-  -moz-border-radius: 9px 9px 9px 9px;
-  -webkit-border-radius: 9px 9px 9px 9px;
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
 }
 .popover-content {
   padding: 0;
@@ -1262,7 +1272,7 @@ a.node--focus:active .node__name {
   text-align: right;
   color: #666662;
   padding-bottom: 10px;
-  width: 70px;
+  width: 55px;
   font-weight: normal;
 }
 .cardFrame td {
@@ -1282,7 +1292,9 @@ a.node--focus:active .node__name {
   padding: 5px 0 8px 14px;
 }
 .cardFrame .engageStatus ul {
+  max-width: 350px;
   margin: 0;
+  padding: 0;
   min-height: 60px;
 }
 .cardFrame .engageStatus li {
@@ -1299,14 +1311,7 @@ a.node--focus:active .node__name {
   vertical-align: bottom;
 }
 .cardFrame .engageStatus li span {
-  display: inline-block;
-  background: #666662;
-  min-width: 28px;
-  height: 18px;
-  margin-right: 5px;
-  color: #fff;
-  text-align: center;
-  line-height: 19px;
+  margin-right: 10px;
 }
 .cardFrame .engageStatus td {
   padding: 0 0 0 14px;
@@ -1334,14 +1339,11 @@ a.node--focus:active .node__name {
   height: 40px;
   border-top: 1px solid #333331;
 }
-.cardFrame .actionBar {
-  padding-left: 61px;
-}
 .cardFrame .actionBar a {
   color: #fff;
   line-height: 35px;
   font-weight: bold;
-  margin-right: 30px;
+  margin: 0 20px;
   text-transform: uppercase;
   text-shadow: 0px 1px 1px #000;
 }
@@ -1400,11 +1402,6 @@ a.node--focus:active .node__name {
   padding: 0;
   margin: 0;
 }
-.cardFrame .photos-label,
-.cardFrame .stories-label,
-.cardFrame .memories-label {
-  display: none;
-}
 .photos-enabled .cardFrame .photos-label,
 .photos-enabled .cardFrame .stories-label {
   display: block;
@@ -1445,6 +1442,7 @@ a.node--focus:active .node__name {
 .popover {
   max-width: auto;
   min-width: 400px;
+  padding: 0;
 }
 .cardFrame .name {
   color: #0051C4;
@@ -1456,7 +1454,7 @@ a.node--focus:active .node__name {
 }
 .cardFrame .nameWrapper a,
 .cardFrame .nameWrapper span {
-  padding-left: 54px !important;
+  padding-left: 65px !important;
 }
 .cardFrame .nameWrapper i {
   width: 44px;
@@ -1470,6 +1468,230 @@ a.node--focus:active .node__name {
 }
 .watchGadget {
   display: none;
+}
+/**
+ * Styling of background colors and gradients for temple ordinance icons
+ * Dimensions:
+ * Large rectangle is 24x18 px;
+ * Small is 18x14 px.
+ * Type: Large is <Body> modified to Bold;
+ * Small is <Body> modified to Bold 11 px;
+ * centered right to left, top to bottom.
+ * Margin or Padding to left of each rectangle: 1 px (so that the rectangles don't touch).
+ * Corner Radius: 1 px
+ * Border: 1 px
+ *
+ * Ready: Gradient: Vertical, top=#DCE8F5, bottom=#97B7D8, border=#97B7DB, letters=#4B76B0
+ * On Hold: Gradient: Vertical, top=#739AC7, bottom=#314E73, border=#42699C, letters=#FFFFFF
+ * Printed: Gradient: Vertical, top=#B8CCAD, bottom=#6C8963, border=#7E9C73, letters=#FFFFFF
+ * Not Printed: Gradient: Vertical, top=#F2E3C2, bottom=#CA945D, border=#DBAC74, letters=#FFFFFF
+ * Completed: Gradient: Vertical, top=#EDECE8, bottom=#DEDBD7, border=#CCC8C4, letters=#3C3B36
+ * Not Available: fill=#FFFFFF, border=#99938D, dashed; letter=#B0ABA5
+ * Not Needed:  fill=#FFFFFF, border=transparent; letter=#B0ABA5
+ */
+.ordIcon {
+  height: auto !important;
+}
+.Ready .ordIcon,
+.Ready.ordIcon,
+.NeedsPermission .ordIcon,
+.NeedsPermission.ordIcon {
+  color: #4B76B0;
+  border-color: #97B7DB;
+  background-color: #DCE8F5;
+  background-image: -moz-linear-gradient(top, #dce8f5, #97b7d8);
+  background-image: -o-linear-gradient(top, #dce8f5, #97b7d8);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #dce8f5), color-stop(1, #97b7d8));
+  background-image: -webkit-linear-gradient(#dce8f5, #97b7d8);
+  background-image: linear-gradient(top, #dce8f5, #97b7d8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#DCE8F5', EndColorStr='#97B7D8');
+}
+/* TODO: shouldn't have a camel cased and lower case ready
+ We might not be even using this because the settings are different */
+.ordIcon.ready {
+  background-color: #CA945D;
+  color: #fff;
+  border-color: transparent;
+}
+.InProgressPrinted .ordIcon,
+.InProgressPrinted.ordIcon {
+  color: #FFFFFF;
+  border-color: #7E9C73;
+  background-color: #88CCAD;
+  background-image: -moz-linear-gradient(top, #b8ccad, #6c8963);
+  background-image: -o-linear-gradient(top, #b8ccad, #6c8963);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b8ccad), color-stop(1, #6c8963));
+  background-image: -webkit-linear-gradient(#b8ccad, #6c8963);
+  background-image: linear-gradient(top, #b8ccad, #6c8963);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#B8CCAD', EndColorStr='#6C8963');
+}
+/* TODO remove after build with Shared and SharedPrinted states makes it to production */
+.assignedToTemple .ordIcon,
+.assignedToTemple.ordIcon {
+  color: #FFFFFF;
+  border-color: #FD6255;
+  background-color: #FD6255;
+}
+.InProgressWaiting .ordIcon,
+.InProgressWaiting.ordIcon {
+  color: #FFFFFF;
+  border-color: #42699C;
+  background-color: #739AC7;
+  background-image: -moz-linear-gradient(top, #739ac7, #314e73);
+  background-image: -o-linear-gradient(top, #739ac7, #314e73);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #739ac7), color-stop(1, #314e73));
+  background-image: -webkit-linear-gradient(#739ac7, #314e73);
+  background-image: linear-gradient(top, #739ac7, #314e73);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#739AC7', EndColorStr='#314E73');
+}
+.InProgressNotPrinted .ordIcon,
+.InProgressNotPrinted.ordIcon {
+  border-color: #DBAC74;
+  background-color: #F2E3C2;
+  color: #FFFFFF;
+  background-image: -moz-linear-gradient(top, #f2e3c2, #ca945d);
+  background-image: -o-linear-gradient(top, #f2e3c2, #ca945d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2e3c2), color-stop(1, #ca945d));
+  background-image: -webkit-linear-gradient(#f2e3c2, #ca945d);
+  background-image: linear-gradient(top, #f2e3c2, #ca945d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F2E3C2', EndColorStr='#CA945D');
+}
+.Completed .ordIcon,
+.Completed.ordIcon {
+  color: #3C3B36;
+  border-color: #CCC8C4;
+  background-color: #EDECE8;
+  background-image: -moz-linear-gradient(top, #edece8, #dedbd7);
+  background-image: -o-linear-gradient(top, #edece8, #dedbd7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #edece8), color-stop(1, #dedbd7));
+  background-image: -webkit-linear-gradient(#edece8, #dedbd7);
+  background-image: linear-gradient(top, #edece8, #dedbd7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#EDECE8', EndColorStr='#DEDBD7');
+}
+.NotNeeded .ordIcon,
+.NotNeeded.ordIcon,
+.NotReady .ordIcon,
+.NotReady.ordIcon,
+.NeedsMoreInformation .ordIcon,
+.NeedsMoreInformation.ordIcon,
+.Unavailable .ordIcon,
+.Unavailable.ordIcon,
+.NotAvailable .ordIcon,
+.NotAvailable.ordIcon,
+.Invalid .ordIcon,
+.Invalid.ordIcon {
+  background-color: #ffffff;
+  border-color: #99938D;
+  border-style: dashed;
+  color: #B0ABA5;
+}
+.NotNeeded .ordIcon,
+.NotNeeded.ordIcon,
+.NotApplicable.ordIcon {
+  border-color: transparent;
+}
+.NotApplicable.ordIcon {
+  visibility: hidden;
+}
+.ordIcon {
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 18px;
+  height: 14px;
+  font-size: 11px;
+  margin-left: 1px;
+}
+.largeOrdIcon {
+  /*TODO these are the new values*/
+  /*height:18px;*/
+  /*width:24px;*/
+  height: 13px;
+  width: 24px;
+  font-size: 13.26px;
+  margin-left: 0px;
+  padding: 3px 0 3px 0;
+  /* ie7 only */
+}
+.ordIcon {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  width: 24px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 1px;
+  padding: 3px 0 3px 0;
+  color: #333331;
+  filter: none;
+}
+.NeedsPermission .ordIcon,
+.NeedsPermission.ordIcon,
+.Ready .ordIcon,
+.Ready.ordIcon {
+  background: #8CBAFC;
+  border: 1px solid #8CBAFC;
+}
+.InProgressNotPrinted .ordIcon,
+.InProgressNotPrinted.ordIcon {
+  background: #FFE18B;
+  border: 1px solid #FFE18B;
+  color: #333331;
+}
+.InProgressWaiting .ordIcon,
+.InProgressWaiting.ordIcon {
+  background: #006B82;
+  border: 1px solid #006B82;
+  color: #fff;
+}
+.SharedInProgressNotPrinted .ordIcon,
+.SharedInProgressNotPrinted.ordIcon {
+  background: #FD6255;
+  border: 1px solid #FD6255;
+  color: #fff;
+}
+.InProgressPrinted .ordIcon,
+.InProgressPrinted.ordIcon {
+  background: #5B8100;
+  border: 1px solid #5B8100;
+  color: #fff;
+}
+.SharedInProgressPrinted .ordIcon,
+.SharedInProgressPrinted.ordIcon {
+  background: #9A690C;
+  border: 1px solid #9A690C;
+  color: #fff;
+}
+.Completed .ordIcon,
+.Completed.ordIcon {
+  background: #CDCDCD;
+  border: 1px solid #CDCDCD;
+}
+.NotNeeded .ordIcon,
+.NotNeeded.ordIcon {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #999992;
+}
+.disabled .ordIcon,
+.NotReady .ordIcon,
+.NotReady.ordIcon,
+.NeedsMoreInformation .ordIcon,
+.NeedsMoreInformation.ordIcon,
+.Unavailable .ordIcon,
+.Unavailable.ordIcon,
+.NotAvailable .ordIcon,
+.NotAvailable.ordIcon,
+.Invalid .ordIcon,
+.Invalid.ordIcon {
+  background: #fff;
+  border: 1px dashed #666662;
+  color: #666662;
+}
+.popover {
+  background: transparent;
 }
 .actionRow {
   margin-top: 15px;

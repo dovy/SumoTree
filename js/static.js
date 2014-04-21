@@ -6,6 +6,32 @@ $(document).ready(function () {
         selector: "[data-toggle=tooltip]",
         container: "body"
     });
+    // No updating of that hash when it's just for a popover
+    $(document.body).on('click', '.nameWrapper a, .personCard, .contributorCard', function (e) {
+        e.preventDefault();
+        return false;
+    });
+    $('.personCard').popover({
+        html: true,
+        container: 'body',
+        content: function () {
+            return $('#personCardTemplate').html();
+        }
+    });
+
+    // Hide all but this
+    $('.personCard').click(function(e){
+        e.preventDefault();
+        $('.personCard').not(this).popover('hide');
+        return false;
+    });
+
+    // hide all popovers if any non-popover part of the body is clicked
+    $( "body" ).on('click', function (e) {
+        if (!$(e.target).parents('.popover-content').length) {
+            $('.personCard').popover('hide');
+        }
+    });
 
     $('.toggleDetails').click(function(e) {
         e.preventDefault();
