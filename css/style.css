@@ -296,12 +296,6 @@ ul.list-collapsed li {
   text-align: center;
   font-weight: bold;
 }
-.panel-primary > .panel-heading {
-  padding-bottom: 0 !important;
-}
-.familyWidgetContainer .family-panel .panel {
-  margin-top: 10px;
-}
 .addDetail {
   line-height: 18px;
 }
