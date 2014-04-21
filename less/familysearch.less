@@ -97,18 +97,20 @@ a:active {
 
 }
 
+
+
 .panel {
   border: 1px solid #CACACA;
   border-bottom: 0;
   background: #fff;
   border: 1px solid #CACACA;
-  border-radius: 12px;
   font-size: 14px;
-
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
   box-shadow: 0;
-
   .panel-title {
     font-size: 20px;
   }
@@ -116,6 +118,33 @@ a:active {
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
+  }
+}
+
+.source-objects, .discussion-objects, .note-objects {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  .panel-heading {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+.family-panel h5 {
+  text-align: left;
+  margin-left: 18px;
+  margin-bottom: 0;
+}
+
+
+.familyWidgetContainer {
+  .row {
+    margin-bottom: 19px;
+    .tree-family .panel-body table tr:hover {
+      background-color: #F7F6F3;
+    }
   }
 }
 
@@ -160,11 +189,20 @@ label {
 
 
 .detailActions.pull-right {
+  a {
+    color: #333331;
+  }
   float:none !important;
+  margin-bottom: 3px;
+  font-size: 12px;
+  line-height: 12px;
   i {
     display: none;
   }
+}
 
+.closeDetail i {
+  display: inline-block !important;
 }
 .detailActions .btn {
   padding-left: 0;
@@ -174,15 +212,21 @@ label {
 
 .family-panel {
   .detailsWell, .well {
+
     margin-top: 0;
     padding: 0;
+    padding: 11px 19px 0;
+    background-color: inherit;
+    .detailActions {
+      display: none;
+    }
     .itemBody p:last-child {
       margin: 0;
     }
     border-radius: 4px 4px 4px 4px;
 
-    min-height: 38px;
-    margin: 15px 20px;
+
+    margin: 5px 20px 0 20px;
     font-size: 14px;
     h3 {
 
@@ -197,9 +241,10 @@ label {
     .form-group, .actionRow, .editingItem, .detailsItem {
       display: none;
     }
-    &.openDetails {
+    &.openDetails, &.openDetails:hover {
 
       background: #fff;
+      //
 
       .itemBody p:last-child {
         //margin: 0 0 10px;
@@ -213,10 +258,13 @@ label {
       }
     }
     &.editing {
+      .detailModifiedSources, .detailsModifiedHistory, hr {
+        display: none;
+      }
       background-color: #f3f3f1;
       color: #333331;
       .itemBody p:last-child {
-        margin: 0 0 10px;
+        //margin: 0 0 10px;
       }
       a, .btn-link {
         color: #0051c4;
@@ -233,7 +281,19 @@ label {
       }
     }
     &.editing, &.openDetails {
-      padding: 20px;
+      hr {
+        margin: 10px 0;
+      }
+      //padding-top: 10px;
+      padding-top: 11px;
+      .detailActions {
+        display: block;
+      }
+      .detailActions.pull-right {
+        float: right !important;
+      }
+
+
       border: 1px solid #dedbd7;
       border-radius: 3px;
       -ms-border-radius: 3px;
@@ -251,7 +311,7 @@ label {
         margin: 0 0 10px;
       }
 
-      padding: 19px 18px 18px 18px;
+      padding: 10px 18px 10px 18px;
     }
 
     h3 {
@@ -316,6 +376,51 @@ label {
       line-height: 20px;
       font-weight: normal;
       text-transform: uppercase;
+    }
+  }
+}
+
+
+.family-panel .tree-family .panel-heading {
+  background-color: #F3F3F1;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  width: auto;
+  padding: 0 10px;
+  height: auto;
+  border-radius: 2px;
+  border-color: #B1B1B1;
+}
+.family-panel .panel {
+  border: 0;
+  border-radius: 0;
+  margin: 20px;
+}
+
+.detailsWell h5 {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #4d4d4a;
+}
+
+.detailsWell.editing h5 {
+  display: none;
+}
+.detailModified {
+  clear: both;
+  margin-top:10px;
+  font-size: .95em;
+  line-height: 1.3em;
+}
+.lifeSketchWidgetContainer {
+  .family-panel .well .detailsWell, .family-panel .detailsWell {
+    .detailActions {
+      display: inline-block;
+    }
+    &.editing {
+      .detailActions {
+        display: none;
+      }
     }
   }
 }

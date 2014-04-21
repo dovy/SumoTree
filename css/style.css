@@ -31,7 +31,7 @@
   color: #fff;
 }
 ul.list-collapsed {
-  padding-left: 30px;
+  padding-left: 5px;
 }
 ul.list-collapsed li {
   list-style: none;
@@ -89,6 +89,9 @@ ul.list-collapsed li {
   padding-bottom: 8px;
   padding-top: 10px;
   width: 95%;
+}
+.tree-family .panel-heading .coupleWrapper .icon-rounded.fs-icon-female {
+  margin-top: 2px;
 }
 .panel .panel:last-child {
   margin-bottom: 0;
@@ -258,6 +261,40 @@ ul.list-collapsed li {
 }
 .detailActions i {
   margin-right: 5px;
+}
+.family-panel .panel-heading .options i {
+  margin-right: 5px;
+}
+.family-panel .panel-heading .options a {
+  margin-right: 10px;
+}
+.detailsWell:hover {
+  background-color: #f8f8f8;
+}
+.detailsWell:hover.editing {
+  background-color: #3071a9;
+}
+.tree-family ul.list-collapsed li {
+  padding-left: 10px;
+}
+.jumbotron.tree-family ul.list-collapsed li {
+  padding-left: 0;
+}
+.popupSources {
+  margin-top: 4px;
+}
+.popupSources a {
+  margin-bottom: 4px;
+}
+.detailModified {
+  width: 100%;
+}
+.family-panel .tree-family {
+  border-top: 0;
+}
+.family-panel h5 {
+  text-align: center;
+  font-weight: bold;
 }
 .clearfix {
   *zoom: 1;
@@ -1428,11 +1465,26 @@ a.node--focus:active .node__name {
   padding-left: 0;
 }
 .personWrapper span.pid {
-  float: right;
+  float: left;
   line-height: 1.428571429;
 }
-.jumbotron .personWrapper span.pid {
+.jumbotron {
+  line-height: 1em;
+}
+.jumbotron .personWrapper .lifeSpan {
+  padding-right: 20px;
+}
+.jumbotron .personWrapper .pid {
   opacity: .8;
+  float: none;
+  white-space: nowrap;
+}
+.jumbotron .personWrapper .pid li {
+  list-style: disc;
+  padding-left: 10px;
+}
+.jumbotron ul.list-collapsed {
+  padding-left: 0;
 }
 .nameWrapper i.hasImage {
   overflow: hidden;

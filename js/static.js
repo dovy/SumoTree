@@ -7,41 +7,40 @@ $(document).ready(function () {
         container: "body"
     });
 
-    $('.toggleMinimize').click(function(e) {
-        e.preventDefault();
-        var parent = $(this).parents('.family-panel:first');
-        if ($(this).text() == "Close") {
-            parent.find('.wellContent').slideUp();
-            $(this).text($(this).text().replace('Close', 'Open'));
-        } else {
-            parent.find('.wellContent').slideDown();
-            $(this).text($(this).text().replace('Open', 'Close'));
-        }
-        return false;
-    });
-
-
-
     $('.toggleDetails').click(function(e) {
         e.preventDefault();
         var parent = $(this).parents('.family-panel:first');
 
         if ($(this).text() == "Show Details") {
-            $(this).text($(this).text().replace('Show', 'Hide'));
+            $(this).html($(this).html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
+
             $.each(parent.find('.detailsWell'), function( ) {
                 if (!$(this).hasClass('editing')) {
-                    $(this).find('.hiddenDetails').show();
+                    $(this).find('.hiddenDetails').fadeIn();
                     $(this).addClass('well openDetails');
                 }
             });
         } else {
-            $(this).text($(this).text().replace('Hide', 'Show'));
+            $(this).html($(this).html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
             $.each(parent.find('.detailsWell'), function( ) {
                 if (!$(this).hasClass('editing')) {
-                    $(this).find('.hiddenDetails').hide();
+                    $(this).find('.hiddenDetails').fadeOut();
                     $(this).removeClass('well openDetails');
                 }
             });
+        }
+
+        return false;
+    });
+
+    $('.openEventDetails').click(function(e) {
+        e.preventDefault();
+
+        var parent = $(this).parents('.detailsWell:first');
+        if (parent.hasClass('openDetails')) {
+            parent.removeClass('well openDetails');
+        } else {
+            parent.addClass('well openDetails');
         }
 
         return false;
@@ -52,14 +51,12 @@ $(document).ready(function () {
         $(this).children().toggleClass("fa-chevron-down fa-chevron-up");
         $(this).closest(".panel-heading").next().slideToggle({duration: 200});
         $(this).closest(".panel-heading").toggleClass('rounded-bottom');
-        if ($(this).attr('data-original-title') == "Close") {
-            $(this).attr('data-original-title', $(this).attr('data-original-title').replace('Close', 'Open'));
-            $(this).parent().find('.toggleDetails').hide();
+        if ($(this).text() == "Close") {
+            $(this).html($(this).html().replace('Close', 'Open'));
+            $(this).parent().find('.toggleDetails').fadeOut();
         } else {
-            if ($(this).attr('data-original-title')) {
-                $(this).attr('data-original-title', $(this).attr('data-original-title').replace('Open', 'Close'));
-            }
-            $(this).parent().find('.toggleDetails').show();
+            $(this).html($(this).html().replace('Open', 'Close'));
+            $(this).parent().find('.toggleDetails').fadeIn();
         }
         return false;
     });
@@ -70,9 +67,10 @@ $(document).ready(function () {
         parent.removeClass('well').removeClass('openDetails');
         var toggle = $(this).parents('.family-panel:first').find('.toggleDetails');
         if ( parent.parents('.family-panel:first').find('.openDetails').length != 0 ) {
-            toggle.text(toggle.text().replace('Show', 'Hide'));
+            toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
+
         } else {
-            toggle.text(toggle.text().replace('Hide', 'Show'));
+            toggle.html(toggle.html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
         }
         return false;
     });
@@ -90,11 +88,12 @@ $(document).ready(function () {
         var toggle = $(this).parents('.family-panel:first').find('.toggleDetails');
 
         if ($(this).parents('.family-panel:first').find('.detailsWell').length > 1) {
-            toggle.text(toggle.text().replace('Show', 'Hide'));
+            toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
+
             parent.removeClass('editing').addClass('openDetails');
         } else {
             parent.removeClass('editing well');
-            toggle.text(toggle.text().replace('Hide', 'Show'));
+            toggle.html(toggle.html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
         }
         return false;
     });

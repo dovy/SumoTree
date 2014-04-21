@@ -90,8 +90,10 @@ a:active {
   border-bottom: 0;
   background: #fff;
   border: 1px solid #CACACA;
-  border-radius: 12px;
   font-size: 14px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
   box-shadow: 0;
@@ -103,6 +105,31 @@ a:active {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
+}
+.source-objects,
+.discussion-objects,
+.note-objects {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.source-objects .panel-heading,
+.discussion-objects .panel-heading,
+.note-objects .panel-heading {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.family-panel h5 {
+  text-align: left;
+  margin-left: 18px;
+  margin-bottom: 0;
+}
+.familyWidgetContainer .row {
+  margin-bottom: 19px;
+}
+.familyWidgetContainer .row .tree-family .panel-body table tr:hover {
+  background-color: #F7F6F3;
 }
 [class*=panel-].panel-primary .options a {
   color: #333331;
@@ -139,9 +166,18 @@ label {
 }
 .detailActions.pull-right {
   float: none !important;
+  margin-bottom: 3px;
+  font-size: 12px;
+  line-height: 12px;
+}
+.detailActions.pull-right a {
+  color: #333331;
 }
 .detailActions.pull-right i {
   display: none;
+}
+.closeDetail i {
+  display: inline-block !important;
 }
 .detailActions .btn {
   padding-left: 0;
@@ -152,10 +188,15 @@ label {
 .family-panel .well {
   margin-top: 0;
   padding: 0;
+  padding: 11px 19px 0;
+  background-color: inherit;
   border-radius: 4px 4px 4px 4px;
-  min-height: 38px;
-  margin: 15px 20px;
+  margin: 5px 20px 0 20px;
   font-size: 14px;
+}
+.family-panel .detailsWell .detailActions,
+.family-panel .well .detailActions {
+  display: none;
 }
 .family-panel .detailsWell .itemBody p:last-child,
 .family-panel .well .itemBody p:last-child {
@@ -183,15 +224,21 @@ label {
   display: none;
 }
 .family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails {
+.family-panel .well.openDetails,
+.family-panel .detailsWell.openDetails:hover,
+.family-panel .well.openDetails:hover {
   background: #fff;
 }
 .family-panel .detailsWell.openDetails .detailsItem,
-.family-panel .well.openDetails .detailsItem {
+.family-panel .well.openDetails .detailsItem,
+.family-panel .detailsWell.openDetails:hover .detailsItem,
+.family-panel .well.openDetails:hover .detailsItem {
   display: inline-block;
 }
 .family-panel .detailsWell.openDetails .non-form,
-.family-panel .well.openDetails .non-form {
+.family-panel .well.openDetails .non-form,
+.family-panel .detailsWell.openDetails:hover .non-form,
+.family-panel .well.openDetails:hover .non-form {
   display: inline-block;
 }
 .family-panel .detailsWell.editing,
@@ -199,9 +246,13 @@ label {
   background-color: #f3f3f1;
   color: #333331;
 }
-.family-panel .detailsWell.editing .itemBody p:last-child,
-.family-panel .well.editing .itemBody p:last-child {
-  margin: 0 0 10px;
+.family-panel .detailsWell.editing .detailModifiedSources,
+.family-panel .well.editing .detailModifiedSources,
+.family-panel .detailsWell.editing .detailsModifiedHistory,
+.family-panel .well.editing .detailsModifiedHistory,
+.family-panel .detailsWell.editing hr,
+.family-panel .well.editing hr {
+  display: none;
 }
 .family-panel .detailsWell.editing a,
 .family-panel .well.editing a,
@@ -234,7 +285,7 @@ label {
 .family-panel .well.editing,
 .family-panel .detailsWell.openDetails,
 .family-panel .well.openDetails {
-  padding: 20px;
+  padding-top: 11px;
   border: 1px solid #dedbd7;
   border-radius: 3px;
   -ms-border-radius: 3px;
@@ -248,7 +299,25 @@ label {
   -webkit-box-shadow: 0 0 10px #dedbd7;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  padding: 19px 18px 18px 18px;
+  padding: 10px 18px 10px 18px;
+}
+.family-panel .detailsWell.editing hr,
+.family-panel .well.editing hr,
+.family-panel .detailsWell.openDetails hr,
+.family-panel .well.openDetails hr {
+  margin: 10px 0;
+}
+.family-panel .detailsWell.editing .detailActions,
+.family-panel .well.editing .detailActions,
+.family-panel .detailsWell.openDetails .detailActions,
+.family-panel .well.openDetails .detailActions {
+  display: block;
+}
+.family-panel .detailsWell.editing .detailActions.pull-right,
+.family-panel .well.editing .detailActions.pull-right,
+.family-panel .detailsWell.openDetails .detailActions.pull-right,
+.family-panel .well.openDetails .detailActions.pull-right {
+  float: right !important;
 }
 .family-panel .detailsWell.editing .itemBody p:last-child,
 .family-panel .well.editing .itemBody p:last-child,
@@ -310,4 +379,41 @@ label {
   line-height: 20px;
   font-weight: normal;
   text-transform: uppercase;
+}
+.family-panel .tree-family .panel-heading {
+  background-color: #F3F3F1;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  width: auto;
+  padding: 0 10px;
+  height: auto;
+  border-radius: 2px;
+  border-color: #B1B1B1;
+}
+.family-panel .panel {
+  border: 0;
+  border-radius: 0;
+  margin: 20px;
+}
+.detailsWell h5 {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #4d4d4a;
+}
+.detailsWell.editing h5 {
+  display: none;
+}
+.detailModified {
+  clear: both;
+  margin-top: 10px;
+  font-size: .95em;
+  line-height: 1.3em;
+}
+.lifeSketchWidgetContainer .family-panel .well .detailsWell .detailActions,
+.lifeSketchWidgetContainer .family-panel .detailsWell .detailActions {
+  display: inline-block;
+}
+.lifeSketchWidgetContainer .family-panel .well .detailsWell.editing .detailActions,
+.lifeSketchWidgetContainer .family-panel .detailsWell.editing .detailActions {
+  display: none;
 }
