@@ -243,7 +243,7 @@ ul.list-collapsed li {
 .family-panel .detailsWell.openDetails,
 .family-panel .well.openDetails {
   border-top: 0;
-  padding: 19px 18px 18px 18px;
+  padding: 18px 18px 18px 18px;
 }
 .family-panel .detailsWell.editing .itemBody p:last-child,
 .family-panel .well.editing .itemBody p:last-child,
@@ -295,6 +295,20 @@ ul.list-collapsed li {
 .family-panel h5 {
   text-align: center;
   font-weight: bold;
+}
+.panel-primary > .panel-heading {
+  padding-bottom: 0 !important;
+}
+.familyWidgetContainer .family-panel .panel {
+  margin-top: 10px;
+}
+.addDetail {
+  line-height: 18px;
+}
+.addDetail i {
+  font-size: 18px;
+  color: #333;
+  margin-right: 5px;
 }
 .clearfix {
   *zoom: 1;

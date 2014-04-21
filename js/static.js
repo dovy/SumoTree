@@ -15,6 +15,9 @@ $(document).ready(function () {
             $(this).html($(this).html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
 
             $.each(parent.find('.detailsWell'), function( ) {
+                if ($(this).find('.addDetail').length != 0) {
+                    return;
+                }
                 if (!$(this).hasClass('editing')) {
                     $(this).find('.hiddenDetails').fadeIn();
                     $(this).addClass('well openDetails');
@@ -24,6 +27,9 @@ $(document).ready(function () {
             $(this).html($(this).html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
             $.each(parent.find('.detailsWell'), function( ) {
                 if (!$(this).hasClass('editing')) {
+                    if ($(this).find('.addDetail').length != 0) {
+                        return;
+                    }
                     $(this).find('.hiddenDetails').fadeOut();
                     $(this).removeClass('well openDetails');
                 }
@@ -68,7 +74,6 @@ $(document).ready(function () {
         var toggle = $(this).parents('.family-panel:first').find('.toggleDetails');
         if ( parent.parents('.family-panel:first').find('.openDetails').length != 0 ) {
             toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
-
         } else {
             toggle.html(toggle.html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
         }
@@ -89,8 +94,11 @@ $(document).ready(function () {
 
         if ($(this).parents('.family-panel:first').find('.detailsWell').length > 1) {
             toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
-
-            parent.removeClass('editing').addClass('openDetails');
+            if (parent.find('.addDetail').length != 0) {
+                parent.removeClass('editing').removeClass('well');
+            } else {
+                parent.removeClass('editing').addClass('openDetails');
+            }
         } else {
             parent.removeClass('editing well');
             toggle.html(toggle.html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
