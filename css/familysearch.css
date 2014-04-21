@@ -125,9 +125,6 @@ a:active {
   margin-left: 18px;
   margin-bottom: 0;
 }
-.familyWidgetContainer .row {
-  margin-bottom: 19px;
-}
 .familyWidgetContainer .row .tree-family .panel-body table tr:hover {
   background-color: #F7F6F3;
 }
@@ -432,23 +429,17 @@ label {
   margin-top: 10px;
 }
 .lowerBar {
-  background: #808080;
-  background: -moz-linear-gradient(top, #808080 0%, #666662 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #808080), color-stop(100%, #666662));
-  background: -webkit-linear-gradient(top, #808080 0%, #666662 100%);
-  background: -o-linear-gradient(top, #808080 0%, #666662 100%);
-  background: -ms-linear-gradient(top, #808080 0%, #666662 100%);
-  background: linear-gradient(to bottom, #808080 0%, #666662 100%);
-  border: 1px solid #333331;
-  border-radius: 0 0 2px 2px;
-  padding-right: 10px;
   margin: 0 -10px;
-  line-height: 40px;
-  text-transform: uppercase;
-  min-height: 16px;
-  height: 40px;
-  text-align: right;
 }
-.lowerBar a {
-  color: #ffffff;
+.detailsWell:hover {
+  background-color: inherit;
+  box-shadow: none;
+}
+.spousesAndChildren {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.parentsAndChildren {
+  padding-right: 20px;
+  padding-left: 0;
 }
