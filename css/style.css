@@ -39,6 +39,9 @@ ul.list-collapsed li {
   padding-right: 10px;
   padding-left: 0;
 }
+abbr {
+  white-space: nowrap;
+}
 .tree-family .panel-body {
   margin: 0;
   padding: 0;
@@ -259,9 +262,6 @@ ul.list-collapsed li {
 .family-panel .well:last-child {
   margin-bottom: 0px;
 }
-.detailActions i {
-  margin-right: 5px;
-}
 .family-panel .panel-heading .options i {
   margin-right: 5px;
 }
@@ -344,6 +344,17 @@ ul.list-collapsed li {
 }
 .panel-heading .options {
   margin-top: -3px;
+}
+.family-panel .detailsWell .detailActions,
+.family-panel .well .detailActions {
+  display: none;
+}
+.family-panel .detailsWell.openDetails .detailActions,
+.family-panel .well.openDetails .detailActions {
+  display: inline-block;
+}
+.detailActions a {
+  font-size: 14px;
 }
 .clearfix {
   *zoom: 1;

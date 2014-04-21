@@ -1,57 +1,57 @@
-body {
-  color: #333331;
-  font-family: 'Montserrat', Verdana, sans-serif;
+body.familysearch_theme {
   font-size: 16px;
   line-height: 24px;
+  color: #333331;
+  font-family: 'Montserrat', Verdana, sans-serif;
 }
-h1,
-h2,
-h3,
-h4 {
+.familysearch_theme h1,
+.familysearch_theme h2,
+.familysearch_theme h3,
+.familysearch_theme h4 {
   font-family: "museo_slab500", serif;
   color: #333331;
 }
-h1 {
+.familysearch_theme h1 {
   color: #4d4d4a;
   font-size: 48px;
   line-height: 50px;
 }
-h2 {
+.familysearch_theme h2 {
   color: #4d4d4a;
   font-size: 36px;
   line-height: 39px;
 }
-h3 {
+.familysearch_theme h3 {
   font-size: 28px;
   line-height: 32px;
 }
-h4 {
+.familysearch_theme h4 {
   font-size: 21px;
   line-height: 24px;
 }
-a,
-a:hover,
-a:active {
+.familysearch_theme a,
+.familysearch_theme a:hover,
+.familysearch_theme a:active {
   color: #0051c4;
 }
-.mainContent {
+.familysearch_theme .mainContent {
   padding: 20px;
   background: #ECEBEA;
   border-top: 1px solid #fff;
 }
-.profileHeaderContainer .jumbotron {
+.familysearch_theme .profileHeaderContainer .jumbotron {
   border-bottom: 1px solid #B7B7B7;
   background: #cdcdcd no-repeat;
   position: relative;
   color: #333331;
 }
-.profileHeaderContainer .jumbotron .personWrapper .nameWrapper h1 {
+.familysearch_theme .profileHeaderContainer .jumbotron .personWrapper .nameWrapper h1 {
   font-size: 28px;
   line-height: 32px;
   color: #333331;
   font-weight: bold;
 }
-.profileHeaderContainer .jumbotron .icon-rounded {
+.familysearch_theme .profileHeaderContainer .jumbotron .icon-rounded {
   box-shadow: 0px 0px 0px 6px #ffffff;
   width: 100px;
   height: 100px;
@@ -59,35 +59,33 @@ a:active {
   line-height: 100px;
   padding-left: 0;
 }
-.profileHeaderContainer .jumbotron .icon-rounded.fs-icon-female {
+.familysearch_theme .profileHeaderContainer .jumbotron .icon-rounded.fs-icon-female {
   background: #F4F4F4;
   color: #dd407d;
 }
-.profileHeaderContainer .jumbotron .icon-rounded.fs-icon-male {
+.familysearch_theme .profileHeaderContainer .jumbotron .icon-rounded.fs-icon-male {
   background: #F4F4F4;
   color: #4888f8;
 }
-.profileHeaderContainer .jumbotron .list-collapsed {
+.familysearch_theme .profileHeaderContainer .jumbotron .list-collapsed {
   line-height: 1em;
   font-size: 16px;
-  line-height: 20px;
 }
-.profileHeaderContainer .jumbotron .personActions {
+.familysearch_theme .profileHeaderContainer .jumbotron .personActions {
   margin-top: 10px;
 }
-.profileHeaderContainer .jumbotron .personActions a {
+.familysearch_theme .profileHeaderContainer .jumbotron .personActions a {
   color: #333331;
 }
-.profileHeaderContainer .jumbotron .pid {
+.familysearch_theme .profileHeaderContainer .jumbotron .pid {
   float: none;
   display: inline-block;
   padding-left: 30px;
 }
-.profileHeaderContainer .jumbotron .pid li {
+.familysearch_theme .profileHeaderContainer .jumbotron .pid li {
   list-style: disc;
 }
-.panel {
-  border-bottom: 0;
+.familysearch_theme .panel {
   background: #fff;
   border: 1px solid #CACACA;
   font-size: 14px;
@@ -98,37 +96,40 @@ a:active {
   -moz-box-shadow: 0;
   box-shadow: 0;
 }
-.panel .panel-title {
+.familysearch_theme .panel .panel-title {
   font-size: 20px;
 }
-.panel .panel-heading {
+.familysearch_theme .panel .panel-title .badge {
+  margin-top: 2px;
+}
+.familysearch_theme .panel .panel-heading {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
 }
-.source-objects,
-.discussion-objects,
-.note-objects {
+.familysearch_theme .source-objects,
+.familysearch_theme .discussion-objects,
+.familysearch_theme .note-objects {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.source-objects .panel-heading,
-.discussion-objects .panel-heading,
-.note-objects .panel-heading {
+.familysearch_theme .source-objects .panel-heading,
+.familysearch_theme .discussion-objects .panel-heading,
+.familysearch_theme .note-objects .panel-heading {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.family-panel h5 {
+.familysearch_theme .family-panel h5 {
   text-align: left;
   margin-left: 18px;
   margin-bottom: 0;
 }
-.familyWidgetContainer .row .tree-family .panel-body table tr:hover {
+.familysearch_theme .familyWidgetContainer .row .tree-family .panel-body table tr:hover {
   background-color: #F7F6F3;
 }
-.familyWidgetContainer .row .family-panel .tree-family .panel-heading {
+.familysearch_theme .familyWidgetContainer .row .family-panel .tree-family .panel-heading {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -136,161 +137,158 @@ a:active {
   -moz-border-radius-bottomleft: 0;
   -moz-border-radius-bottomright: 0;
 }
-[class*=panel-].panel-primary .options a {
+.familysearch_theme [class*=panel-].panel-primary .options a {
   color: #333331;
 }
-.panel-heading .options > a {
+.familysearch_theme .panel-heading .options > a {
   opacity: .8;
 }
-.well.editing {
+.familysearch_theme .well.editing {
   background-color: #ECEBEA;
   border: 1px solid #CDCDCD;
 }
-.well.openDetails {
+.familysearch_theme .well.openDetails {
   background-color: #fff;
   border: 1px solid #CDCDCD;
 }
-label {
+.familysearch_theme label {
   margin-bottom: 0;
 }
-.panel-primary > .panel-heading {
+.familysearch_theme .panel-primary > .panel-heading {
   background: #fff;
   border: 0;
   padding-top: 15px;
 }
-.family-panel .detailsWell.editing a,
-.family-panel .well.editing a,
-.family-panel .detailsWell.editing .btn-link,
-.family-panel .well.editing .btn-link {
+.familysearch_theme .family-panel .detailsWell.editing a,
+.familysearch_theme .family-panel .well.editing a,
+.familysearch_theme .family-panel .detailsWell.editing .btn-link,
+.familysearch_theme .family-panel .well.editing .btn-link {
   color: #0051C4;
   opacity: 1;
 }
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
+.familysearch_theme .family-panel .detailsWell:last-child,
+.familysearch_theme .family-panel .well:last-child {
   margin-bottom: 20px;
 }
-.detailActions.pull-right {
+.familysearch_theme .detailActions.pull-right {
   float: none !important;
   margin-bottom: 3px;
   font-size: 12px;
   line-height: 12px;
 }
-.detailActions.pull-right a {
+.familysearch_theme .detailActions.pull-right a {
   color: #333331;
 }
-.detailActions.pull-right i {
+.familysearch_theme .detailActions.pull-right i {
   display: none;
 }
-.closeDetail i {
+.familysearch_theme .closeDetail i {
   display: inline-block !important;
 }
-.detailActions .btn {
+.familysearch_theme .detailActions .btn {
   padding-left: 0;
   padding-right: 10px;
   font-size: 14px;
 }
-.family-panel .detailsWell,
-.family-panel .well {
-  margin-top: 0;
-  padding: 0;
+.familysearch_theme .family-panel .detailsWell,
+.familysearch_theme .family-panel .well {
   padding: 11px 19px 0;
   background-color: inherit;
   border-radius: 4px 4px 4px 4px;
   margin: 5px 20px 0 20px;
   font-size: 14px;
 }
-.family-panel .detailsWell .detailActions,
-.family-panel .well .detailActions {
+.familysearch_theme .family-panel .detailsWell .detailActions,
+.familysearch_theme .family-panel .well .detailActions {
   display: none;
 }
-.family-panel .detailsWell .itemBody p:last-child,
-.family-panel .well .itemBody p:last-child {
+.familysearch_theme .family-panel .detailsWell .itemBody p:last-child,
+.familysearch_theme .family-panel .well .itemBody p:last-child {
   margin: 0;
 }
-.family-panel .detailsWell h3,
-.family-panel .well h3 {
+.familysearch_theme .family-panel .detailsWell h3,
+.familysearch_theme .family-panel .well h3 {
   border-radius: 0;
   font-size: 20px;
   font-weight: normal;
   color: #4d4d4a;
 }
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
+.familysearch_theme .family-panel .detailsWell:last-child,
+.familysearch_theme .family-panel .well:last-child {
   margin-bottom: 0px;
 }
-.family-panel .detailsWell .form-group,
-.family-panel .well .form-group,
-.family-panel .detailsWell .actionRow,
-.family-panel .well .actionRow,
-.family-panel .detailsWell .editingItem,
-.family-panel .well .editingItem,
-.family-panel .detailsWell .detailsItem,
-.family-panel .well .detailsItem {
+.familysearch_theme .family-panel .detailsWell .form-group,
+.familysearch_theme .family-panel .well .form-group,
+.familysearch_theme .family-panel .detailsWell .actionRow,
+.familysearch_theme .family-panel .well .actionRow,
+.familysearch_theme .family-panel .detailsWell .editingItem,
+.familysearch_theme .family-panel .well .editingItem,
+.familysearch_theme .family-panel .detailsWell .detailsItem,
+.familysearch_theme .family-panel .well .detailsItem {
   display: none;
 }
-.family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails,
-.family-panel .detailsWell.openDetails:hover,
-.family-panel .well.openDetails:hover {
+.familysearch_theme .family-panel .detailsWell.openDetails,
+.familysearch_theme .family-panel .well.openDetails,
+.familysearch_theme .family-panel .detailsWell.openDetails:hover,
+.familysearch_theme .family-panel .well.openDetails:hover {
   background: #fff;
 }
-.family-panel .detailsWell.openDetails .detailsItem,
-.family-panel .well.openDetails .detailsItem,
-.family-panel .detailsWell.openDetails:hover .detailsItem,
-.family-panel .well.openDetails:hover .detailsItem {
+.familysearch_theme .family-panel .detailsWell.openDetails .detailsItem,
+.familysearch_theme .family-panel .well.openDetails .detailsItem,
+.familysearch_theme .family-panel .detailsWell.openDetails:hover .detailsItem,
+.familysearch_theme .family-panel .well.openDetails:hover .detailsItem {
   display: inline-block;
 }
-.family-panel .detailsWell.openDetails .non-form,
-.family-panel .well.openDetails .non-form,
-.family-panel .detailsWell.openDetails:hover .non-form,
-.family-panel .well.openDetails:hover .non-form {
+.familysearch_theme .family-panel .detailsWell.openDetails .non-form,
+.familysearch_theme .family-panel .well.openDetails .non-form,
+.familysearch_theme .family-panel .detailsWell.openDetails:hover .non-form,
+.familysearch_theme .family-panel .well.openDetails:hover .non-form {
   display: inline-block;
 }
-.family-panel .detailsWell.editing,
-.family-panel .well.editing {
+.familysearch_theme .family-panel .detailsWell.editing,
+.familysearch_theme .family-panel .well.editing {
   background-color: #f3f3f1;
   color: #333331;
 }
-.family-panel .detailsWell.editing .detailModifiedSources,
-.family-panel .well.editing .detailModifiedSources,
-.family-panel .detailsWell.editing .detailsModifiedHistory,
-.family-panel .well.editing .detailsModifiedHistory,
-.family-panel .detailsWell.editing hr,
-.family-panel .well.editing hr {
+.familysearch_theme .family-panel .detailsWell.editing .detailModifiedSources,
+.familysearch_theme .family-panel .well.editing .detailModifiedSources,
+.familysearch_theme .family-panel .detailsWell.editing .detailsModifiedHistory,
+.familysearch_theme .family-panel .well.editing .detailsModifiedHistory,
+.familysearch_theme .family-panel .detailsWell.editing hr,
+.familysearch_theme .family-panel .well.editing hr {
   display: none;
 }
-.family-panel .detailsWell.editing a,
-.family-panel .well.editing a,
-.family-panel .detailsWell.editing .btn-link,
-.family-panel .well.editing .btn-link {
+.familysearch_theme .family-panel .detailsWell.editing a,
+.familysearch_theme .family-panel .well.editing a,
+.familysearch_theme .family-panel .detailsWell.editing .btn-link,
+.familysearch_theme .family-panel .well.editing .btn-link {
   color: #0051c4;
   opacity: .6;
 }
-.family-panel .detailsWell.editing a:hover,
-.family-panel .well.editing a:hover,
-.family-panel .detailsWell.editing .btn-link:hover,
-.family-panel .well.editing .btn-link:hover {
+.familysearch_theme .family-panel .detailsWell.editing a:hover,
+.familysearch_theme .family-panel .well.editing a:hover,
+.familysearch_theme .family-panel .detailsWell.editing .btn-link:hover,
+.familysearch_theme .family-panel .well.editing .btn-link:hover {
   opacity: 1;
 }
-.family-panel .detailsWell.editing .form-group,
-.family-panel .well.editing .form-group,
-.family-panel .detailsWell.editing .actionRow,
-.family-panel .well.editing .actionRow,
-.family-panel .detailsWell.editing .editingItem,
-.family-panel .well.editing .editingItem {
+.familysearch_theme .family-panel .detailsWell.editing .form-group,
+.familysearch_theme .family-panel .well.editing .form-group,
+.familysearch_theme .family-panel .detailsWell.editing .actionRow,
+.familysearch_theme .family-panel .well.editing .actionRow,
+.familysearch_theme .family-panel .detailsWell.editing .editingItem,
+.familysearch_theme .family-panel .well.editing .editingItem {
   display: block;
 }
-.family-panel .detailsWell.editing .non-form,
-.family-panel .well.editing .non-form,
-.family-panel .detailsWell.editing .detailActions,
-.family-panel .well.editing .detailActions {
+.familysearch_theme .family-panel .detailsWell.editing .non-form,
+.familysearch_theme .family-panel .well.editing .non-form,
+.familysearch_theme .family-panel .detailsWell.editing .detailActions,
+.familysearch_theme .family-panel .well.editing .detailActions {
   display: none;
 }
-.family-panel .detailsWell.editing,
-.family-panel .well.editing,
-.family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails {
-  padding-top: 11px;
+.familysearch_theme .family-panel .detailsWell.editing,
+.familysearch_theme .family-panel .well.editing,
+.familysearch_theme .family-panel .detailsWell.openDetails,
+.familysearch_theme .family-panel .well.openDetails {
   border: 1px solid #dedbd7;
   border-radius: 3px;
   -ms-border-radius: 3px;
@@ -303,89 +301,70 @@ label {
   -o-box-shadow: 0 0 10px #dedbd7;
   -webkit-box-shadow: 0 0 10px #dedbd7;
   margin-bottom: 16px;
-  padding-bottom: 12px;
   padding: 10px 18px 10px 18px;
 }
-.family-panel .detailsWell.editing hr,
-.family-panel .well.editing hr,
-.family-panel .detailsWell.openDetails hr,
-.family-panel .well.openDetails hr {
+.familysearch_theme .family-panel .detailsWell.editing hr,
+.familysearch_theme .family-panel .well.editing hr,
+.familysearch_theme .family-panel .detailsWell.openDetails hr,
+.familysearch_theme .family-panel .well.openDetails hr {
   margin: 10px 0;
 }
-.family-panel .detailsWell.editing .detailActions,
-.family-panel .well.editing .detailActions,
-.family-panel .detailsWell.openDetails .detailActions,
-.family-panel .well.openDetails .detailActions {
+.familysearch_theme .family-panel .detailsWell.editing .detailActions,
+.familysearch_theme .family-panel .well.editing .detailActions,
+.familysearch_theme .family-panel .detailsWell.openDetails .detailActions,
+.familysearch_theme .family-panel .well.openDetails .detailActions {
   display: block;
 }
-.family-panel .detailsWell.editing .detailActions.pull-right,
-.family-panel .well.editing .detailActions.pull-right,
-.family-panel .detailsWell.openDetails .detailActions.pull-right,
-.family-panel .well.openDetails .detailActions.pull-right {
+.familysearch_theme .family-panel .detailsWell.editing .detailActions.pull-right,
+.familysearch_theme .family-panel .well.editing .detailActions.pull-right,
+.familysearch_theme .family-panel .detailsWell.openDetails .detailActions.pull-right,
+.familysearch_theme .family-panel .well.openDetails .detailActions.pull-right {
   float: right !important;
 }
-.family-panel .detailsWell.editing .itemBody p:last-child,
-.family-panel .well.editing .itemBody p:last-child,
-.family-panel .detailsWell.openDetails .itemBody p:last-child,
-.family-panel .well.openDetails .itemBody p:last-child {
+.familysearch_theme .family-panel .detailsWell.editing .itemBody p:last-child,
+.familysearch_theme .family-panel .well.editing .itemBody p:last-child,
+.familysearch_theme .family-panel .detailsWell.openDetails .itemBody p:last-child,
+.familysearch_theme .family-panel .well.openDetails .itemBody p:last-child {
   margin: 0 0 10px;
 }
-.family-panel .detailsWell h3,
-.family-panel .well h3 {
+.familysearch_theme .family-panel .detailsWell h3,
+.familysearch_theme .family-panel .well h3 {
   margin-top: 0;
 }
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
+.familysearch_theme .family-panel .detailsWell:last-child,
+.familysearch_theme .family-panel .well:last-child {
   margin-bottom: 20px;
 }
-.tree-family.jumbotron {
+.familysearch_theme .tree-family.jumbotron {
   margin-bottom: 0;
   border-bottom: 1px solid #B7B7B7;
 }
-.sidebar .panel {
+.familysearch_theme .sidebar .panel {
   border-color: #ADACAB;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-bottomright: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
 }
-.sidebar .panel-heading {
+.familysearch_theme .sidebar .panel-heading {
   background: #DEDBD7;
   padding: 5px 15px;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-bottomright: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
   margin: 0;
   border-bottom-color: #ADACAB;
 }
-.sidebar .panel-heading a {
+.familysearch_theme .sidebar .panel-heading a {
   color: #3B3A35;
 }
-.sidebar .panel-heading .panel-title {
+.familysearch_theme .sidebar .panel-heading .panel-title {
   color: #3B3A35;
   font-size: 16px;
   line-height: 20px;
   font-weight: normal;
   text-transform: uppercase;
 }
-.family-panel .tree-family .panel-heading {
+.familysearch_theme .family-panel .tree-family .panel-heading {
   background-color: #F3F3F1;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   width: auto;
@@ -394,49 +373,52 @@ label {
   border-radius: 2px;
   border-color: #B1B1B1;
 }
-.family-panel .panel {
+.familysearch_theme .family-panel .panel {
   border: 0;
   border-radius: 0;
   margin: 20px;
 }
-.detailsWell h5 {
+.familysearch_theme .detailsWell h5 {
   margin-top: 0;
   font-size: 14px;
   font-weight: normal;
   color: #4d4d4a;
 }
-.detailsWell.editing h5 {
+.familysearch_theme .detailsWell.editing h5 {
   display: none;
 }
-.detailModified {
+.familysearch_theme .detailModified {
   clear: both;
   margin-top: 10px;
   font-size: .95em;
   line-height: 1.3em;
 }
-.lifeSketchWidgetContainer .family-panel .well .detailsWell .detailActions,
-.lifeSketchWidgetContainer .family-panel .detailsWell .detailActions {
+.familysearch_theme .lifeSketchWidgetContainer .family-panel .well .detailsWell .detailActions,
+.familysearch_theme .lifeSketchWidgetContainer .family-panel .detailsWell .detailActions {
   display: inline-block;
 }
-.lifeSketchWidgetContainer .family-panel .well .detailsWell.editing .detailActions,
-.lifeSketchWidgetContainer .family-panel .detailsWell.editing .detailActions {
+.familysearch_theme .lifeSketchWidgetContainer .family-panel .well .detailsWell.editing .detailActions,
+.familysearch_theme .lifeSketchWidgetContainer .family-panel .detailsWell.editing .detailActions {
   display: none;
 }
-.familyWidgetContainer .family-panel .panel {
+.familysearch_theme .familyWidgetContainer .family-panel .panel {
   margin-top: 10px;
 }
-.lowerBar {
+.familysearch_theme .lowerBar {
   margin: 0 -10px;
 }
-.detailsWell:hover {
+.familysearch_theme .detailsWell:hover {
   background-color: inherit;
   box-shadow: none;
 }
-.spousesAndChildren {
+.familysearch_theme .spousesAndChildren {
   padding-left: 20px;
   padding-right: 0;
 }
-.parentsAndChildren {
+.familysearch_theme .parentsAndChildren {
   padding-right: 20px;
   padding-left: 0;
+}
+.familysearch_theme .lowerBar a {
+  color: #fff;
 }

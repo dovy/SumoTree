@@ -147,4 +147,14 @@ $(document).ready(function () {
 
     $('.btn').button()
 
+    $('.changeTheme').click(function() {
+        if ($('#themeContainer').hasClass('familysearch_theme')) {
+            $('#themeContainer').removeClass('familysearch_theme');
+            $(this).html($(this).html().replace('Boostrap', 'FamilySearch'));
+        } else {
+            $('#themeContainer').addClass('familysearch_theme');
+            $(this).html($(this).html().replace('FamilySearch', 'Boostrap'));
+        }
+    });
+
 });

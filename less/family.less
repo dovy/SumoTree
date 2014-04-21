@@ -42,7 +42,9 @@ ul.list-collapsed {
 
 	}
 }
-
+abbr {
+  white-space:nowrap;
+}
 .tree-family {
 	.panel-body {
 		margin: 0;
@@ -261,9 +263,6 @@ ul.list-collapsed {
     }
   }
 }
-.detailActions i {
-  margin-right: 5px;
-}
 .family-panel .panel-heading .options {
     i {
       margin-right: 5px;
@@ -362,4 +361,22 @@ ul.list-collapsed {
 }
 .panel-heading .options {
   margin-top: -3px;
+}
+.panel-title .badge {
+ // margin-top:2px;
+}
+.family-panel {
+  .detailsWell, .well {
+    .detailActions {
+      display:none;
+    }
+    &.openDetails {
+      .detailActions {
+        display: inline-block;
+      }
+    }
+  }
+}
+.detailActions a {
+  font-size:14px;
 }
