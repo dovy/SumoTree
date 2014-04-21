@@ -270,7 +270,7 @@ ul.list-collapsed li {
 }
 .detailsWell:hover {
   background-color: #f8f8f8;
-  box-shadow: 0px 1px 1px #cccccc, 0px -1px 1px #cccccc;
+  box-shadow: 0px 1px 0px #cccccc, 0px -1px 0px #cccccc;
 }
 .detailsWell:hover.editing {
   background-color: #3071a9;
