@@ -124,6 +124,7 @@ body.familysearch_theme {
 .familysearch_theme .family-panel h5 {
   text-align: left;
   margin-left: 18px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 .familysearch_theme .familyWidgetContainer .row .tree-family .panel-body table tr:hover {
@@ -137,7 +138,8 @@ body.familysearch_theme {
   -moz-border-radius-bottomleft: 0;
   -moz-border-radius-bottomright: 0;
 }
-.familysearch_theme [class*=panel-].panel-primary .options a {
+.familysearch_theme [class*=panel-].panel-primary .options a,
+.familysearch_theme .notesWidgetContainer h4 a i {
   color: #333331;
 }
 .familysearch_theme .panel-heading .options > a {
@@ -421,4 +423,7 @@ body.familysearch_theme {
 }
 .familysearch_theme .lowerBar a {
   color: #fff;
+}
+.familysearch_theme .addNewNote {
+  padding: 0 15px;
 }

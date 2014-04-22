@@ -52,7 +52,7 @@ abbr {
 		table {
 			width: 100%;
 			td {
-				padding: 10px 20px;
+				padding: 10px 5px 10px 20px;
 			}
 		}
 		h3 {
@@ -122,8 +122,43 @@ abbr {
 	margin-bottom: 0;
 }
 .family-panel .panel-body {
+
 	padding: 0;
 	margin: 0;
+}
+.tree-family {
+  .childrenHolder {
+    position: relative;
+    table {
+      margin-top: 19px;
+    }
+    .childHide {
+      display: block;
+      position:absolute;
+      top: -1px;
+      color: #4d4d4a;
+      font-size: 13px;
+
+      i {
+        font-size: 13px;
+
+        height: 19px;
+        background: #333;
+        color: #fff;
+        -webkit-border-bottom-right-radius: 50%;
+        -webkit-border-bottom-left-radius: 50%;
+        -moz-border-radius-bottomright: 50%;
+        -moz-border-radius-bottomleft: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        padding: 3px;
+        text-align: center;
+        margin-right: 12px;
+      }
+      margin-left: 20px;
+    }
+  }
+
 }
 
 .panel-heading .options {
@@ -308,13 +343,53 @@ abbr {
 
 }
 
-
-
-
-.addDetail {
-  line-height: 18px;
+.addNewNote2, .addDetail2 {
+  padding: 10px 0;
+  span {
+    line-height: 18px;
+    display: block;
+    margin-top: -1px;
+    font-size: 14px;
+    float: left;
+  }
   i {
+    float: left;
+    display: block;
     font-size: 18px;
+    margin-right: 3px;
+    color: #333;
+    line-height: 16px;
+  }
+}
+
+.addNewNote2 {
+  width: 178px;
+  background:#ddd;
+  float: right;
+}
+.addNewNote {
+  padding: 10px 15px;
+  i {
+    font-size:15px;
+    color: #333 !important;
+  }
+}
+.addDetail {
+  padding: 0;
+  i {
+    font-size:15px;
+    color: #333 !important;
+  }
+}
+
+
+.addDetail2 {
+  line-height: 12px;
+  font-size: 14px;
+  i {
+    margin-top: 2px;
+    font-size: 18px;
+    line-height: 18px;
     color: #333;
     margin-right: 5px;
   }
@@ -379,4 +454,45 @@ abbr {
 }
 .detailActions a {
   font-size:14px;
+}
+
+.editParents {
+  font-size: .9em;
+  display:none;
+}
+.childrenList tr.actionRow td {
+  padding: 10px;
+}
+.childrenList tr td:hover {
+  -webkit-box-shadow: 0 0 0 1px #ccc;
+  box-shadow: 0 0 0 1px #ccc;
+  -moz-box-shadow: 0 0 0 1px #ccc;
+  .editParents {
+    display: inline-block;
+  }
+}
+
+.table-hover > tbody > tr.actionRow:hover > td {
+  background-color: #fff;
+}
+.childrenList {
+  tr.actionRow td:hover {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -moz-box-shadow: none;
+  }
+}
+
+.unknownFather {
+  display: block;
+  margin-left: 10px;
+  padding: 0px 12px;
+  text-align: left;
+}
+.familyActions {
+  padding-left: 18px;
+  padding-top:3px;
+  a, .btn {
+    padding: 0;
+  }
 }

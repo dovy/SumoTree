@@ -32,7 +32,7 @@
 </div>
 <div id="themeContainer" class="familysearch_theme">
 <div class="container">
-<div class="profileHeaderContainer" style="display: block;">
+<div class="profileHeaderContainer">
     <div class="tree-family jumbotron ng-scope jumbo-male">
         <div class="personWrapper">
 
@@ -58,7 +58,7 @@
 <div class="mainContent">
 <div class="row">
 <div class="col-md-9">
-<div class="lifeSketchWidgetContainer" style="display: block;">
+<div class="lifeSketchWidgetContainer">
     <div class="panel panel-primary family-panel">
         <div class="panel-heading">
             <div class="options">
@@ -133,7 +133,7 @@
 <div class="panel-heading">
     <div class="options">
         <a class="panel-collapse" href="javascript:;"><i class="fa fa-chevron-down">&nbsp;</i>Close</a>
-        <a href="javascript:;" class="toggleDetails"><i class="fa fa-eye">&nbsp;</i>Show Details</a>
+        <a href="javascript:;" class="toggleDetails hidden-xs"><i class="fa fa-eye">&nbsp;</i>Show Details</a>
     </div>
     <h4 class="panel-title">Vital Information</h4>
 </div>
@@ -159,13 +159,13 @@
             </div>
         </div>
 
-        <div class="col-sm4 col-sm-4" style="display: block;">
+        <div class="col-sm4 col-sm-4">
             <div class="form-group">
                 <label>First Names</label> <input class="form-control" id="firstName" type="text">
             </div>
         </div>
 
-        <div class="col-sm4 col-sm-4" style="display: block;">
+        <div class="col-sm4 col-sm-4">
             <div class="form-group">
                 <label>Last Name</label> <input class="form-control" id="lastName" type="text">
             </div>
@@ -339,7 +339,9 @@
             </div>
             <div class="non-form">
                 <span class="eventLabel">Christening</span><br/>
-                <a href="" class="editDetail non-form addDetail"><i class="fa fa-plus-square">&nbsp;</i>Add</a>
+                <a href="#" class="btn btn-link non-form addDetail">
+                    <i class="fa fa-plus-square">&nbsp;</i>Add
+                </a>
             </div>
         </div>
     </div>
@@ -509,263 +511,260 @@
 </div>
 </div>
 <div class="otherInfoWidgetContainer">
-<div class="panel panel-primary family-panel">
-<div class="panel-heading">
-    <div class="options">
-        <a class="panel-collapse" href="javascript:;"><i class="fa fa-chevron-down">&nbsp;</i>Close</a>
-        <a href="javascript:;" class="toggleDetails"><i class="fa fa-eye">&nbsp;</i>Show Details</a>
-    </div>
-    <h4 class="panel-title">Other Information</h4>
-</div>
-<div class="panel-body lifeSketchBody">
-
-
-<div class="detailsWell">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="detailActions pull-right">
-                <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
-                                                                                                                       class="deleteDetail btn btn-link btn-xs non-form"><i
-                    class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
-                    class="fa fa-times-circle">&nbsp;</i>Close</a>
+    <div class="panel panel-primary family-panel">
+        <div class="panel-heading">
+            <div class="options">
+                <a class="panel-collapse" href="javascript:;"><i class="fa fa-chevron-down">&nbsp;</i>Close</a>
+                <a href="javascript:;" class="toggleDetails hidden-xs"><i class="fa fa-eye">&nbsp;</i>Show Details</a>
             </div>
-            <div class="non-form">
-                <span class="eventLabel">Birth</span><br/>
-                <a href="#" class="openEventDetails">
-                    <span class="eventDate">17 March 1971</span><br/>
-                    <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
-                </a>
+            <h4 class="panel-title">Other Information</h4>
+        </div>
+        <div class="panel-body lifeSketchBody">
+            <div class="detailsWell">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detailActions pull-right">
+                            <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""                                                                                                    class="deleteDetail btn btn-link btn-xs non-form"><i
+                                class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
+                                class="fa fa-times-circle">&nbsp;</i>Close</a>
+                        </div>
+                        <div class="non-form">
+                            <span class="eventLabel">Birth</span><br/>
+                            <a href="#" class="openEventDetails">
+                                <span class="eventDate">17 March 1971</span><br/>
+                                <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Birth Date</label> <input class="form-control" name="birthDate" placeholder="Date of Birth" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Birth Place</label> <input class="form-control" name="birthPlace" placeholder="Place of Birth" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Reason this Information is Correct</label>
+                    <textarea class="form-control" name="justification"
+                              placeholder="Explain why you feel this information is correct.">
+
+
+                    </textarea>
+                </div>
+
+                <div class="detailsItem editingItem detailModified">
+                    Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
+                                                                                             class="changeHistory">History</a></span><br>
+                    <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
+
+                    <div class="detailModifiedSources">
+                        <hr>
+                        <!-- Place a link and badge if there are sources, just the text if there are none. -->
+                        <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
+                            class="badge">5</span></a></span><br/>
+
+                        <div class="popupSources">
+                            <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
+                            <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="actionRow">
+                    <button class="btn btn-primary saveButton" type="submit">Save</button>
+                    <button class="btn btn-link cancelButton" type="submit">Cancel</button>
+                </div>
+            </div>
+
+            <div class="detailsWell">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detailActions pull-right">
+                            <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
+                                                                                                                                   class="deleteDetail btn btn-link btn-xs non-form"><i
+                                class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
+                                class="fa fa-times-circle">&nbsp;</i>Close</a>
+                        </div>
+                        <div class="non-form">
+                            <span class="eventLabel">Christening</span><br/>
+                            <a href="#" class="openEventDetails">
+                                <span class="eventDate">17 March 1971</span><br/>
+                                <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Christening Date</label> <input class="form-control" name="christeningDate"
+                                                           placeholder="Date of Christening" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Christening Place</label> <input class="form-control" name="christeningPlace"
+                                                            placeholder="Place of Christening" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Reason this Information is Correct</label>
+                    <textarea class="form-control" name="justification"
+                              placeholder="Explain why you feel this information is correct.">
+
+
+                    </textarea>
+                </div>
+
+                <div class="detailsItem editingItem detailModified">
+                    Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
+                                                                                             class="changeHistory">History</a></span><br>
+                    <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
+
+                    <div class="detailModifiedSources">
+                        <hr>
+                        <!-- Place a link and badge if there are sources, just the text if there are none. -->
+                        <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
+                            class="badge">5</span></a></span><br/>
+
+                        <div class="popupSources">
+                            <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
+                            <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="actionRow">
+                    <button class="btn btn-primary saveButton" type="submit">Save</button>
+                    <button class="btn btn-link cancelButton" type="submit">Cancel</button>
+                </div>
+            </div>
+
+            <div class="detailsWell">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detailActions pull-right">
+                            <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
+                                                                                                                                   class="deleteDetail btn btn-link btn-xs non-form"><i
+                                class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
+                                class="fa fa-times-circle">&nbsp;</i>Close</a>
+                        </div>
+                        <div class="non-form">
+                            <span class="eventLabel">Death</span><br/>
+                            <a href="#" class="openEventDetails">
+                                <span class="eventDate">17 March 1971</span><br/>
+                                <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Death Date</label> <input class="form-control" id="deathDate" placeholder="Date of Death" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Death Place</label> <input class="form-control" id="deathPlace" placeholder="Place of Death" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Reason this Information is Correct</label>
+                    <textarea class="form-control" name="justification"
+                              placeholder="Explain why you feel this information is correct.">
+
+
+                    </textarea>
+                </div>
+
+                <div class="detailsItem editingItem detailModified">
+                    Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
+                                                                                             class="changeHistory">History</a></span><br>
+                    <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
+
+                    <div class="detailModifiedSources">
+                        <hr>
+                        <!-- Place a link and badge if there are sources, just the text if there are none. -->
+                        <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
+                            class="badge">5</span></a></span><br/>
+
+                        <div class="popupSources">
+                            <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
+                            <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="actionRow">
+                    <button class="btn btn-primary saveButton" type="submit">Save</button>
+                    <button class="btn btn-link cancelButton" type="submit">Cancel</button>
+                </div>
+            </div>
+
+            <div class="detailsWell">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detailActions pull-right">
+                            <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
+                                                                                                                                   class="deleteDetail btn btn-link btn-xs non-form"><i
+                                class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
+                                class="fa fa-times-circle">&nbsp;</i>Close</a>
+                        </div>
+                        <div class="non-form">
+                            <span class="eventLabel">Burial</span><br/>
+                            <a href="#" class="openEventDetails">
+                                <span class="eventDate">17 March 1971</span><br/>
+                                <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Burial Date</label> <input class="form-control" name="burialDate" placeholder="Date of Burial" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Burial Place</label> <input class="form-control" name="burialPlace" placeholder="Place of Burial"
+                                                       type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Reason this Information is Correct</label>
+                    <textarea class="form-control" name="justification"
+                              placeholder="Explain why you feel this information is correct.">
+
+
+                    </textarea>
+                </div>
+
+                <div class="detailsItem editingItem detailModified">
+                    Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
+                                                                                             class="changeHistory">History</a></span><br>
+                    <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
+
+                    <div class="detailModifiedSources">
+                        <hr>
+                        <!-- Place a link and badge if there are sources, just the text if there are none. -->
+                        <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
+                            class="badge">5</span></a></span><br/>
+
+                        <div class="popupSources">
+                            <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
+                            <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="actionRow">
+                    <button class="btn btn-primary saveButton" type="submit">Save</button>
+                    <button class="btn btn-link cancelButton" type="submit">Cancel</button>
+                </div>
+
             </div>
         </div>
     </div>
-
-    <div class="form-group">
-        <label>Birth Date</label> <input class="form-control" name="birthDate" placeholder="Date of Birth" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Birth Place</label> <input class="form-control" name="birthPlace" placeholder="Place of Birth" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Reason this Information is Correct</label>
-        <textarea class="form-control" name="justification"
-                  placeholder="Explain why you feel this information is correct.">
-
-
-        </textarea>
-    </div>
-
-    <div class="detailsItem editingItem detailModified">
-        Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
-                                                                                 class="changeHistory">History</a></span><br>
-        <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
-
-        <div class="detailModifiedSources">
-            <hr>
-            <!-- Place a link and badge if there are sources, just the text if there are none. -->
-            <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
-                class="badge">5</span></a></span><br/>
-
-            <div class="popupSources">
-                <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
-                <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
-            </div>
-        </div>
-    </div>
-    <div class="actionRow">
-        <button class="btn btn-primary saveButton" type="submit">Save</button>
-        <button class="btn btn-link cancelButton" type="submit">Cancel</button>
-    </div>
-</div>
-
-<div class="detailsWell">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="detailActions pull-right">
-                <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
-                                                                                                                       class="deleteDetail btn btn-link btn-xs non-form"><i
-                    class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
-                    class="fa fa-times-circle">&nbsp;</i>Close</a>
-            </div>
-            <div class="non-form">
-                <span class="eventLabel">Christening</span><br/>
-                <a href="#" class="openEventDetails">
-                    <span class="eventDate">17 March 1971</span><br/>
-                    <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label>Christening Date</label> <input class="form-control" name="christeningDate"
-                                               placeholder="Date of Christening" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Christening Place</label> <input class="form-control" name="christeningPlace"
-                                                placeholder="Place of Christening" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Reason this Information is Correct</label>
-        <textarea class="form-control" name="justification"
-                  placeholder="Explain why you feel this information is correct.">
-
-
-        </textarea>
-    </div>
-
-    <div class="detailsItem editingItem detailModified">
-        Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
-                                                                                 class="changeHistory">History</a></span><br>
-        <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
-
-        <div class="detailModifiedSources">
-            <hr>
-            <!-- Place a link and badge if there are sources, just the text if there are none. -->
-            <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
-                class="badge">5</span></a></span><br/>
-
-            <div class="popupSources">
-                <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
-                <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
-            </div>
-        </div>
-    </div>
-    <div class="actionRow">
-        <button class="btn btn-primary saveButton" type="submit">Save</button>
-        <button class="btn btn-link cancelButton" type="submit">Cancel</button>
-    </div>
-</div>
-
-<div class="detailsWell">
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="detailActions pull-right">
-                <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
-                                                                                                                       class="deleteDetail btn btn-link btn-xs non-form"><i
-                    class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
-                    class="fa fa-times-circle">&nbsp;</i>Close</a>
-            </div>
-            <div class="non-form">
-                <span class="eventLabel">Death</span><br/>
-                <a href="#" class="openEventDetails">
-                    <span class="eventDate">17 March 1971</span><br/>
-                    <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label>Death Date</label> <input class="form-control" id="deathDate" placeholder="Date of Death" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Death Place</label> <input class="form-control" id="deathPlace" placeholder="Place of Death" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Reason this Information is Correct</label>
-        <textarea class="form-control" name="justification"
-                  placeholder="Explain why you feel this information is correct.">
-
-
-        </textarea>
-    </div>
-
-    <div class="detailsItem editingItem detailModified">
-        Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
-                                                                                 class="changeHistory">History</a></span><br>
-        <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
-
-        <div class="detailModifiedSources">
-            <hr>
-            <!-- Place a link and badge if there are sources, just the text if there are none. -->
-            <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
-                class="badge">5</span></a></span><br/>
-
-            <div class="popupSources">
-                <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
-                <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
-            </div>
-        </div>
-    </div>
-    <div class="actionRow">
-        <button class="btn btn-primary saveButton" type="submit">Save</button>
-        <button class="btn btn-link cancelButton" type="submit">Cancel</button>
-    </div>
-</div>
-
-<div class="detailsWell">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="detailActions pull-right">
-                <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""
-                                                                                                                       class="deleteDetail btn btn-link btn-xs non-form"><i
-                    class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
-                    class="fa fa-times-circle">&nbsp;</i>Close</a>
-            </div>
-            <div class="non-form">
-                <span class="eventLabel">Burial</span><br/>
-                <a href="#" class="openEventDetails">
-                    <span class="eventDate">17 March 1971</span><br/>
-                    <span class="eventLocation">Chicago, Cook, Illinois, United States</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label>Burial Date</label> <input class="form-control" name="burialDate" placeholder="Date of Burial" type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Burial Place</label> <input class="form-control" name="burialPlace" placeholder="Place of Burial"
-                                           type="text">
-    </div>
-
-    <div class="form-group">
-        <label>Reason this Information is Correct</label>
-        <textarea class="form-control" name="justification"
-                  placeholder="Explain why you feel this information is correct.">
-
-
-        </textarea>
-    </div>
-
-    <div class="detailsItem editingItem detailModified">
-        Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
-                                                                                 class="changeHistory">History</a></span><br>
-        <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
-
-        <div class="detailModifiedSources">
-            <hr>
-            <!-- Place a link and badge if there are sources, just the text if there are none. -->
-            <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
-                class="badge">5</span></a></span><br/>
-
-            <div class="popupSources">
-                <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
-                <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
-            </div>
-        </div>
-    </div>
-    <div class="actionRow">
-        <button class="btn btn-primary saveButton" type="submit">Save</button>
-        <button class="btn btn-link cancelButton" type="submit">Cancel</button>
-    </div>
-
-</div>
-</div>
-</div>
 </div>
 
 
-<div class="familyWidgetContainer" style="display: block;">
+<div class="familyWidgetContainer">
 <div class="row">
 <div class="col-sm-12">
     <div class="panel panel-primary family-panel">
@@ -776,9 +775,14 @@
             <h4 class="panel-title">Family Members</h4>
         </div>
         <div class="row">
-            <div class=" col-sm-6 spousesAndChildren">
+            <div class=" col-sm-6 spousesAndChildren immediateFamily">
                 <h5>Spouses and Children</h5>
-
+                <div class="familyActions">
+                    <a href="#" class="hideChildren"><i class="fa fa-eye-slash">&nbsp;</i>Hide All</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#" class="btn btn-link non-form addSpouse">
+                        <i class="fa fa-plus-square">&nbsp;</i>Add Spouse
+                    </a>
+                </div>
                 <div class="panel panel-default tree-family">
                     <div class="panel-heading">
                         <div class="connector">
@@ -823,58 +827,78 @@
                             &nbsp;
                         </div>
                     </div>
+                    <div class="childrenHolder">
+                        <a href="" class="childHide"><span class=""><i class="fa fa-chevron-up"></i></span>Children (2)</a>
+                        <div class="panel-body">
+                            <table class="table-hover childrenList">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="personWrapper">
+                                            <div class="nameWrapper">
+                                                <i class="fs-icon-female icon-rounded">&nbsp;</i> <a
+                                                    class="female personCard name" data-original-title=""
+                                                    data-pid="277H-R63" href="#" title="">Birute Marija Paukstys</a>
 
-                    <div class="panel-body">
-                        <table class="table-hover">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <div class="personWrapper">
-                                        <div class="nameWrapper">
-                                            <i class="fs-icon-female icon-rounded">&nbsp;</i> <a
-                                                class="female personCard name" data-original-title=""
-                                                data-pid="277H-R63" href="#" title="">Birute Marija Paukstys</a>
+                                            </div>
+                                            <a href="#" class="editParents pull-right">Edit Parents</a>
+                                            <ul class="list-collapsed">
+                                                <li class="lifeSpan">1946-2007</li>
+
+                                                <li class="separator">-</li>
+
+                                                <li class="pid">277H-R63</li>
+                                            </ul>
+
                                         </div>
+                                    </td>
+                                </tr>
 
-                                        <ul class="list-collapsed">
-                                            <li class="lifeSpan">1946-2007</li>
+                                <tr>
+                                    <td>
+                                        <div class="personWrapper">
+                                            <div class="nameWrapper">
+                                                <i class="fs-icon-male icon-rounded">&nbsp;</i> <a
+                                                    class="male personCard name" data-original-title=""
+                                                    data-pid="2774-Z86" href="#" title="">Romualdas Bronius
+                                                Paukstys</a>
+                                            </div>
+                                            <a href="#" class="editParents pull-right">Edit Parents</a>
+                                            <ul class="list-collapsed">
+                                                <li class="lifeSpan">1939-Living</li>
 
-                                            <li class="separator">-</li>
+                                                <li class="separator">-</li>
 
-                                            <li class="pid">277H-R63</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="personWrapper">
-                                        <div class="nameWrapper">
-                                            <i class="fs-icon-male icon-rounded">&nbsp;</i> <a
-                                                class="male personCard name" data-original-title=""
-                                                data-pid="2774-Z86" href="#" title="">Romualdas Bronius
-                                            Paukstys</a>
+                                                <li class="pid">2774-Z86</li>
+                                            </ul>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr class="actionRow">
+                                    <td>
+                                        <a href="#" class="btn btn-link non-form addChild">
+                                            <i class="fa fa-plus-square">&nbsp;</i>Add Child
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                                        <ul class="list-collapsed">
-                                            <li class="lifeSpan">1939-Living</li>
-
-                                            <li class="separator">-</li>
-
-                                            <li class="pid">2774-Z86</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        </div>
                     </div>
                 </div>
+                <a href="#" class="btn btn-link non-form addChild unknownFather">
+                    <i class="fa fa-plus-square">&nbsp;</i>Add Child with an Unknown Father
+                </a>
             </div>
-            <div class=" col-sm-6 parentsAndChildren">
+            <div class="col-sm-6 parentsAndChildren immediateFamily">
                 <h5>Parents and Siblings</h5>
-
+                <div class="familyActions">
+                    <a href="#" class="hideChildren"><i class="fa fa-eye-slash">&nbsp;</i>Hide All</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#" class="btn btn-link non-form addSpouse">
+                        <i class="fa fa-plus-square">&nbsp;</i>Add Spouse
+                    </a>
+                </div>
                 <div class="panel-body parents-children">
                     <div class="panel panel-default tree-family">
                         <div class="panel-heading">
@@ -936,31 +960,40 @@
                             <div class="lowerBar"><a href="#" class="editCouple">EDIT
                                 COUPLE</a></div>
                         </div>
+                        <div class="childrenHolder">
+                            <a href="" class="childHide"><span class=""><i class="fa fa-chevron-up"></i></span>Children (1)</a>
+                            <div class="panel-body">
+                                <table class="table-hover childrenList">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="personWrapper">
+                                                <div class="nameWrapper">
+                                                    <i class="fs-icon-male icon-rounded">&nbsp;</i> <a
+                                                        class="male personCard name" data-original-title=""
+                                                        data-pid="277H-SWR" href="#" title="">Pranas Paukstys</a>
+                                                </div>
+                                                <a href="#" class="editParents pull-right">Edit Parents</a>
+                                                <ul class="list-collapsed">
+                                                    <li class="lifeSpan">1919-1971</li>
 
-                        <div class="panel-body">
-                            <table class="table-hover">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="personWrapper">
-                                            <div class="nameWrapper">
-                                                <i class="fs-icon-male icon-rounded">&nbsp;</i> <a
-                                                    class="male personCard name" data-original-title=""
-                                                    data-pid="277H-SWR" href="#" title="">Pranas Paukstys</a>
+                                                    <li class="separator">-</li>
+
+                                                    <li class="pid">277H-SWR</li>
+                                                </ul>
                                             </div>
-
-                                            <ul class="list-collapsed">
-                                                <li class="lifeSpan">1919-1971</li>
-
-                                                <li class="separator">-</li>
-
-                                                <li class="pid">277H-SWR</li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class="actionRow">
+                                        <td>
+                                            <a href="#" class="btn btn-link non-form addChild">
+                                                <i class="fa fa-plus-square">&nbsp;</i>Add Child
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -971,7 +1004,7 @@
 </div>
 </div>
 
-<div class="sourcesWidgetContainer" style="display: block;">
+<div class="sourcesWidgetContainer">
     <div class="row">
         <div class="col-lg-12">
 
@@ -1105,7 +1138,7 @@
         </div>
     </div>
 </div>
-<div class="discussionsWidgetContainer" style="display: block;">
+<div class="discussionsWidgetContainer">
     <div class="row">
         <div class="col-lg-12">
 
@@ -1169,55 +1202,107 @@
         </div>
     </div>
 </div>
-<div class="notesWidgetContainer" style="display: block;">
-    <div class="row">
-        <div class="col-lg-12">
-
-            <div class="panel panel-primary note-panel">
-                <div class="panel-heading">
-                    <div class="options">
-                        <a class="panel-collapse" href="javascript:;"><i class="fa fa-chevron-down">&nbsp;</i>Close</a>
-                    </div>
-                    <h4 class="panel-title">Notes</h4>
+<div class="notesWidgetContainer">
+    <div class="panel panel-primary family-panel">
+        <div class="panel-heading">
+            <div class="options">
+                <a class="panel-collapse" href="javascript:;"><i class="fa fa-chevron-down">&nbsp;</i>Close</a>
+                <a href="javascript:;" class="toggleDetails hidden-xs"><i class="fa fa-eye">&nbsp;</i>Show Details</a>
+            </div>
+            <h4 class="panel-title">Notes</h4>
+        </div>
+        <div class="panel-body notesBody">
+            <div class="row">
+                <div class="col-md-12" style="padding: 0 27px;">
+                    <a href="#" class="btn btn-link non-form addNewNote pull-right">
+                        <i class="fa fa-plus-square">&nbsp;</i>Add a New Note
+                    </a>
+                    <a href="#" class="non-form addNewNote hide"><i class="fa fa-plus-square">&nbsp;</i><span>Add a New Note</span></a>
                 </div>
-                <div class="panel-body">
-                    <div class="panel-group note-objects" id="notes-">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" href="#note-">Title of Note</a>
-                                    <small class="note-updated">updated
-                                        <abbr class="timeago" title="2013-12-10T03:46:48.000Z">4 months ago</abbr>
-                                    </small>
-                                </h4>
-                            </div>
-                            <div class="panel-collapse collapse" id="note-" style="height: 0;">
-                                <div class="panel-body">
-                                    <div class="media">
-                                        <a class="pull-left fa fa-pencil" href="#" style="font-style: italic">&nbsp;</a>
+            </div>
 
-                                        <div class="media-body">
-                                            <div class="note">
-                                                <h4 class="media-heading">Here's the note! Limited to 10000 characters
-                                                    apparently.
-                                                </h4>
-                                                <h6>by <a class="contributorCard" href="#" data-pid="MMNV-HVH"
-                                                          data-original-title="" title="">MMNV-HVH</a>,
-                                                    <small><abbr class="timeago" title="2013-12-10T03:46:48.000Z">4
-                                                        months ago</abbr></small>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="addNewNoteContainer detailsWell well editing hide">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Write a Title For Your Note</label> <input class="form-control" name="noteTitle" placeholder="Title of Your Note" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Wite Your Note</label>
+                            <textarea class="form-control noteValue" name="note"
+                                      placeholder="Enter your note here. Limit of 1000 characters."></textarea>
+                            <span class="countLimit pull-right">10000</span>
+                        </div>
+                        <div class="actionRow">
+                            <button class="btn btn-primary saveNewNote" type="submit">Save</button>
+                            <button class="btn btn-link cancelNewNote" type="submit">Cancel</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="detailsWell">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detailActions pull-right">
+                            <a href="" class="btn btn-xs btn-link editDetail non-form"><i class="fa fa-edit">&nbsp;</i>Edit</a> <a href=""                                                                                                    class="deleteDetail btn btn-link btn-xs non-form"><i
+                                class="fa fa-trash-o">&nbsp;</i>Delete</a> <a href="" class="btn btn-xs btn-link detailsItem closeDetail"><i
+                                class="fa fa-times-circle">&nbsp;</i>Close</a>
+                        </div>
+                        <div class="non-form">
+                            <h4 class="">
+                                <a href="#" class="openEventDetails "><i class="fa fa-pencil">&nbsp;</i>Title of Note</a>
+                            </h4>
+                            <div class="media detailsItem">
+                               Note<br />
+                               <span class="noteText">This is the body of the note, or the full text.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Write a Title For Your Note</label> <input class="form-control" name="noteTitle" placeholder="Title of Your Note" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Wite Your Note</label>
+                    <textarea class="form-control noteValue" name="note"
+                              placeholder="Enter your note here. Limit of 1000 characters."></textarea>
+                    <span class="countLimit pull-right">10000</span>
+                </div>
+                <div class="form-group noteJustification">
+                    <label>Reason this Information is Correct</label>
+                    <textarea class="form-control" name="justification"
+                              placeholder="Explain why you feel this information is correct.">
+                    </textarea>
+                </div>
+
+                <div class="detailsItem editingItem detailModified">
+                    Modified<span class="detailsModifiedHistory">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#"
+                                                                                             class="changeHistory">History</a></span><br>
+                    <span class="modifiedDate">April 2, 2014</span> by <a href="http://" class="contributor">Dovy</a>
+
+                    <div class="detailModifiedSources">
+                        <hr>
+                        <!-- Place a link and badge if there are sources, just the text if there are none. -->
+                        <span>Sources</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="#" class="popupTags">Tags</a> <a href="#"><span
+                            class="badge">5</span></a></span><br/>
+
+                        <div class="popupSources">
+                            <a href="#" class="popupSource">Death Certificate for Pranas Paukstys</a><br/>
+                            <a href="#" class="popupSource"><i>&nbsp;</i>Death Certificate for Pranas Paukstys</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="actionRow">
+                    <button class="btn btn-primary saveButton" type="submit">Save</button>
+                    <button class="btn btn-link cancelButton" type="submit">Cancel</button>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
+
 </div>
 <div class="col-md-3 sidebar">
 
@@ -1256,9 +1341,9 @@
                         <div class="nameWrapper">
                             <i class="fs-icon-male icon-rounded">&nbsp;</i>
                             <a href="#" class="male personcard name widgetAction" data-pid="KW6F-2DN"
-                               data-type="person">Dovydas Romualdas Paukstys</a><br>
+                               data-type="person">Pranas Bronius Paukstys</a><br>
             <span class="pid">
-                KW6F-2DN
+                277H-SWR
               </span>
                         </div>
 
@@ -1283,12 +1368,12 @@
 
                             <td>
                                 <div class="date ellipses-text" title="Standard: June 3, 1982">
-                                    June 3, 1982
+                                    16 August 1919
                                 </div>
 
                                 <div class="ellipses-text">
                                     <div class="place" title="Standard: Anchorage, Alaskas">
-                                        Anchorage, Alaska
+                                        Lithuania
                                     </div>
                                 </div>
                             </td>
@@ -1297,12 +1382,12 @@
                         <tr class="event death">
                             <th>Death</th>
                             <td>
-                                <div class="date ellipses-text" title="Living">
-                                    Living
+                                <div class="date ellipses-text" title="Standard: 17 March 1971">
+                                    17 March 1971
                                 </div>
                                 <div class="ellipses-text">
                                     <div class="place" title="">
-
+                                        Chicago, Cook, Illinois, United States
                                     </div>
                                 </div>
                             </td>
@@ -1317,25 +1402,25 @@
                                 <ul class="clearfix">
                                     <li class="sources-label">
                                         <a href="#">
-                                            <span class="badge">0</span>Sources
+                                            <span class="badge">10</span>Sources
                                         </a>
                                     </li>
                                     <li class="discussions-label">
                                         <a href="">
-                                            <span class="badge">0</span>Discussions
+                                            <span class="badge">2</span>Discussions
                                         </a>
                                     </li>
                                     <li class="memories-label">
                                         <a href="#">
-                                            <span class="badge">5</span>Memories
+                                            <span class="badge">2</span>Memories
                                         </a>
                                     </li>
-                                    <li class="photos-label">
+                                    <li class="photos-label hide">
                                         <a href="#">
                                             <span class="badge">0</span>Photos
                                         </a>
                                     </li>
-                                    <li class="stories-label">
+                                    <li class="stories-label hide">
                                         <a href="#">
                                             <span class="badge">0</span>Stories
                                         </a>

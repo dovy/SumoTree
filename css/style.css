@@ -50,7 +50,7 @@ abbr {
   width: 100%;
 }
 .tree-family .panel-body table td {
-  padding: 10px 20px;
+  padding: 10px 5px 10px 20px;
 }
 .tree-family .panel-body h3 {
   margin: 10px;
@@ -102,6 +102,35 @@ abbr {
 .family-panel .panel-body {
   padding: 0;
   margin: 0;
+}
+.tree-family .childrenHolder {
+  position: relative;
+}
+.tree-family .childrenHolder table {
+  margin-top: 19px;
+}
+.tree-family .childrenHolder .childHide {
+  display: block;
+  position: absolute;
+  top: -1px;
+  color: #4d4d4a;
+  font-size: 13px;
+  margin-left: 20px;
+}
+.tree-family .childrenHolder .childHide i {
+  font-size: 13px;
+  height: 19px;
+  background: #333;
+  color: #fff;
+  -webkit-border-bottom-right-radius: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  -moz-border-radius-bottomright: 50%;
+  -moz-border-radius-bottomleft: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 3px;
+  text-align: center;
+  margin-right: 12px;
 }
 .panel-heading .options {
   float: right!important;
@@ -301,11 +330,54 @@ abbr {
   text-align: center;
   font-weight: bold;
 }
-.addDetail {
+.addNewNote2,
+.addDetail2 {
+  padding: 10px 0;
+}
+.addNewNote2 span,
+.addDetail2 span {
   line-height: 18px;
+  display: block;
+  margin-top: -1px;
+  font-size: 14px;
+  float: left;
+}
+.addNewNote2 i,
+.addDetail2 i {
+  float: left;
+  display: block;
+  font-size: 18px;
+  margin-right: 3px;
+  color: #333;
+  line-height: 16px;
+}
+.addNewNote2 {
+  width: 178px;
+  background: #ddd;
+  float: right;
+}
+.addNewNote {
+  padding: 10px 15px;
+}
+.addNewNote i {
+  font-size: 15px;
+  color: #333 !important;
+}
+.addDetail {
+  padding: 0;
 }
 .addDetail i {
+  font-size: 15px;
+  color: #333 !important;
+}
+.addDetail2 {
+  line-height: 12px;
+  font-size: 14px;
+}
+.addDetail2 i {
+  margin-top: 2px;
   font-size: 18px;
+  line-height: 18px;
   color: #333;
   margin-right: 5px;
 }
@@ -355,6 +427,43 @@ abbr {
 }
 .detailActions a {
   font-size: 14px;
+}
+.editParents {
+  font-size: .9em;
+  display: none;
+}
+.childrenList tr.actionRow td {
+  padding: 10px;
+}
+.childrenList tr td:hover {
+  -webkit-box-shadow: 0 0 0 1px #ccc;
+  box-shadow: 0 0 0 1px #ccc;
+  -moz-box-shadow: 0 0 0 1px #ccc;
+}
+.childrenList tr td:hover .editParents {
+  display: inline-block;
+}
+.table-hover > tbody > tr.actionRow:hover > td {
+  background-color: #fff;
+}
+.childrenList tr.actionRow td:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+.unknownFather {
+  display: block;
+  margin-left: 10px;
+  padding: 0px 12px;
+  text-align: left;
+}
+.familyActions {
+  padding-left: 18px;
+  padding-top: 3px;
+}
+.familyActions a,
+.familyActions .btn {
+  padding: 0;
 }
 .clearfix {
   *zoom: 1;

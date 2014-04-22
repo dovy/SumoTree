@@ -37,7 +37,7 @@ $(document).ready(function () {
         e.preventDefault();
         var parent = $(this).parents('.family-panel:first');
 
-        if ($(this).text() == "Show Details") {
+        if ($(this).text().indexOf("Show") > -1) {
             $(this).html($(this).html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
 
             $.each(parent.find('.detailsWell'), function( ) {
@@ -156,5 +156,44 @@ $(document).ready(function () {
             $(this).html($(this).html().replace('FamilySearch', 'Boostrap'));
         }
     });
+    $('.noteValue').keyup(function() {
+        if ($(this).val().length >= 10000) {
+            return false;
+        }
+        $(this).parent().find('.countLimit').text(10000-$(this).val().length);
+    });
+    $('.addNewNote').click(function(e) {
+        e.preventDefault();
+        $('.addNewNoteContainer').removeClass('hide');
+        return false;
+    });
+    $('.cancelNewNote, .saveNewNote').click(function(e) {
+        e.preventDefault();
+        $('.addNewNoteContainer').addClass('hide');
+        return false;
+    });
+
+    $('.childHide, .hideChildren').click(function(e) {
+        e.preventDefault();
+        var elem = $(this);
+        var container = $(this).parents('.immediateFamily:first');
+        var parent = container.find('.childrenHolder:first');
+        var hideAll = container.find('.hideChildren');
+        var childrenList = parent.find('.panel-body');
+
+        if (!childrenList.is(':hidden')) {
+            childrenList.slideUp('medium', function() {
+                elem.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+                hideAll.html(hideAll.html().replace('fa-eye-slash', 'fa-eye').replace('Hide', 'Show'));
+            });
+        } else {
+            childrenList.slideDown('medium', function() {
+                elem.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+                hideAll.html(hideAll.html().replace('fa-eye', 'fa-eye-slash').replace('Show', 'Hide'));
+            });
+        }
+        return false;
+    });
+
 
 });
