@@ -196,4 +196,75 @@ $(document).ready(function () {
     });
 
 
+    // Discussions
+    $('.showDiscussionResponses').click(function(e) {
+        e.preventDefault();
+        var parent = $(this).parents('.additionalDiscussions:first');
+        if (parent.hasClass('expanded')) {
+            parent.removeClass('expanded')
+        } else {
+            parent.addClass('expanded')
+        }
+        return false;
+    });
+    $('.addDiscussion').click(function(e) {
+        e.preventDefault();
+        var parent = $(this).parents('.additionalDiscussions:first');
+        if (parent.hasClass('expanded')) {
+            parent.removeClass('expanded')
+        } else {
+            parent.addClass('expanded')
+        }
+        return false;
+    });
+
+    $('.addNewDiscussion').click(function(e) {
+        e.preventDefault();
+        $('.addNewDiscussionContainer').removeClass('hide');
+        return false;
+    });
+    $('.cancelNewDiscussion, .saveNewDiscussion').click(function(e) {
+        e.preventDefault();
+        $('.addNewDiscussionContainer').addClass('hide');
+        return false;
+    });
+
+    $('.editDiscussionDetail').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.comment:first').addClass('editing');
+        return false;
+    });
+    $('.cancelComment, .saveComment').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.comment:first').removeClass('editing');
+        return false;
+    });
+
+    $('.addComment').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.discussion:first').find('.additionalDiscussions').addClass('expanded').find('.addCommentLink a').click();
+        return false;
+    });
+
+    $('.addCommentLink a').click(function(e) {
+        e.preventDefault();
+        console.log('here');
+        $(this).parents('.additionalDiscussions:first').addClass('expanded').removeClass('no-padding-left').find('.addCommentForm').addClass('editing').addClass('comment');
+        $('.addCommentLink').hide();
+        return false;
+    });
+    $('.cancelAddComment, .saveAddComment').click(function(e) {
+        e.preventDefault();
+
+        $('.addCommentLink').show();
+        $(this).parents('.comment:first').removeClass('editing').removeClass('comment');
+        if ( $(this).parents('.additionalDiscussions:first').find('.comment').length == 0 ) {
+            $(this).parents('.additionalDiscussions:first').removeClass('expanded');
+        }
+        return false;
+    });
+
+    //addCommentForm editing comment
+
+
 });

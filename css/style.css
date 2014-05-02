@@ -193,102 +193,102 @@ abbr {
 .change-objects h6:last-child {
   margin-bottom: 0px;
 }
-.family-panel .detailsWell,
-.family-panel .well {
+.detailsWell,
+.well {
   padding: 19px;
   margin-top: 0;
   margin-bottom: 0;
 }
-.family-panel .detailsWell .itemBody p:last-child,
-.family-panel .well .itemBody p:last-child {
+.detailsWell .itemBody p:last-child,
+.well .itemBody p:last-child {
   margin: 0;
 }
-.family-panel .detailsWell h3,
-.family-panel .well h3 {
+.detailsWell h3,
+.well h3 {
   margin-top: 0;
 }
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
+.detailsWell:last-child,
+.well:last-child {
   margin-bottom: 0px;
 }
-.family-panel .detailsWell .form-group,
-.family-panel .well .form-group,
-.family-panel .detailsWell .actionRow,
-.family-panel .well .actionRow,
-.family-panel .detailsWell .editingItem,
-.family-panel .well .editingItem,
-.family-panel .detailsWell .detailsItem,
-.family-panel .well .detailsItem {
+.detailsWell .form-group,
+.well .form-group,
+.detailsWell .actionRow,
+.well .actionRow,
+.detailsWell .editingItem,
+.well .editingItem,
+.detailsWell .detailsItem,
+.well .detailsItem {
   display: none;
 }
-.family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails {
+.detailsWell.openDetails,
+.well.openDetails {
   background: #eee;
   color: #555;
   border-color: #ddd;
 }
-.family-panel .detailsWell.openDetails .itemBody p:last-child,
-.family-panel .well.openDetails .itemBody p:last-child {
+.detailsWell.openDetails .itemBody p:last-child,
+.well.openDetails .itemBody p:last-child {
   margin: 0 0 10px;
 }
-.family-panel .detailsWell.openDetails .detailsItem,
-.family-panel .well.openDetails .detailsItem {
+.detailsWell.openDetails .detailsItem,
+.well.openDetails .detailsItem {
   display: inline-block;
 }
-.family-panel .detailsWell.openDetails .non-form,
-.family-panel .well.openDetails .non-form {
+.detailsWell.openDetails .non-form,
+.well.openDetails .non-form {
   display: inline-block;
 }
-.family-panel .detailsWell.editing .itemBody p:last-child,
-.family-panel .well.editing .itemBody p:last-child {
+.detailsWell.editing .itemBody p:last-child,
+.well.editing .itemBody p:last-child {
   margin: 0 0 10px;
 }
-.family-panel .detailsWell.editing a,
-.family-panel .well.editing a,
-.family-panel .detailsWell.editing .btn-link,
-.family-panel .well.editing .btn-link {
+.detailsWell.editing a,
+.well.editing a,
+.detailsWell.editing .btn-link,
+.well.editing .btn-link {
   color: #fff;
   opacity: .6;
 }
-.family-panel .detailsWell.editing a:hover,
-.family-panel .well.editing a:hover,
-.family-panel .detailsWell.editing .btn-link:hover,
-.family-panel .well.editing .btn-link:hover {
+.detailsWell.editing a:hover,
+.well.editing a:hover,
+.detailsWell.editing .btn-link:hover,
+.well.editing .btn-link:hover {
   opacity: 1;
 }
-.family-panel .detailsWell.editing .form-group,
-.family-panel .well.editing .form-group,
-.family-panel .detailsWell.editing .actionRow,
-.family-panel .well.editing .actionRow,
-.family-panel .detailsWell.editing .editingItem,
-.family-panel .well.editing .editingItem {
+.detailsWell.editing .form-group,
+.well.editing .form-group,
+.detailsWell.editing .actionRow,
+.well.editing .actionRow,
+.detailsWell.editing .editingItem,
+.well.editing .editingItem {
   display: block;
 }
-.family-panel .detailsWell.editing .non-form,
-.family-panel .well.editing .non-form,
-.family-panel .detailsWell.editing .detailActions,
-.family-panel .well.editing .detailActions {
+.detailsWell.editing .non-form,
+.well.editing .non-form,
+.detailsWell.editing .detailActions,
+.well.editing .detailActions {
   display: none;
 }
-.family-panel .detailsWell.editing,
-.family-panel .well.editing,
-.family-panel .detailsWell.openDetails,
-.family-panel .well.openDetails {
+.detailsWell.editing,
+.well.editing,
+.detailsWell.openDetails,
+.well.openDetails {
   border-top: 0;
   padding: 18px 18px 18px 18px;
 }
-.family-panel .detailsWell.editing .itemBody p:last-child,
-.family-panel .well.editing .itemBody p:last-child,
-.family-panel .detailsWell.openDetails .itemBody p:last-child,
-.family-panel .well.openDetails .itemBody p:last-child {
+.detailsWell.editing .itemBody p:last-child,
+.well.editing .itemBody p:last-child,
+.detailsWell.openDetails .itemBody p:last-child,
+.well.openDetails .itemBody p:last-child {
   margin: 0 0 10px;
 }
-.family-panel .detailsWell h3,
-.family-panel .well h3 {
+.detailsWell h3,
+.well h3 {
   margin-top: 0;
 }
-.family-panel .detailsWell:last-child,
-.family-panel .well:last-child {
+.detailsWell:last-child,
+.well:last-child {
   margin-bottom: 0px;
 }
 .family-panel .panel-heading .options i {
@@ -464,6 +464,12 @@ abbr {
 .familyActions a,
 .familyActions .btn {
   padding: 0;
+}
+.familysearch_theme a h4 {
+  color: inherit;
+}
+.eventLabel {
+  font-weight: 500;
 }
 .clearfix {
   *zoom: 1;
@@ -2064,4 +2070,85 @@ ul.polaroids a:hover {
 }
 .contributorCard .row div {
   line-height: 1.5em !important;
+}
+.discussionWidgetContainer .family-panel .detailsWell.openDetails .non-form.non-form-block,
+.discussionWidgetContainer .family-panel .well.openDetails .non-form.non-form-block,
+.discussionWidgetContainer .family-panel .detailsWell.openDetails:hover .non-form.non-form-block,
+.discussionWidgetContainer .family-panel .well.openDetails:hover .non-form.non-form-block {
+  display: block;
+}
+.discussionWidgetContainer .fa {
+  color: #222;
+}
+.discussionWidgetContainer .fa.openEventDetails {
+  font-size: 20px;
+}
+.discussionWidgetContainer .discussionsBody {
+  padding-bottom: 10px;
+}
+.discussionWidgetContainer .discussionsBody .detailsWell {
+  position: relative;
+}
+.discussionWidgetContainer .detailActions {
+  padding-bottom: 10px;
+}
+.discussionWidgetContainer .detailActions.pull-right {
+  position: absolute;
+  right: 0;
+}
+.discussionWidgetContainer .detailActions .btn-xs {
+  padding-left: 0;
+}
+.discussionWidgetContainer .additionalDiscussions {
+  border: 1px solid transparent;
+  border-top-color: #eee;
+  padding: 15px 15px 5px 15px;
+}
+.discussionWidgetContainer .additionalDiscussions .media-body .commentsBody {
+  display: none;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded {
+  border: 1px solid;
+  border-color: #cdcdcd;
+  display: block;
+  background-color: #ECEBEA;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .addCommentLink {
+  border-top: 1px solid white;
+  padding-top: 8px;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .commentsBody {
+  clear: both;
+  display: block;
+  padding-top: 8px;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .comment {
+  padding: 8px 0 0 0;
+  border-top: 1px solid white;
+  display: block;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .comment.editing .form-group,
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .comment.editing .actionRow {
+  display: block;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .comment.editing .actionRow {
+  padding-bottom: 10px;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .comment.editing .commentDetails {
+  display: none;
+}
+.discussionWidgetContainer .additionalDiscussions.expanded .media-body .comment .commentsBody {
+  display: block !important;
+}
+.no-margin-top {
+  margin-top: 0;
+}
+.no-padding-left {
+  padding-left: 0 !important;
+}
+.no-padding-top {
+  padding-top: 0 !important;
+}
+.no-border-top {
+  border-top: 0;
 }
