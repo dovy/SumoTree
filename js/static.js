@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     $('.toggleDetails').click(function(e) {
         e.preventDefault();
-        
+        http://rootsdev.org/familysearch-widgets/profile.html
         var parent = $(this).parents('.family-panel:first');
 
         if ($(this).text().indexOf("Show") > -1) {
