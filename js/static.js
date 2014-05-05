@@ -35,6 +35,7 @@ $(document).ready(function () {
 
     $('.toggleDetails').click(function(e) {
         e.preventDefault();
+        
         var parent = $(this).parents('.family-panel:first');
 
         if ($(this).text().indexOf("Show") > -1) {
@@ -61,6 +62,7 @@ $(document).ready(function () {
                 }
             });
         }
+
 
         return false;
     });
@@ -97,6 +99,7 @@ $(document).ready(function () {
         e.preventDefault();
         var parent = $(this).parents('.detailsWell:first');
         parent.removeClass('well').removeClass('openDetails');
+        parent.find('.detailsWell').removeClass('editing').removeClass('openDetails').removeClass('well');
         var toggle = $(this).parents('.family-panel:first').find('.toggleDetails');
         if ( parent.parents('.family-panel:first').find('.openDetails').length != 0 ) {
             toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
@@ -128,6 +131,10 @@ $(document).ready(function () {
         } else {
             parent.removeClass('editing well');
             toggle.html(toggle.html().replace('Hide', 'Show').replace('fa-eye-slash', 'fa-eye'));
+        }
+
+        if ( parent.hasClass( 'sourceItem' ) ) {
+            parent.removeClass('openDetails');
         }
         return false;
     });
@@ -261,6 +268,12 @@ $(document).ready(function () {
         if ( $(this).parents('.additionalDiscussions:first').find('.comment').length == 0 ) {
             $(this).parents('.additionalDiscussions:first').removeClass('expanded');
         }
+        return false;
+    });
+
+    $('.addSourceJustification, .editSourceJustification').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.detailsWell:first').addClass('editing');
         return false;
     });
 
