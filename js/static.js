@@ -280,4 +280,12 @@ $(document).ready(function () {
     //addCommentForm editing comment
 
 
+
+    // SEARCH/ADD PAGE
+    $('#searchadd a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+
 });

@@ -1822,6 +1822,43 @@ a.node--focus:active .node__name {
 .actionRow {
   margin-top: 15px;
 }
+.yearRange {
+  margin-bottom: 15px;
+}
+.yearRange .row .input-group {
+  width: 100% !important;
+}
+.yearRange .row .col-xs-6:first-child {
+  padding-right: 2px;
+}
+.yearRange .row .col-xs-6:last-child {
+  padding-left: 2px;
+}
+.familysearch_theme .nav-tabs {
+  padding-left: 30px;
+  border-bottom: 1px solid #B7B7B7;
+}
+.familysearch_theme .nav-tabs li a:hover {
+  background: none;
+  border-color: transparent;
+}
+.familysearch_theme .nav-tabs li.active a,
+.familysearch_theme .nav-tabs li.active a:hover {
+  border-left-color: #B7B7B7;
+  border-right-color: #B7B7B7;
+  border-top-color: #B7B7B7;
+  background: #fff;
+  border-top-width: 1px;
+}
+.familysearch_theme .nav-tabs li a {
+  margin: 0 10px;
+}
+.familysearch_theme .tab-pane {
+  background: #fff;
+  border: 1px solid #B7B7B7;
+  border-top: 0;
+  padding: 20px;
+}
 .tree-family .primaryEvents .event {
   margin-left: 0;
 }
