@@ -73,10 +73,12 @@ $(document).ready(function () {
     function loadContent() {
         fsWidgets.getPID();
         fsWidgets.profileHeader( '.profileHeaderContainer', fsWidgets.pID );
+
         fsWidgets.familyMembers( '.familyWidgetContainer', fsWidgets.pID );
         if ( fsWidgets.currentUser.id != fsWidgets.pID ) {
             fsWidgets.sources( '.sourcesWidgetContainer', fsWidgets.pID );
             fsWidgets.changes( '.changesWidgetContainer', fsWidgets.pID );
+            fsWidgets.changeHistory( '.changesHistoryWidgetContainer', fsWidgets.pID );
             fsWidgets.discussions( '.discussionsWidgetContainer', fsWidgets.pID );
             fsWidgets.notes( '.notesWidgetContainer', fsWidgets.pID );    
         }

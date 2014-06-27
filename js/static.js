@@ -122,7 +122,11 @@ $(document).ready(function () {
         var toggle = $(this).parents('.family-panel:first').find('.toggleDetails');
 
         if ($(this).parents('.family-panel:first').find('.detailsWell').length > 1) {
-            toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
+
+            if ( toggle.html() ) {
+                toggle.html(toggle.html().replace('Show', 'Hide').replace('fa-eye', 'fa-eye-slash'));
+            }
+
             if (parent.find('.addDetail').length != 0) {
                 parent.removeClass('editing').removeClass('well');
             } else {
@@ -228,6 +232,11 @@ $(document).ready(function () {
     $('.addNewDiscussion').click(function(e) {
         e.preventDefault();
         $('.addNewDiscussionContainer').removeClass('hide');
+        return false;
+    });
+    $('.addNewEvent').click(function(e) {
+        e.preventDefault();
+        $('.addNewEventContainer').removeClass('hide');
         return false;
     });
     $('.cancelNewDiscussion, .saveNewDiscussion').click(function(e) {

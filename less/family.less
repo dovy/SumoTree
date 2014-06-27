@@ -1,5 +1,6 @@
 @male: #4888f8;
 @female: #dd407d;
+@unknown: #666662;
 
 .clearboth, .clearleft, .clearright {
 	height: 0;
@@ -31,6 +32,35 @@
 		background: @male;
 		color: #fff;
 	}
+    &.fs-icon-unknown {
+        background: @unknown;
+        color: #fff;
+    }
+
+}
+.fs-icon-small-male {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -999px;
+  background: @male;
+}
+.fs-icon-small-female {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -999px;
+  background: @female;
+}
+.fs-icon-small-unknown {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -999px;
+  background: @unknown;
 }
 ul.list-collapsed {
 	padding-left: 5px;
@@ -61,7 +91,7 @@ abbr {
 	}
 }
 
-.tree-family {
+
 	.personWrapper {
 		.icon-rounded {
 			margin-left: -2px;
@@ -95,7 +125,7 @@ abbr {
 	}
 
 
-	.panel-heading {
+	.panel-heading, .couple {
 
 		.connector {
 			border: 2px solid #4d4d4a;
@@ -117,7 +147,7 @@ abbr {
 
 	}
 
-}
+
 .panel .panel:last-child {
 	margin-bottom: 0;
 }
